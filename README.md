@@ -20,7 +20,7 @@ PDFs ──► extract (Azure AI Document Intelligence prebuilt models; layout +
      ──► SQL tables + analytics views (DuckDB, portable SQL)
 ```
 
-**Live demo:** _Streamlit app link coming soon_. Pick a packet, run the agent, and inspect
+**Live demo: [lebenflo-loan-intake-agent.streamlit.app](https://lebenflo-loan-intake-agent.streamlit.app)**. Pick a packet, run the agent, and inspect
 the documents, extracted fields, confidence scores, rule findings and memo.
 
 ## Quick start (offline: no Azure needed)
