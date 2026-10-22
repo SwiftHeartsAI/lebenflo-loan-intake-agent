@@ -1,0 +1,5 @@
+{
+ "model": "azure-openai/gpt-5.4-mini",
+ "recorded_at": "2026-10-22T15:56:35.932611+00:00",
+ "response": "{\"employee_name\":\"Jon Quillfeather\",\"employer_name\":\"Quillback Robotics Co\",\"wages\":54934.52,\"tax_year\":\"2025\"}"
+}

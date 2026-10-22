@@ -1,5 +1,7 @@
 # Lebenflo Loan Document Intake Agent
 
+[![CI](https://github.com/SwiftHeartsAI/lebenflo-loan-intake-agent/actions/workflows/ci.yml/badge.svg)](https://github.com/SwiftHeartsAI/lebenflo-loan-intake-agent/actions/workflows/ci.yml)
+
 > **Lebenflo Credit Union is fictional, and all data in this repo is synthetic.**
 > Every document is watermarked "SAMPLE – SYNTHETIC TEST DATA". Names and employers are
 > invented, and SSNs use the 900–999 area range, which is never issued.
@@ -15,18 +17,27 @@ PDFs ──► extract (Azure AI Document Intelligence prebuilt models; layout +
      ──► decide (APPROVE_FOR_UNDERWRITING | ESCALATE_TO_HUMAN)
      ──► memo (LLM summary of PII-masked facts)
          every step → audit log (JSONL) + Phoenix trace
+     ──► SQL tables + analytics views (DuckDB, portable SQL)
 ```
+
+**Live demo:** _Streamlit app link coming soon_. Pick a packet, run the agent, and inspect
+the documents, extracted fields, confidence scores, rule findings and memo.
 
 ## Quick start (offline: no Azure needed)
 
 ```bash
 uv sync
 uv run python -m lebenflo.generate          # 10 synthetic packets + ground truth
-uv run python -m lebenflo.extract.simulate  # simulated DI recordings (until you run live)
 uv run python -m lebenflo.agent             # run the agent, memos in reports/runs/
 uv run python -m lebenflo.eval              # metrics in reports/eval/
+uv run python -m lebenflo.warehouse         # SQL tables + views in data/warehouse.duckdb
+uv run streamlit run streamlit_app.py       # the demo app
 uv run pytest
 ```
+
+Offline mode replays the real Azure responses recorded in `data/recorded/` (Document
+Intelligence per document; Azure OpenAI calls by prompt hash), so everything above runs with
+no keys. CI runs lint and tests the same way on every push.
 
 Tracing: run `uv run phoenix serve` in another terminal, then open http://localhost:6006.
 Traces go to the `lebenflo-loan-intake` project.
@@ -88,5 +99,8 @@ src/lebenflo/validate/    rules V-001..V-004
 src/lebenflo/governance/  PII masking, audit log
 src/lebenflo/agent/       LangGraph graph + CLI
 src/lebenflo/eval/        evaluation vs ground truth
-src/lebenflo/llm.py       Azure OpenAI + fake LLM (all prompts masked here)
+src/lebenflo/llm.py       Azure OpenAI + offline replay (all prompts masked here)
+src/lebenflo/warehouse.py SQL load; schema and views in sql/
+streamlit_app.py          demo app
+.github/workflows/ci.yml  lint + tests on every push
 ```

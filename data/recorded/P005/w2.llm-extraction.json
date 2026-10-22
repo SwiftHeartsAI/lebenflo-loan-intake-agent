@@ -1,6 +1,6 @@
 {
  "_model": "azure-openai/gpt-5.4-mini",
- "_recorded_at": "2026-10-22T13:58:41.102529+00:00",
+ "_recorded_at": "2026-10-22T16:00:24.050264+00:00",
  "prompt_sha256": "fa2797ff512261888637a67f090e08a67243ccfef15b585abf6dd95f5ea83010",
  "response": {
   "employee_name": "Liz Thistlewood",

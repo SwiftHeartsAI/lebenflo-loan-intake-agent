@@ -1,12 +1,12 @@
 {
  "_source": "azure",
  "_model_id": "prebuilt-payStub.us",
- "_recorded_at": "2026-10-22T14:01:54.938448+00:00",
+ "_recorded_at": "2026-10-22T16:04:55.493982+00:00",
  "result": {
   "apiVersion": "2024-11-30",
   "modelId": "prebuilt-payStub.us",
   "stringIndexType": "textElements",
-  "content": "EARNINGS STATEMENT Saltmeadow Print Works - Payroll Department\nEmployer:\nSaltmeadow Print Works\nEmployee Name:\nKat Oakhollow\nEmployee Address:\n2113 Birchend Ct, Northmarch City, NM 00000\nSocial Security Number:\n908-78-3060\nPay Period Start:\n09/16/2026\nPay Period End:\n09/30/2026\nPay Date:\n10/03/2026\nEarnings\nCurrent\nYear to Date\nGross Pay\n$4,270.83\n$76,874.94\nSAMPLE - SYNTHETIC TES18,49. 95 4L\nTaxes and Deductions\n$1,025.00\n$18,449.99\nNet Pay\n$3,245.83\n$58,424.95\nDATA\nSAMPLE - SYNTHETIC TEST DATA - fictional document, not valid for any use",
+  "content": "EARNINGS STATEMENT Saltmeadow Print Works - Payroll Department\nEmployer:\nSaltmeadow Print Works\nEmployee Name:\nKat Oakhollow\nEmployee Address:\n2113 Birchend Ct, Northmarch City, NM 00000\nSocial Security Number:\n908-78-3060\nPay Period Start:\n09/16/2026\nPay Period End:\n09/30/2026\nPay Date:\n10/03/2026\nEarnings\nCurrent\nYear to Date\nGross Pay\n$4,270.83\n$76,874.94\nSAMPLE - SYNTHETIC TE318,49. 95 4L\nTaxes and Deductions\n$1,025.00\n$18,449.99\nNet Pay\n$3,245.83\n$58,424.95\nDATA\nSAMPLE - SYNTHETIC TEST DATA - fictional document, not valid for any use",
   "pages": [
    {
     "pageNumber": 1,
@@ -90,7 +90,7 @@
      {
       "content": "Works",
       "polygon": [
-       1.8186,
+       1.8187,
        0.9656,
        2.213,
        0.9654,
@@ -315,7 +315,7 @@
        0.6902,
        2.2015
       ],
-      "confidence": 0.995,
+      "confidence": 0.994,
       "span": {
        "offset": 125,
        "length": 8
@@ -400,7 +400,7 @@
        2.0469,
        4.9246,
        2.0454,
-       4.924,
+       4.9241,
        2.1974,
        4.2108,
        2.1975
@@ -585,7 +585,7 @@
        1.4527,
        2.7009
       ],
-      "confidence": 0.996,
+      "confidence": 0.995,
       "span": {
        "offset": 234,
        "length": 6
@@ -801,7 +801,7 @@
        6.1706,
        3.5752
       ],
-      "confidence": 0.998,
+      "confidence": 0.999,
       "span": {
        "offset": 322,
        "length": 2
@@ -927,7 +927,7 @@
        2.4692,
        6.8278
       ],
-      "confidence": 0.95,
+      "confidence": 0.947,
       "span": {
        "offset": 368,
        "length": 1
@@ -945,14 +945,14 @@
        2.866,
        6.5379
       ],
-      "confidence": 0.876,
+      "confidence": 0.878,
       "span": {
        "offset": 370,
        "length": 9
       }
      },
      {
-      "content": "TES18,49.",
+      "content": "TE318,49.",
       "polygon": [
        5.2434,
        4.1636,
@@ -963,7 +963,7 @@
        5.5303,
        4.6036
       ],
-      "confidence": 0.111,
+      "confidence": 0.11,
       "span": {
        "offset": 380,
        "length": 9
@@ -979,7 +979,7 @@
        6.4873,
        4.0973,
        6.4075,
-       4.1549
+       4.1548
       ],
       "confidence": 0.093,
       "span": {
@@ -991,11 +991,11 @@
       "content": "4L",
       "polygon": [
        6.3048,
-       3.5873,
+       3.5872,
        6.7635,
        3.2552,
        6.9561,
-       3.6661,
+       3.666,
        6.5617,
        4.0326
       ],
@@ -1197,7 +1197,7 @@
        2.282,
        10.6045
       ],
-      "confidence": 0.996,
+      "confidence": 0.995,
       "span": {
        "offset": 472,
        "length": 6
@@ -1840,11 +1840,11 @@
       ]
      },
      {
-      "content": "SAMPLE - SYNTHETIC TES18,49. 95 4L",
+      "content": "SAMPLE - SYNTHETIC TE318,49. 95 4L",
       "polygon": [
        0.1882,
        7.6917,
-       6.6779,
+       6.678,
        3.2552,
        6.9561,
        3.7116,
@@ -2138,7 +2138,7 @@
         ]
        }
       ],
-      "confidence": 0.781,
+      "confidence": 0.782,
       "spans": [
        {
         "offset": 143,
@@ -2308,7 +2308,7 @@
         ]
        }
       ],
-      "confidence": 0.949,
+      "confidence": 0.948,
       "spans": [
        {
         "offset": 241,
@@ -2335,7 +2335,7 @@
         ]
        }
       ],
-      "confidence": 0.891,
+      "confidence": 0.89,
       "spans": [
        {
         "offset": 427,
@@ -2389,7 +2389,7 @@
         ]
        }
       ],
-      "confidence": 0.891,
+      "confidence": 0.898,
       "spans": [
        {
         "offset": 456,

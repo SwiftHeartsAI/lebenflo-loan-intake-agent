@@ -1,7 +1,7 @@
 {
  "_source": "azure",
  "_model_id": "prebuilt-tax.us.w2",
- "_recorded_at": "2026-10-22T14:01:03.675035+00:00",
+ "_recorded_at": "2026-10-22T16:04:21.588643+00:00",
  "result": {
   "apiVersion": "2024-11-30",
   "modelId": "prebuilt-tax.us.w2",
@@ -10,7 +10,7 @@
   "pages": [
    {
     "pageNumber": 1,
-    "angle": -0.0738999992609024,
+    "angle": -0.05820000171661377,
     "width": 8.5,
     "height": 11,
     "unit": "inch",
@@ -45,7 +45,7 @@
        1.3072,
        0.8852
       ],
-      "confidence": 0.997,
+      "confidence": 0.996,
       "span": {
        "offset": 5,
        "length": 3
@@ -117,7 +117,7 @@
        3.3405,
        0.8824
       ],
-      "confidence": 0.995,
+      "confidence": 0.994,
       "span": {
        "offset": 22,
        "length": 9
@@ -225,7 +225,7 @@
        1.5097,
        1.1238
       ],
-      "confidence": 0.995,
+      "confidence": 0.994,
       "span": {
        "offset": 49,
        "length": 2
@@ -333,7 +333,7 @@
        4.0755,
        1.1187
       ],
-      "confidence": 0.993,
+      "confidence": 0.994,
       "span": {
        "offset": 86,
        "length": 6
@@ -513,7 +513,7 @@
        2.3959,
        2.0066
       ],
-      "confidence": 0.993,
+      "confidence": 0.994,
       "span": {
        "offset": 168,
        "length": 7
@@ -765,7 +765,7 @@
        0.785,
        2.9272
       ],
-      "confidence": 0.911,
+      "confidence": 0.912,
       "span": {
        "offset": 271,
        "length": 10
@@ -1521,7 +1521,7 @@
        4.1579,
        10.6091
       ],
-      "confidence": 0.993,
+      "confidence": 0.992,
       "span": {
        "offset": 552,
        "length": 1
@@ -1647,7 +1647,7 @@
        6.033,
        10.6161
       ],
-      "confidence": 0.997,
+      "confidence": 0.996,
       "span": {
        "offset": 592,
        "length": 3
@@ -1735,13 +1735,13 @@
       "content": "b Employer identification number:",
       "polygon": [
        0.6834,
-       1.8501,
+       1.8493,
        2.9491,
-       1.8465,
-       2.9494,
-       2.0051,
-       0.6836,
-       2.0087
+       1.8479,
+       2.9492,
+       2.0065,
+       0.6835,
+       2.0079
       ],
       "spans": [
        {
@@ -1778,7 +1778,7 @@
        2.159,
        2.0019,
        2.3084,
-       0.6876,
+       0.6877,
        2.3115
       ],
       "spans": [

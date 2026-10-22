@@ -1,7 +1,7 @@
 {
  "_source": "azure",
  "_model_id": "prebuilt-layout",
- "_recorded_at": "2026-10-22T13:57:27.137332+00:00",
+ "_recorded_at": "2026-10-22T15:59:31.339028+00:00",
  "result": {
   "apiVersion": "2024-11-30",
   "modelId": "prebuilt-layout",
@@ -189,7 +189,7 @@
        1.1827,
        1.1238
       ],
-      "confidence": 0.982,
+      "confidence": 0.983,
       "span": {
        "offset": 44,
        "length": 1
@@ -423,7 +423,7 @@
        2.5959,
        1.7051
       ],
-      "confidence": 0.995,
+      "confidence": 0.994,
       "span": {
        "offset": 122,
        "length": 7
@@ -855,7 +855,7 @@
        5.043,
        2.9257
       ],
-      "confidence": 0.995,
+      "confidence": 0.994,
       "span": {
        "offset": 305,
        "length": 10
@@ -891,7 +891,7 @@
        6.0943,
        2.9254
       ],
-      "confidence": 0.995,
+      "confidence": 0.996,
       "span": {
        "offset": 322,
        "length": 2
@@ -1017,7 +1017,7 @@
        3.8815,
        3.2219
       ],
-      "confidence": 0.994,
+      "confidence": 0.993,
       "span": {
        "offset": 366,
        "length": 10
@@ -1323,7 +1323,7 @@
        3.8816,
        4.1441
       ],
-      "confidence": 0.994,
+      "confidence": 0.995,
       "span": {
        "offset": 481,
        "length": 10
@@ -1464,7 +1464,7 @@
        10.4826,
        3.4887,
        10.6082,
-       2.8633,
+       2.8634,
        10.6064
       ],
       "confidence": 0.995,
@@ -1575,7 +1575,7 @@
        5.2164,
        10.6129
       ],
-      "confidence": 0.994,
+      "confidence": 0.993,
       "span": {
        "offset": 572,
        "length": 3
@@ -1604,9 +1604,9 @@
       "polygon": [
        5.6572,
        10.4898,
-       5.7932,
+       5.7912,
        10.4907,
-       5.793,
+       5.791,
        10.615,
        5.6569,
        10.6139

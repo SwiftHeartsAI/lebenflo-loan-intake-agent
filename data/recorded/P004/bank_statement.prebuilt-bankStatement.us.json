@@ -1,7 +1,7 @@
 {
  "_source": "azure",
  "_model_id": "prebuilt-bankStatement.us",
- "_recorded_at": "2026-10-22T13:56:29.629348+00:00",
+ "_recorded_at": "2026-10-22T15:58:43.050843+00:00",
  "result": {
   "apiVersion": "2024-11-30",
   "modelId": "prebuilt-bankStatement.us",
@@ -10,7 +10,7 @@
   "pages": [
    {
     "pageNumber": 1,
-    "angle": -0.04410000145435333,
+    "angle": -0.04399999976158142,
     "width": 8.5,
     "height": 11,
     "unit": "inch",
@@ -45,7 +45,7 @@
        1.6888,
        0.8673
       ],
-      "confidence": 0.996,
+      "confidence": 0.997,
       "span": {
        "offset": 9,
        "length": 6
@@ -153,7 +153,7 @@
        0.6896,
        1.1072
       ],
-      "confidence": 0.994,
+      "confidence": 0.993,
       "span": {
        "offset": 49,
        "length": 8
@@ -315,7 +315,7 @@
        0.6905,
        1.9362
       ],
-      "confidence": 0.993,
+      "confidence": 0.995,
       "span": {
        "offset": 113,
        "length": 8
@@ -459,7 +459,7 @@
        0.6883,
        2.1984
       ],
-      "confidence": 0.996,
+      "confidence": 0.997,
       "span": {
        "offset": 166,
        "length": 7
@@ -855,7 +855,7 @@
        6.3866,
        3.5762
       ],
-      "confidence": 0.995,
+      "confidence": 0.994,
       "span": {
        "offset": 352,
        "length": 11
@@ -927,7 +927,7 @@
        5.5281,
        4.6441
       ],
-      "confidence": 0.725,
+      "confidence": 0.718,
       "span": {
        "offset": 383,
        "length": 4
@@ -945,7 +945,7 @@
        6.4875,
        4.0103
       ],
-      "confidence": 0.69,
+      "confidence": 0.74,
       "span": {
        "offset": 388,
        "length": 3
@@ -963,7 +963,7 @@
        6.771,
        3.8769
       ],
-      "confidence": 0.056,
+      "confidence": 0.061,
       "span": {
        "offset": 392,
        "length": 7
@@ -999,7 +999,7 @@
        7.5947,
        3.3305
       ],
-      "confidence": 0.588,
+      "confidence": 0.6,
       "span": {
        "offset": 402,
        "length": 2
@@ -1125,7 +1125,7 @@
        2.1487,
        4.0357
       ],
-      "confidence": 0.995,
+      "confidence": 0.994,
       "span": {
        "offset": 454,
        "length": 8
@@ -1305,7 +1305,7 @@
        2.1491,
        4.4795
       ],
-      "confidence": 0.993,
+      "confidence": 0.994,
       "span": {
        "offset": 543,
        "length": 8
@@ -1539,7 +1539,7 @@
        2.7637,
        10.6043
       ],
-      "confidence": 0.977,
+      "confidence": 0.982,
       "span": {
        "offset": 656,
        "length": 1
@@ -1611,7 +1611,7 @@
        4.1593,
        10.6076
       ],
-      "confidence": 0.995,
+      "confidence": 0.994,
       "span": {
        "offset": 678,
        "length": 1
@@ -2848,7 +2848,7 @@
                 ]
                }
               ],
-              "confidence": 0.733,
+              "confidence": 0.732,
               "spans": [
                {
                 "offset": 449,
@@ -3022,7 +3022,7 @@
                 ]
                }
               ],
-              "confidence": 0.731,
+              "confidence": 0.732,
               "spans": [
                {
                 "offset": 538,

@@ -1,7 +1,7 @@
 {
  "_source": "azure",
  "_model_id": "prebuilt-idDocument",
- "_recorded_at": "2026-10-22T13:54:10.050428+00:00",
+ "_recorded_at": "2026-10-22T15:55:26.822104+00:00",
  "result": {
   "apiVersion": "2024-11-30",
   "modelId": "prebuilt-idDocument",
@@ -145,7 +145,7 @@
       "content": "N66306997",
       "polygon": [
        3.5334,
-       1.6222,
+       1.6221,
        4.2666,
        1.6216,
        4.2666,
@@ -225,7 +225,7 @@
        2.424,
        2.2255
       ],
-      "confidence": 0.997,
+      "confidence": 0.996,
       "span": {
        "offset": 76,
        "length": 5
@@ -585,7 +585,7 @@
        5.5641,
        4.6816
       ],
-      "confidence": 0.684,
+      "confidence": 0.682,
       "span": {
        "offset": 203,
        "length": 4
@@ -621,7 +621,7 @@
        2.2768,
        10.6058
       ],
-      "confidence": 0.995,
+      "confidence": 0.996,
       "span": {
        "offset": 213,
        "length": 6
@@ -729,7 +729,7 @@
        4.2369,
        10.609
       ],
-      "confidence": 0.99,
+      "confidence": 0.992,
       "span": {
        "offset": 244,
        "length": 9
@@ -837,7 +837,7 @@
        6.0312,
        10.6148
       ],
-      "confidence": 0.996,
+      "confidence": 0.997,
       "span": {
        "offset": 282,
        "length": 3
@@ -1342,7 +1342,7 @@
         "pageNumber": 1,
         "polygon": [
          3.5334,
-         1.6222,
+         1.6221,
          4.2666,
          1.6216,
          4.2666,

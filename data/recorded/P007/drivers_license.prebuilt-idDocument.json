@@ -1,7 +1,7 @@
 {
  "_source": "azure",
  "_model_id": "prebuilt-idDocument",
- "_recorded_at": "2026-10-22T13:59:47.639136+00:00",
+ "_recorded_at": "2026-10-22T16:02:44.765433+00:00",
  "result": {
   "apiVersion": "2024-11-30",
   "modelId": "prebuilt-idDocument",
@@ -63,7 +63,7 @@
        1.992,
        1.345
       ],
-      "confidence": 0.997,
+      "confidence": 0.996,
       "span": {
        "offset": 9,
        "length": 10
@@ -99,7 +99,7 @@
        4.1371,
        1.344
       ],
-      "confidence": 0.995,
+      "confidence": 0.994,
       "span": {
        "offset": 27,
        "length": 7
@@ -603,7 +603,7 @@
        6.8537,
        3.7982
       ],
-      "confidence": 0.984,
+      "confidence": 0.985,
       "span": {
        "offset": 208,
        "length": 4
@@ -724,7 +724,7 @@
        10.4855,
        4.6271,
        10.4869,
-       4.626,
+       4.6261,
        10.6111,
        4.2379,
        10.6097
@@ -799,7 +799,7 @@
        5.7905,
        10.6152,
        5.6564,
-       10.6144
+       10.6143
       ],
       "confidence": 0.998,
       "span": {

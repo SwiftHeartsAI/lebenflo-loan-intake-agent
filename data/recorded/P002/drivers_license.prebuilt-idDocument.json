@@ -1,7 +1,7 @@
 {
  "_source": "azure",
  "_model_id": "prebuilt-idDocument",
- "_recorded_at": "2026-10-22T13:55:02.813144+00:00",
+ "_recorded_at": "2026-10-22T15:56:49.223761+00:00",
  "result": {
   "apiVersion": "2024-11-30",
   "modelId": "prebuilt-idDocument",

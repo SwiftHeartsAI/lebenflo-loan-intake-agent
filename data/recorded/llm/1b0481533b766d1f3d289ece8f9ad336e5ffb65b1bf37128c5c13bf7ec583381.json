@@ -1,0 +1,5 @@
+{
+ "model": "azure-openai/gpt-5.4-mini",
+ "recorded_at": "2026-10-22T15:59:36.558213+00:00",
+ "response": "{\"employee_name\":\"Sam Ashcombe\",\"employer_name\":\"Glimmerstone Health Clinic\",\"wages\":62550.59,\"tax_year\":\"2025\"}"
+}

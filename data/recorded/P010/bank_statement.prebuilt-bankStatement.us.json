@@ -1,7 +1,7 @@
 {
  "_source": "azure",
  "_model_id": "prebuilt-bankStatement.us",
- "_recorded_at": "2026-10-22T14:02:36.210817+00:00",
+ "_recorded_at": "2026-10-22T16:05:23.393289+00:00",
  "result": {
   "apiVersion": "2024-11-30",
   "modelId": "prebuilt-bankStatement.us",

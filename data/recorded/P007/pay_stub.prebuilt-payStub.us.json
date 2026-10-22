@@ -1,7 +1,7 @@
 {
  "_source": "azure",
  "_model_id": "prebuilt-payStub.us",
- "_recorded_at": "2026-10-22T13:59:53.173424+00:00",
+ "_recorded_at": "2026-10-22T16:03:00.794091+00:00",
  "result": {
   "apiVersion": "2024-11-30",
   "modelId": "prebuilt-payStub.us",
@@ -27,7 +27,7 @@
        0.6933,
        0.8568
       ],
-      "confidence": 0.994,
+      "confidence": 0.995,
       "span": {
        "offset": 0,
        "length": 8
@@ -387,7 +387,7 @@
        5.1239,
        2.1985
       ],
-      "confidence": 0.995,
+      "confidence": 0.994,
       "span": {
        "offset": 177,
        "length": 5
@@ -711,7 +711,7 @@
        6.8812,
        3.7091
       ],
-      "confidence": 0.985,
+      "confidence": 0.984,
       "span": {
        "offset": 305,
        "length": 4
@@ -999,7 +999,7 @@
        0.9523,
        4.3398
       ],
-      "confidence": 0.998,
+      "confidence": 0.997,
       "span": {
        "offset": 415,
        "length": 3
@@ -1071,7 +1071,7 @@
        2.4625,
        6.8277
       ],
-      "confidence": 0.987,
+      "confidence": 0.988,
       "span": {
        "offset": 447,
        "length": 1
@@ -1305,7 +1305,7 @@
        5.6559,
        10.6127
       ],
-      "confidence": 0.997,
+      "confidence": 0.996,
       "span": {
        "offset": 522,
        "length": 3

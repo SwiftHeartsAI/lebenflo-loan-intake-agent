@@ -1,6 +1,6 @@
 -- Analytics views an intake manager (or a Power BI report) would use.
--- Portable between Azure SQL (T-SQL) and DuckDB: no ORDER BY inside views (T-SQL disallows it),
--- explicit GROUP BY columns, and one statement per view.
+-- Portable SQL: no ORDER BY inside views (SQL Server disallows it), explicit GROUP BY columns,
+-- one statement per view.
 
 -- How often each rule fires, as a share of all packets.
 CREATE VIEW lebenflo.v_exception_rate_by_rule AS
@@ -41,7 +41,7 @@ FROM lebenflo.documents
 GROUP BY doc_type, method, model_id;
 
 -- Loan amount as a share of annual income: an intake-time affordability indicator.
--- (Not DTI: true DTI needs monthly debt payments, which underwriting collects; see policy LP-5.)
+-- (Not DTI: true DTI needs monthly debt payments, which underwriting collects.)
 CREATE VIEW lebenflo.v_loan_to_income AS
 SELECT
     packet_id,

@@ -1,16 +1,16 @@
 {
  "_source": "azure",
  "_model_id": "prebuilt-payStub.us",
- "_recorded_at": "2026-10-22T13:58:04.622356+00:00",
+ "_recorded_at": "2026-10-22T15:59:54.115819+00:00",
  "result": {
   "apiVersion": "2024-11-30",
   "modelId": "prebuilt-payStub.us",
   "stringIndexType": "textElements",
-  "content": "EARNINGS STATEMENT Vantrell Hydroponics - Payroll Department\nEmployer:\nVantrell Hydroponics\nEmployee Name:\nLiz Thistlewood\nEmployee Address:\n9302 Birchend Ct, Northmarch City, NM 00000\nSocial Security Number:\n934-18-4456\nPay Period Start:\n09/16/2026\nPay Period End:\n09/30/2026\nPay Date:\n10/03/2026\nEarnings\nCurrent\nYear to Date\nGross Pay\n$3,416.67\n$61,500.06\nSAMPLE - SYNTHETIC TES4, 00\nTaxes and Deductions\n$820.00\n$14,760.01\nNet Pay\n$2,596.67\n$46,740.05\nDATA\nSAMPLE - SYNTHETIC TEST DATA - fictional document, not valid for any use",
+  "content": "EARNINGS STATEMENT Vantrell Hydroponics - Payroll Department\nEmployer:\nVantrell Hydroponics\nEmployee Name:\nLiz Thistlewood\nEmployee Address:\n9302 Birchend Ct, Northmarch City, NM 00000\nSocial Security Number:\n934-18-4456\nPay Period Start:\n09/16/2026\nPay Period End:\n09/30/2026\nPay Date:\n10/03/2026\nEarnings\nCurrent\nYear to Date\nGross Pay\n$3,416.67\n$61,500.06\nSAMPLE - SYNTHETIC TES4,00\nTaxes and Deductions\n$820.00\n$14,760.01\nNet Pay\n$2,596.67\n$46,740.05\nDATA\nSAMPLE - SYNTHETIC TEST DATA - fictional document, not valid for any use",
   "pages": [
    {
     "pageNumber": 1,
-    "angle": -0.07129999995231628,
+    "angle": -0.0714000016450882,
     "width": 8.5,
     "height": 11,
     "unit": "inch",
@@ -189,7 +189,7 @@
        3.5716,
        1.7016
       ],
-      "confidence": 0.994,
+      "confidence": 0.995,
       "span": {
        "offset": 80,
        "length": 11
@@ -279,7 +279,7 @@
        0.69,
        2.2007
       ],
-      "confidence": 0.995,
+      "confidence": 0.994,
       "span": {
        "offset": 123,
        "length": 8
@@ -333,7 +333,7 @@
        3.4076,
        2.194
       ],
-      "confidence": 0.995,
+      "confidence": 0.996,
       "span": {
        "offset": 146,
        "length": 8
@@ -369,7 +369,7 @@
        4.2112,
        2.1965
       ],
-      "confidence": 0.994,
+      "confidence": 0.995,
       "span": {
        "offset": 159,
        "length": 10
@@ -387,7 +387,7 @@
        4.9711,
        2.1972
       ],
-      "confidence": 0.994,
+      "confidence": 0.995,
       "span": {
        "offset": 170,
        "length": 5
@@ -441,7 +441,7 @@
        0.691,
        2.4476
       ],
-      "confidence": 0.995,
+      "confidence": 0.996,
       "span": {
        "offset": 185,
        "length": 6
@@ -657,7 +657,7 @@
        0.688,
        3.1998
       ],
-      "confidence": 0.996,
+      "confidence": 0.997,
       "span": {
        "offset": 277,
        "length": 3
@@ -909,46 +909,28 @@
        2.8535,
        6.5402
       ],
-      "confidence": 0.948,
+      "confidence": 0.954,
       "span": {
        "offset": 368,
        "length": 9
       }
      },
      {
-      "content": "TES4,",
+      "content": "TES4,00",
       "polygon": [
        5.2353,
        4.1405,
-       6.1332,
-       3.6147,
-       6.3635,
-       4.0353,
-       5.5052,
-       4.5997
-      ],
-      "confidence": 0.096,
-      "span": {
-       "offset": 378,
-       "length": 5
-      }
-     },
-     {
-      "content": "00",
-      "polygon": [
-       6.2223,
-       3.5643,
        7.0455,
        3.0393,
        7.2604,
        3.4724,
-       6.4492,
-       3.9883
+       5.5052,
+       4.5997
       ],
-      "confidence": 0.092,
+      "confidence": 0.093,
       "span": {
-       "offset": 384,
-       "length": 2
+       "offset": 378,
+       "length": 7
       }
      },
      {
@@ -965,7 +947,7 @@
       ],
       "confidence": 0.995,
       "span": {
-       "offset": 387,
+       "offset": 386,
        "length": 5
       }
      },
@@ -983,7 +965,7 @@
       ],
       "confidence": 0.998,
       "span": {
-       "offset": 393,
+       "offset": 392,
        "length": 3
       }
      },
@@ -1001,7 +983,7 @@
       ],
       "confidence": 0.993,
       "span": {
-       "offset": 397,
+       "offset": 396,
        "length": 10
       }
      },
@@ -1019,7 +1001,7 @@
       ],
       "confidence": 0.995,
       "span": {
-       "offset": 408,
+       "offset": 407,
        "length": 7
       }
      },
@@ -1037,7 +1019,7 @@
       ],
       "confidence": 0.993,
       "span": {
-       "offset": 416,
+       "offset": 415,
        "length": 10
       }
      },
@@ -1055,7 +1037,7 @@
       ],
       "confidence": 0.996,
       "span": {
-       "offset": 427,
+       "offset": 426,
        "length": 3
       }
      },
@@ -1073,7 +1055,7 @@
       ],
       "confidence": 0.997,
       "span": {
-       "offset": 431,
+       "offset": 430,
        "length": 3
       }
      },
@@ -1091,7 +1073,7 @@
       ],
       "confidence": 0.993,
       "span": {
-       "offset": 435,
+       "offset": 434,
        "length": 9
       }
      },
@@ -1109,7 +1091,7 @@
       ],
       "confidence": 0.994,
       "span": {
-       "offset": 445,
+       "offset": 444,
        "length": 10
       }
      },
@@ -1127,7 +1109,7 @@
       ],
       "confidence": 0.989,
       "span": {
-       "offset": 456,
+       "offset": 455,
        "length": 4
       }
      },
@@ -1145,7 +1127,7 @@
       ],
       "confidence": 0.994,
       "span": {
-       "offset": 461,
+       "offset": 460,
        "length": 6
       }
      },
@@ -1163,7 +1145,7 @@
       ],
       "confidence": 0.992,
       "span": {
-       "offset": 468,
+       "offset": 467,
        "length": 1
       }
      },
@@ -1175,13 +1157,13 @@
        3.4894,
        10.4861,
        3.4886,
-       10.6061,
+       10.606,
        2.8625,
        10.6042
       ],
       "confidence": 0.995,
       "span": {
-       "offset": 470,
+       "offset": 469,
        "length": 9
       }
      },
@@ -1199,7 +1181,7 @@
       ],
       "confidence": 0.992,
       "span": {
-       "offset": 480,
+       "offset": 479,
        "length": 4
       }
      },
@@ -1217,7 +1199,7 @@
       ],
       "confidence": 0.989,
       "span": {
-       "offset": 485,
+       "offset": 484,
        "length": 4
       }
      },
@@ -1235,7 +1217,7 @@
       ],
       "confidence": 0.994,
       "span": {
-       "offset": 490,
+       "offset": 489,
        "length": 1
       }
      },
@@ -1253,7 +1235,7 @@
       ],
       "confidence": 0.992,
       "span": {
-       "offset": 492,
+       "offset": 491,
        "length": 9
       }
      },
@@ -1271,7 +1253,7 @@
       ],
       "confidence": 0.993,
       "span": {
-       "offset": 502,
+       "offset": 501,
        "length": 9
       }
      },
@@ -1289,7 +1271,7 @@
       ],
       "confidence": 0.997,
       "span": {
-       "offset": 512,
+       "offset": 511,
        "length": 3
       }
      },
@@ -1298,16 +1280,16 @@
       "polygon": [
        5.3983,
        10.4922,
-       5.6219,
+       5.6218,
        10.4935,
        5.6215,
        10.6125,
        5.398,
        10.6118
       ],
-      "confidence": 0.996,
+      "confidence": 0.997,
       "span": {
-       "offset": 516,
+       "offset": 515,
        "length": 5
       }
      },
@@ -1325,7 +1307,7 @@
       ],
       "confidence": 0.997,
       "span": {
-       "offset": 522,
+       "offset": 521,
        "length": 3
       }
      },
@@ -1343,7 +1325,7 @@
       ],
       "confidence": 0.998,
       "span": {
-       "offset": 526,
+       "offset": 525,
        "length": 3
       }
      },
@@ -1361,7 +1343,7 @@
       ],
       "confidence": 0.997,
       "span": {
-       "offset": 530,
+       "offset": 529,
        "length": 3
       }
      }
@@ -1786,7 +1768,7 @@
       ]
      },
      {
-      "content": "SAMPLE - SYNTHETIC TES4, 00",
+      "content": "SAMPLE - SYNTHETIC TES4,00",
       "polygon": [
        0.1937,
        7.7198,
@@ -1800,7 +1782,7 @@
       "spans": [
        {
         "offset": 359,
-        "length": 27
+        "length": 26
        }
       ]
      },
@@ -1818,7 +1800,7 @@
       ],
       "spans": [
        {
-        "offset": 387,
+        "offset": 386,
         "length": 20
        }
       ]
@@ -1837,7 +1819,7 @@
       ],
       "spans": [
        {
-        "offset": 408,
+        "offset": 407,
         "length": 7
        }
       ]
@@ -1856,7 +1838,7 @@
       ],
       "spans": [
        {
-        "offset": 416,
+        "offset": 415,
         "length": 10
        }
       ]
@@ -1875,7 +1857,7 @@
       ],
       "spans": [
        {
-        "offset": 427,
+        "offset": 426,
         "length": 7
        }
       ]
@@ -1894,7 +1876,7 @@
       ],
       "spans": [
        {
-        "offset": 435,
+        "offset": 434,
         "length": 9
        }
       ]
@@ -1913,7 +1895,7 @@
       ],
       "spans": [
        {
-        "offset": 445,
+        "offset": 444,
         "length": 10
        }
       ]
@@ -1926,13 +1908,13 @@
        7.8248,
        2.4967,
        8.096,
-       2.8718,
+       2.8717,
        6.8882,
        3.7091
       ],
       "spans": [
        {
-        "offset": 456,
+        "offset": 455,
         "length": 4
        }
       ]
@@ -1951,7 +1933,7 @@
       ],
       "spans": [
        {
-        "offset": 461,
+        "offset": 460,
         "length": 72
        }
       ]
@@ -1960,7 +1942,7 @@
     "spans": [
      {
       "offset": 0,
-      "length": 533
+      "length": 532
      }
     ]
    }
@@ -2004,10 +1986,10 @@
         ]
        }
       ],
-      "confidence": 0.954,
+      "confidence": 0.956,
       "spans": [
        {
-        "offset": 408,
+        "offset": 407,
         "length": 7
        }
       ]
@@ -2061,7 +2043,7 @@
       "confidence": 0.973,
       "spans": [
        {
-        "offset": 435,
+        "offset": 434,
         "length": 9
        }
       ]
@@ -2085,10 +2067,10 @@
         ]
        }
       ],
-      "confidence": 0.865,
+      "confidence": 0.862,
       "spans": [
        {
-        "offset": 408,
+        "offset": 407,
         "length": 7
        }
       ]
@@ -2308,10 +2290,10 @@
         ]
        }
       ],
-      "confidence": 0.9,
+      "confidence": 0.904,
       "spans": [
        {
-        "offset": 416,
+        "offset": 415,
         "length": 10
        }
       ]
@@ -2335,7 +2317,7 @@
         ]
        }
       ],
-      "confidence": 0.808,
+      "confidence": 0.934,
       "spans": [
        {
         "offset": 348,
@@ -2362,10 +2344,10 @@
         ]
        }
       ],
-      "confidence": 0.862,
+      "confidence": 0.894,
       "spans": [
        {
-        "offset": 445,
+        "offset": 444,
         "length": 10
        }
       ]
@@ -2375,7 +2357,7 @@
     "spans": [
      {
       "offset": 0,
-      "length": 533
+      "length": 532
      }
     ]
    }

@@ -1,38 +1,22 @@
 """Load agent results into SQL tables and build the analytics views in sql/.
 
-Two targets, same SQL files:
-- Azure SQL Database (live): the real warehouse, loaded with pymssql.
-- DuckDB (offline): an in-process copy for tests and the public demo, so the database itself
-  is never exposed to the internet.
+DuckDB is an in-process SQL database, so the demo needs no server. The schema and views are
+plain, portable SQL files, so the same pipeline could target Azure SQL or Snowflake by swapping
+the connection.
 
-After an Azure SQL load, the view results are read back from Azure SQL and saved to
-data/recorded/azure_sql_views.json, so the demo can show what Azure SQL returned.
-
-Usage:  uv run python -m lebenflo.warehouse              # DuckDB file (data/warehouse.duckdb)
-        uv run python -m lebenflo.warehouse --azure-sql  # also load Azure SQL Database
+Usage:  uv run python -m lebenflo.warehouse     (writes data/warehouse.duckdb)
 """
 
-import argparse
 import json
-from datetime import UTC, datetime
-from decimal import Decimal
 
 import duckdb
 
-from lebenflo.config import (
-    AZURE_SQL_SNAPSHOT,
-    GROUND_TRUTH_DIR,
-    RUNS_DIR,
-    SQL_DIR,
-    WAREHOUSE_DB,
-    Settings,
-    get_settings,
-)
+from lebenflo.config import GROUND_TRUTH_DIR, RUNS_DIR, SQL_DIR, WAREHOUSE_DB
 from lebenflo.eval.__main__ import values_match
 from lebenflo.validate.rules import DECISION_FIELDS, periods_per_year
 
-TABLES = ["packets", "documents", "fields", "findings", "policy_refs"]
-# View name -> ORDER BY used when displaying it (T-SQL doesn't allow ORDER BY inside a view).
+TABLES = ["packets", "documents", "fields", "findings"]
+# View name -> ORDER BY used when displaying it (SQL Server doesn't allow ORDER BY inside a view).
 VIEWS = {
     "v_exception_rate_by_rule": "packets_flagged DESC",
     "v_field_quality": "accuracy_pct, avg_confidence",
@@ -78,9 +62,6 @@ def collect_rows(states: list[dict]) -> dict[str, list[tuple]]:
                 ))  # fmt: skip
         for finding in state["findings"]:
             rows["findings"].append((pid, finding["rule_id"], finding["message"]))
-        for ref in state.get("policy_refs", []):
-            for rank, m in enumerate(ref["matches"], start=1):
-                rows["policy_refs"].append((pid, ref["query"], rank, m["section_id"], m["score"]))
     return rows
 
 
@@ -94,72 +75,23 @@ def sql_statements(filename: str) -> list[str]:
     return [s.strip() for s in "\n".join(lines).split(";") if s.strip()]
 
 
-def load(con, rows: dict[str, list[tuple]], placeholder: str) -> None:
-    """Drop and recreate everything in the lebenflo schema, insert rows, create views."""
-    cur = con.cursor()
-    for view in VIEWS:
-        cur.execute(f"DROP VIEW IF EXISTS lebenflo.{view}")
-    for table in TABLES:
-        cur.execute(f"DROP TABLE IF EXISTS lebenflo.{table}")
-    for statement in sql_statements("schema.sql"):
-        cur.execute(statement)
-    for table, table_rows in rows.items():
-        if table_rows:
-            marks = ", ".join([placeholder] * len(table_rows[0]))
-            cur.executemany(f"INSERT INTO lebenflo.{table} VALUES ({marks})", table_rows)
-    for statement in sql_statements("views.sql"):
-        cur.execute(statement)  # T-SQL needs each CREATE VIEW in its own batch
-    con.commit()
-
-
-def build_duckdb(states: list[dict], db_path: str = ":memory:") -> duckdb.DuckDBPyConnection:
+def build_warehouse(states: list[dict], db_path: str = ":memory:") -> duckdb.DuckDBPyConnection:
+    """Create the lebenflo schema from sql/, insert the rows, and create the views."""
     con = duckdb.connect(db_path)
     con.execute("CREATE SCHEMA IF NOT EXISTS lebenflo")
-    load(con, collect_rows(states), placeholder="?")
-    return con
-
-
-def load_azure_sql(states: list[dict], settings: Settings) -> dict:
-    """Load Azure SQL Database, read every view back, and record the results."""
-    import pymssql
-
-    if not (settings.sql_server and settings.sql_user and settings.sql_password):
-        raise RuntimeError("Set AZURE_SQL_SERVER, AZURE_SQL_USER and AZURE_SQL_PASSWORD in .env")
-    con = pymssql.connect(
-        server=settings.sql_server,
-        user=settings.sql_user,
-        password=settings.sql_password,
-        database=settings.sql_database,
-        login_timeout=60,  # a serverless database may need time to resume from auto-pause
-    )
-    cur = con.cursor()
-    cur.execute("IF SCHEMA_ID('lebenflo') IS NULL EXEC('CREATE SCHEMA lebenflo')")
-    load(con, collect_rows(states), placeholder="%s")
-
-    cur.execute("SELECT @@VERSION")
-    version = cur.fetchone()[0].splitlines()[0]
-    snapshot = {
-        "engine": version,
-        "server": settings.sql_server.split(".")[0],
-        "database": settings.sql_database,
-        "loaded_at": datetime.now(UTC).isoformat(),
-        "row_counts": {},
-        "views": {},
-    }
+    for view in VIEWS:
+        con.execute(f"DROP VIEW IF EXISTS lebenflo.{view}")
     for table in TABLES:
-        cur.execute(f"SELECT COUNT(*) FROM lebenflo.{table}")
-        snapshot["row_counts"][table] = cur.fetchone()[0]
-    for view, order in VIEWS.items():
-        cur.execute(f"SELECT * FROM lebenflo.{view} ORDER BY {order}")
-        snapshot["views"][view] = {
-            "columns": [c[0] for c in cur.description],
-            "rows": [
-                [float(v) if isinstance(v, Decimal) else v for v in r] for r in cur.fetchall()
-            ],
-        }
-    con.close()
-    AZURE_SQL_SNAPSHOT.write_text(json.dumps(snapshot, indent=1))
-    return snapshot
+        con.execute(f"DROP TABLE IF EXISTS lebenflo.{table}")
+    for statement in sql_statements("schema.sql"):
+        con.execute(statement)
+    for table, table_rows in collect_rows(states).items():
+        if table_rows:
+            marks = ", ".join(["?"] * len(table_rows[0]))
+            con.executemany(f"INSERT INTO lebenflo.{table} VALUES ({marks})", table_rows)
+    for statement in sql_statements("views.sql"):
+        con.execute(statement)
+    return con
 
 
 def load_states() -> list[dict]:
@@ -167,16 +99,10 @@ def load_states() -> list[dict]:
 
 
 def main() -> None:
-    parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--azure-sql", action="store_true", help="also load Azure SQL Database")
-    args = parser.parse_args()
-    states = load_states()
     WAREHOUSE_DB.parent.mkdir(parents=True, exist_ok=True)
-    con = build_duckdb(states, str(WAREHOUSE_DB))
+    con = build_warehouse(load_states(), str(WAREHOUSE_DB))
     print(con.sql("SELECT * FROM lebenflo.v_exception_rate_by_rule ORDER BY packets_flagged DESC"))
-    if args.azure_sql:
-        snap = load_azure_sql(states, get_settings())
-        print(f"Loaded Azure SQL ({snap['engine']}): {snap['row_counts']}")
+    print(f"Saved {WAREHOUSE_DB}")
 
 
 if __name__ == "__main__":

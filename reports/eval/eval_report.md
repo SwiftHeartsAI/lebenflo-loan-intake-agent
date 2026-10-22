@@ -1,6 +1,6 @@
 # Evaluation report
 
-Run at 2026-10-22T14:04:45.661688+00:00 · extraction sources: {'azure': 39}
+Run at 2026-10-22T16:06:44.299204+00:00 · extraction sources: {'azure': 39}
 
 ## Summary
 | Metric | Value |

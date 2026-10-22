@@ -1,7 +1,7 @@
 {
  "_source": "azure",
  "_model_id": "prebuilt-payStub.us",
- "_recorded_at": "2026-10-22T13:58:58.233121+00:00",
+ "_recorded_at": "2026-10-22T16:00:47.496925+00:00",
  "result": {
   "apiVersion": "2024-11-30",
   "modelId": "prebuilt-payStub.us",
@@ -81,7 +81,7 @@
        1.2394,
        1.115
       ],
-      "confidence": 0.996,
+      "confidence": 0.997,
       "span": {
        "offset": 27,
        "length": 7
@@ -387,7 +387,7 @@
        3.9101,
        2.2014
       ],
-      "confidence": 0.989,
+      "confidence": 0.988,
       "span": {
        "offset": 159,
        "length": 4
@@ -477,7 +477,7 @@
        0.6909,
        2.4481
       ],
-      "confidence": 0.997,
+      "confidence": 0.996,
       "span": {
        "offset": 190,
        "length": 6
@@ -531,7 +531,7 @@
        3.0506,
        2.4382
       ],
-      "confidence": 0.995,
+      "confidence": 0.994,
       "span": {
        "offset": 214,
        "length": 11
@@ -999,7 +999,7 @@
        5.8309,
        4.0856
       ],
-      "confidence": 0.993,
+      "confidence": 0.992,
       "span": {
        "offset": 398,
        "length": 10
@@ -1035,7 +1035,7 @@
        0.9515,
        4.3401
       ],
-      "confidence": 0.996,
+      "confidence": 0.995,
       "span": {
        "offset": 413,
        "length": 3
@@ -1125,7 +1125,7 @@
        2.86,
        6.5443
       ],
-      "confidence": 0.993,
+      "confidence": 0.992,
       "span": {
        "offset": 447,
        "length": 9
@@ -1143,7 +1143,7 @@
        5.5339,
        4.6641
       ],
-      "confidence": 0.995,
+      "confidence": 0.994,
       "span": {
        "offset": 457,
        "length": 1
@@ -1161,7 +1161,7 @@
        2.2814,
        10.6044
       ],
-      "confidence": 0.996,
+      "confidence": 0.995,
       "span": {
        "offset": 459,
        "length": 6
@@ -1197,7 +1197,7 @@
        2.8633,
        10.6047
       ],
-      "confidence": 0.995,
+      "confidence": 0.993,
       "span": {
        "offset": 468,
        "length": 9
@@ -1264,7 +1264,7 @@
        10.488,
        4.6273,
        10.4892,
-       4.6265,
+       4.6264,
        10.6094,
        4.252,
        10.6076
@@ -1341,7 +1341,7 @@
        5.6561,
        10.6131
       ],
-      "confidence": 0.998,
+      "confidence": 0.997,
       "span": {
        "offset": 520,
        "length": 3
@@ -1924,7 +1924,7 @@
        4.1955,
        6.5301,
        4.1853,
-       6.5322,
+       6.5321,
        4.326,
        5.8259,
        4.3362
@@ -2102,7 +2102,7 @@
         ]
        }
       ],
-      "confidence": 0.777,
+      "confidence": 0.776,
       "spans": [
        {
         "offset": 146,
@@ -2164,7 +2164,7 @@
         ]
        }
       ],
-      "confidence": 0.954,
+      "confidence": 0.953,
       "spans": [
        {
         "offset": 214,
@@ -2299,7 +2299,7 @@
         ]
        }
       ],
-      "confidence": 0.9,
+      "confidence": 0.899,
       "spans": [
        {
         "offset": 398,

@@ -1,7 +1,7 @@
 -- Intake results, one row per packet / document / field / finding / policy match.
--- Portable SQL: runs unchanged on Azure SQL Database (T-SQL) and on DuckDB (the local snapshot
--- the public demo uses). Everything lives in its own "lebenflo" schema so it can share a
--- database safely. Flags are SMALLINT 0/1 because T-SQL has no BOOLEAN.
+-- Runs on DuckDB, and is written in portable SQL (explicit lengths, SMALLINT flags instead of
+-- BOOLEAN) so the same file also runs on Azure SQL Database / SQL Server or Snowflake.
+-- Everything lives in its own "lebenflo" schema so it can share a database safely.
 
 CREATE TABLE lebenflo.packets (
     packet_id         VARCHAR(10) PRIMARY KEY,
@@ -37,12 +37,4 @@ CREATE TABLE lebenflo.findings (
     packet_id VARCHAR(10),
     rule_id   VARCHAR(10),
     message   VARCHAR(200)
-);
-
-CREATE TABLE lebenflo.policy_refs (
-    packet_id   VARCHAR(10),
-    query_key   VARCHAR(10),   -- rule ID, or APPROVE
-    match_rank  INTEGER,
-    section_id  VARCHAR(10),
-    score       DECIMAL(10, 6)
 );

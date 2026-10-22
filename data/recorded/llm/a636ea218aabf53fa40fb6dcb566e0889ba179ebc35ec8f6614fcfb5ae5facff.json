@@ -1,0 +1,5 @@
+{
+ "model": "azure-openai/gpt-5.4-mini",
+ "recorded_at": "2026-10-22T15:57:37.489495+00:00",
+ "response": "Tess Marrowbrook submitted a $18,000 home improvement loan request with documents received for a bank statement, driver\u2019s license, pay stub, and W-2. The pay stub income is $77,500.08 and the W-2 wages are $77,184.44, and the bank account ending balance shown is $7,794.36 in account ****2963. One review finding flagged the bank statement ending balance field at 0.738 confidence, below the 0.80 threshold. The reviewer should check the bank statement ending balance against the source document and confirm the account balance details."
+}

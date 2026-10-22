@@ -1,8 +1,8 @@
 """Streamlit demo for the Lebenflo loan intake agent.
 
-Runs in offline mode: every Azure AI Document Intelligence, Azure OpenAI and embedding response
-is replayed from data/recorded/ (captured in a live run), so the hosted demo needs no keys and
-costs nothing, while showing real model output.
+Runs in offline mode: every Azure AI Document Intelligence and Azure OpenAI response is replayed
+from data/recorded/ (captured in a live run), so the hosted demo needs no keys and costs nothing,
+while showing real model output.
 
 Run locally:  uv run streamlit run streamlit_app.py
 """
@@ -18,7 +18,6 @@ from lebenflo.config import (
     AUDIT_LOG,
     GROUND_TRUTH_DIR,
     PACKETS_DIR,
-    POLICY_FILE,
     SQL_DIR,
     Settings,
     get_settings,
@@ -26,29 +25,15 @@ from lebenflo.config import (
 from lebenflo.eval.__main__ import evaluate, values_match
 from lebenflo.governance.pii import mask_pii
 from lebenflo.llm import OfflineLLM
-from lebenflo.rag.policy import (
-    EXPECTED_SECTION,
-    RULE_QUERIES,
-    index_is_current,
-    load_index,
-    retrieve,
-)
 from lebenflo.validate.rules import CONFIDENCE_THRESHOLD, DECISION_FIELDS
-from lebenflo.warehouse import build_warehouse
+from lebenflo.warehouse import VIEWS, build_warehouse
 
 REPO_URL = "https://github.com/SwiftHeartsAI/lebenflo-loan-intake-agent"
 NODE_LABELS = {
     "extract": "Extract fields (Document Intelligence prebuilt models, layout + LLM fallback)",
     "validate": "Validate (rules V-001 to V-004)",
-    "policy_check": "Policy check (RAG over the lending policy)",
     "decide": "Decide (approve for underwriting or escalate, never decline)",
     "memo": "Write memo (LLM summary of PII-masked facts)",
-}
-RULE_NAMES = {
-    "V-001": "Name mismatch across documents",
-    "V-002": "Pay stub vs W-2 income gap > 10%",
-    "V-003": "Required document missing",
-    "V-004": f"Decision field below {CONFIDENCE_THRESHOLD:.2f} confidence",
 }
 
 st.set_page_config(page_title="Lebenflo Loan Intake Agent", page_icon="🏦", layout="wide")
@@ -89,6 +74,14 @@ def packet_label(pid: str) -> str:
     return f"{pid} – {t['applicant']['full_name']}{flaw}"
 
 
+def view_sql(view: str) -> str:
+    """The CREATE VIEW statement for one view, with its comment, from sql/views.sql."""
+    text = (SQL_DIR / "views.sql").read_text()
+    start = text.find(f"CREATE VIEW lebenflo.{view}")
+    block_start = text.rfind("\n\n", 0, start) + 2
+    return text[block_start : text.find(";", start) + 1]
+
+
 # ---------- sidebar ----------
 
 with st.sidebar:
@@ -98,9 +91,8 @@ with st.sidebar:
         "are synthetic test data."
     )
     st.markdown(
-        "An AI workflow agent that reads a member's loan packet, cross-checks the documents "
-        "against each other and the lending policy, and routes it to underwriting or to a human. "
-        "**It never declines a loan.**"
+        "An AI workflow agent that reads a member's loan packet, cross-checks the documents, "
+        "and routes it to underwriting or to a human reviewer. **It never declines a loan.**"
     )
     st.info(
         "**Demo mode:** replays the real Azure responses recorded in a live run. "
@@ -110,8 +102,8 @@ with st.sidebar:
 
 st.title("Loan Document Intake Agent")
 st.caption(
-    "Azure AI Document Intelligence · Azure OpenAI (AI Foundry) · LangGraph · RAG · "
-    "DuckDB SQL · Arize Phoenix · PII masking & audit trail"
+    "Azure AI Document Intelligence · Azure OpenAI (AI Foundry) · LangGraph · SQL analytics · "
+    "Arize Phoenix · PII masking & audit trail"
 )
 
 tab_demo, tab_eval, tab_sql, tab_gov, tab_arch = st.tabs(
@@ -146,11 +138,11 @@ with tab_demo:
         else:
             st.warning(f"**{state['outcome']}**: a human reviewer must look at this packet.")
         for reason in state["reasons"]:
-            st.markdown(f"- `{reason.split(':')[0]}` {reason.split(':', 1)[1].strip()}")
-        expected = truth["expected_outcome"]
+            rule_id, message = reason.split(":", 1)
+            st.markdown(f"- `{rule_id}` {message.strip()}")
         st.caption(
             f"Ground truth: injected flaw = {truth['flaw'] or 'none'}, "
-            f"expected outcome = {expected}, expected rule = "
+            f"expected outcome = {truth['expected_outcome']}, expected rule = "
             f"{', '.join(truth['expected_reasons']) or 'none'}"
         )
 
@@ -178,25 +170,22 @@ with tab_demo:
                 f"source: {doc['source']} (recorded Azure response)"
             )
             truth_fields = truth["documents"].get(doc_type, {}).get("fields", {})
-            rows = [
-                {
-                    "field": name,
-                    "extracted": f["value"],
-                    "confidence": round(f["confidence"], 3),
-                    "used by rules": name in DECISION_FIELDS[doc_type],
-                    "matches ground truth": values_match(truth_fields.get(name), f["value"]),
-                }
-                for name, f in doc["fields"].items()
-            ]
-            df = pd.DataFrame(rows)
-            df["extracted"] = df["extracted"].astype(str)
+            df = pd.DataFrame(
+                [
+                    {
+                        "field": name,
+                        "extracted": str(f["value"]),
+                        "confidence": round(f["confidence"], 3),
+                        "used by rules": name in DECISION_FIELDS[doc_type],
+                        "matches ground truth": values_match(truth_fields.get(name), f["value"]),
+                    }
+                    for name, f in doc["fields"].items()
+                ]
+            )
+            low = "background-color: rgba(255,170,0,.25)"
             st.dataframe(
                 df.style.apply(
-                    lambda r: (
-                        ["background-color: rgba(255,170,0,.25)"] * len(r)
-                        if r["confidence"] < CONFIDENCE_THRESHOLD
-                        else [""] * len(r)
-                    ),
+                    lambda r: [low if r["confidence"] < CONFIDENCE_THRESHOLD else ""] * len(r),
                     axis=1,
                 ),
                 hide_index=True,
@@ -204,24 +193,9 @@ with tab_demo:
             )
             st.caption(
                 f"Highlighted rows are below the {CONFIDENCE_THRESHOLD:.2f} confidence threshold. "
-                "SSNs appear here because this is synthetic data, but they are masked "
-                "before any text is sent to the LLM."
+                "SSNs appear here because this is synthetic data, but they are masked before any "
+                "text is sent to the LLM."
             )
-
-            st.subheader("Policy check (RAG)")
-            if not state.get("policy_refs"):
-                st.info("Policy index not built yet.")
-            for ref in state.get("policy_refs", []):
-                top = ref["matches"][0]
-                with st.expander(
-                    f"{ref['query']} → {top['section_id']} {top['title']} "
-                    f"(similarity {top['score']:.3f})"
-                ):
-                    st.markdown(f"**Query:** _{RULE_QUERIES[ref['query']]}_")
-                    for m in ref["matches"]:
-                        st.markdown(
-                            f"**{m['section_id']} {m['title']}** · score {m['score']:.3f}\n\n{m['text']}"
-                        )
 
         st.subheader("Intake memo")
         with st.container(border=True):
@@ -237,7 +211,7 @@ with tab_eval:
         f"Extraction source: **{', '.join(results['extraction_sources'])}** "
         "(real Azure AI Document Intelligence responses)."
     )
-    c1, c2, c3, c4 = st.columns(4)
+    c1, c2, c3 = st.columns(3)
     c1.metric(
         "Field-level extraction accuracy",
         f"{f['overall']:.1%}",
@@ -245,25 +219,21 @@ with tab_eval:
     )
     c2.metric("Flawed packets caught (right rule)", e["flawed_caught_by_expected_rule"])
     c3.metric("Clean packets passed to underwriting", e["clean_approved"])
-    index = load_index()
-    if index:
-        hits = sum(retrieve(index, k, 1)[0]["section_id"] == v for k, v in EXPECTED_SECTION.items())
-        c4.metric("RAG retrieval hit@1", f"{hits}/{len(EXPECTED_SECTION)}")
 
     st.markdown("#### What the numbers say")
     st.markdown(
         "- **No flaw was missed.** Name mismatch, income gap and missing document were each "
         "escalated for the right rule.\n"
         "- **The agent is over-cautious.** Document Intelligence reads the bank statement's ending "
-        "balance correctly every time, but at **0.737 confidence**, just under the 0.80 threshold, so "
-        "V-004 sends clean packets to a human. That's the safe failure mode, and the fix is per-field "
-        "calibration. I did not tune the threshold on these same 10 packets, because that would be "
-        "overfitting the test set.\n"
+        "balance correctly every time, but at **0.737 confidence**, just under the 0.80 threshold, "
+        "so V-004 sends clean packets to a human. That's the safe failure mode, and the fix is "
+        "per-field calibration. I did not tune the threshold on these same 10 packets, because "
+        "that would be overfitting the test set.\n"
         "- **The confidence gate caught a real error.** On P008 the model swapped day and month on "
         "the license dates (at 0.49–0.72 confidence), and V-004 escalated it.\n"
-        "- **The W-2 fell back to layout + LLM** on every packet (the prebuilt model didn't recognise "
-        "the synthetic layout). The LLM read wages and names 100% correctly; the SSN is masked "
-        "before the LLM, so it is deliberately not extracted."
+        "- **The W-2 fell back to layout + LLM** on every packet (the prebuilt model didn't "
+        "recognise the synthetic layout). The LLM read wages and names 100% correctly; the SSN is "
+        "masked before the LLM, so it is deliberately not extracted."
     )
     st.markdown("#### Per packet")
     st.dataframe(
@@ -274,60 +244,35 @@ with tab_eval:
     st.markdown("#### Per field accuracy")
     per_field = pd.DataFrame([{"field": k, "accuracy": v} for k, v in f["per_field"].items()])
     st.bar_chart(per_field, x="field", y="accuracy", horizontal=True, height=620)
-    if index:
-        st.markdown("#### RAG retrieval")
-        st.dataframe(
-            pd.DataFrame(
-                [
-                    {
-                        "query (rule)": k,
-                        "expected section": v,
-                        "retrieved #1": (top := retrieve(index, k, 2))[0]["section_id"],
-                        "score #1": top[0]["score"],
-                        "retrieved #2": top[1]["section_id"],
-                        "score #2": top[1]["score"],
-                        "hit@1": top[0]["section_id"] == v,
-                    }
-                    for k, v in EXPECTED_SECTION.items()
-                ]
-            ),
-            hide_index=True,
-            use_container_width=True,
-        )
-        if not index_is_current(index):
-            st.warning("The policy text changed after it was embedded; rebuild the index.")
 
 # ---------- tab 3: SQL analytics ----------
 
 with tab_sql:
     st.markdown(
-        "Agent results are loaded into **DuckDB** tables (`packets`, `documents`, `fields`, "
-        "`findings`, `policy_refs`). The analytics views are plain SQL in "
-        "[`sql/views.sql`](" + REPO_URL + "/blob/main/sql/views.sql), the same SQL you'd "
-        "run on Snowflake or feed into Power BI."
+        "Agent results are loaded into SQL tables (`packets`, `documents`, `fields`, `findings`) "
+        "in a **DuckDB** database. The analytics views are portable SQL in "
+        f"[`sql/views.sql`]({REPO_URL}/blob/main/sql/views.sql), written to run on Azure SQL or "
+        "Snowflake as well, and ready to feed a Power BI report."
     )
     con = warehouse()
-    views = {
-        "Exception rate by rule": "v_exception_rate_by_rule",
-        "Field quality (accuracy & confidence)": "v_field_quality",
-        "Outcome vs expected (ground truth)": "v_outcome_vs_expected",
-        "Extraction path by document type": "v_extraction_path",
-        "Loan-to-income by packet": "v_loan_to_income",
+    titles = {
+        "v_exception_rate_by_rule": "Exception rate by rule",
+        "v_field_quality": "Field quality (accuracy & confidence)",
+        "v_outcome_vs_expected": "Outcome vs expected (ground truth)",
+        "v_extraction_path": "Extraction path by document type",
+        "v_loan_to_income": "Loan-to-income by packet",
     }
-    choice = st.selectbox("View", list(views))
-    view_sql = (SQL_DIR / "views.sql").read_text()
-    start = view_sql.find(f"CREATE VIEW {views[choice]}")
-    block_start = view_sql.rfind("\n\n", 0, start) + 2
-    st.code(view_sql[block_start : view_sql.find(";", start) + 1], language="sql")
-    result = con.sql(f"SELECT * FROM {views[choice]}").df()
+    view = st.selectbox("View", list(VIEWS), format_func=titles.get)
+    st.code(view_sql(view), language="sql")
+    result = con.sql(f"SELECT * FROM lebenflo.{view} ORDER BY {VIEWS[view]}").df()
     st.dataframe(result, hide_index=True, use_container_width=True)
-    if choice == "Exception rate by rule":
+    if view == "v_exception_rate_by_rule":
         st.bar_chart(result, x="rule_id", y="packets_flagged")
 
     st.markdown("#### Try your own query")
     query = st.text_area(
         "Read-only SQL",
-        "SELECT rule_id, COUNT(*) AS n\nFROM findings\nGROUP BY rule_id\nORDER BY n DESC",
+        "SELECT rule_id, COUNT(*) AS n\nFROM lebenflo.findings\nGROUP BY rule_id\nORDER BY n DESC",
         height=110,
     )
     if st.button("Run query"):
@@ -344,22 +289,21 @@ with tab_sql:
 with tab_gov:
     st.markdown("#### PII masking (try it)")
     st.markdown(
-        "Document Intelligence has to read raw documents, but **no SSN, account number or "
-        "date of birth ever reaches the LLM**. Every prompt passes through one function, "
-        "`mask_pii()`, and a test asserts that no packet's SSN, DOB or account number "
-        "appears in any prompt."
+        "Document Intelligence has to read raw documents, but **no SSN, account number or date of "
+        "birth ever reaches the LLM**. Every prompt passes through one function, `mask_pii()`, "
+        "and a test asserts that no packet's SSN, DOB or account number appears in any prompt."
     )
     sample = st.text_area(
         "Text going to the LLM",
-        "Employee Bea Pennywhistle, SSN 970-47-6925, "
-        "account 0031831063, DOB: 07/03/1972, pay date 10/03/2026.",
+        "Employee Bea Pennywhistle, SSN 970-47-6925, account 0031831063, "
+        "DOB: 07/03/1972, pay date 10/03/2026.",
     )
     st.code(mask_pii(sample), language=None)
 
     st.markdown("#### Audit trail")
     st.markdown(
-        "Every step writes a JSON line: time, step, actor, model, confidence, and the "
-        "**SHA-256 hash** of the input instead of the raw document."
+        "Every step writes a JSON line: time, step, actor, model, confidence, and the **SHA-256 "
+        "hash** of the input instead of the raw document."
     )
     if AUDIT_LOG.exists():
         events = [json.loads(line) for line in AUDIT_LOG.read_text().splitlines()[-400:]]
@@ -384,10 +328,10 @@ with tab_gov:
     st.markdown(
         "- **Rules decide, the LLM explains.** Routing is deterministic and every escalation cites "
         "a rule ID, so it is consistent and auditable. The LLM never makes or recommends a credit "
-        "decision (policy LP-10).\n"
-        "- **No automated declines.** Adverse action is a human decision with ECOA notices (LP-7).\n"
-        "- **Uncertainty means escalation.** Low-confidence values go to a person (LP-6).\n"
-        "- **Grounded summaries.** The memo cites the policy sections retrieved for each finding.\n"
+        "decision.\n"
+        "- **No automated declines.** Adverse action is a human decision, with the notices fair "
+        "lending rules require.\n"
+        "- **Uncertainty means escalation.** Values read with low confidence go to a person.\n"
         "- **Synthetic data only.** Never-issued SSN range 900–999, fictional employers, and a "
         "watermark on every page."
     )
@@ -402,15 +346,14 @@ digraph {
   extract [label="extract\\nDocument Intelligence\\nprebuilt models"];
   fallback [label="layout + LLM\\nfallback", fillcolor="#f3eefb"];
   validate [label="validate\\nrules V-001…V-004"];
-  policy [label="policy_check\\nRAG: embeddings +\\ncosine search"];
   decide [label="decide\\napprove for UW /\\nescalate"];
   memo [label="memo\\nLLM summary\\n(PII masked)", fillcolor="#f3eefb"];
   audit [label="Audit log\\n(hashes, no PII)", shape=cylinder, fillcolor="#eef8ee"];
-  wh [label="DuckDB\\nSQL views", shape=cylinder, fillcolor="#eef8ee"];
+  wh [label="SQL tables\\n+ views", shape=cylinder, fillcolor="#eef8ee"];
   phoenix [label="Arize Phoenix\\ntraces", fillcolor="#eef8ee"];
-  pdfs -> extract -> validate -> policy -> decide -> memo;
+  pdfs -> extract -> validate -> decide -> memo;
   extract -> fallback [style=dashed, label="< 60% fields"]; fallback -> validate [style=dashed];
-  memo -> wh; {extract validate policy decide memo} -> audit [style=dotted, color=gray];
+  memo -> wh; {extract validate decide memo} -> audit [style=dotted, color=gray];
   memo -> phoenix [style=dotted, color=gray];
 }
 """)
@@ -420,32 +363,29 @@ digraph {
             [
                 (
                     "Intelligent document processing",
-                    "Azure AI Document Intelligence v4.0: prebuilt-payStub.us, prebuilt-tax.us.w2, prebuilt-bankStatement.us, prebuilt-idDocument, prebuilt-layout",
+                    "Azure AI Document Intelligence v4.0: prebuilt-payStub.us, prebuilt-tax.us.w2, "
+                    "prebuilt-bankStatement.us, prebuilt-idDocument, prebuilt-layout",
                     "src/lebenflo/extract/",
                 ),
                 (
                     "Generative AI",
-                    "Azure OpenAI via Azure AI Foundry (chat model for the fallback extraction and the memo)",
+                    "Azure OpenAI via Azure AI Foundry: fallback extraction and the reviewer memo",
                     "src/lebenflo/llm.py",
                 ),
                 (
                     "Workflow agent",
-                    "LangGraph state graph: extract → validate → policy_check → decide → memo",
+                    "LangGraph state graph: extract → validate → decide → memo",
                     "src/lebenflo/agent/graph.py",
                 ),
                 (
-                    "RAG / semantic search",
-                    "Azure OpenAI embeddings (text-embedding-3-small) over a chunked lending policy, cosine similarity, cited sections",
-                    "src/lebenflo/rag/ · policy/",
-                ),
-                (
                     "Python + SQL data pipeline",
-                    "Results loaded into DuckDB tables, analytics views in SQL (portable to Snowflake)",
+                    "Results loaded into SQL tables with analytics views (portable SQL)",
                     "src/lebenflo/warehouse.py · sql/",
                 ),
                 (
                     "Evaluation & observability",
-                    "Ground-truth eval (field accuracy, escalation accuracy, retrieval hit@1); Arize Phoenix tracing via OpenInference",
+                    "Ground-truth eval (field accuracy, escalation accuracy); Arize Phoenix tracing "
+                    "via OpenInference",
                     "src/lebenflo/eval/ · src/lebenflo/tracing.py",
                 ),
                 (
@@ -455,7 +395,7 @@ digraph {
                 ),
                 (
                     "CI/CD & source control",
-                    "GitHub Actions: ruff + pytest on every push, fully offline (recorded responses)",
+                    "GitHub Actions: ruff + pytest on every push, fully offline",
                     ".github/workflows/ci.yml",
                 ),
             ],
@@ -466,18 +406,17 @@ digraph {
     )
     st.markdown("#### Record / replay")
     st.markdown(
-        "In **live** mode every Azure response (Document Intelligence, chat and embeddings) is "
-        "saved to `data/recorded/`. **Offline** mode replays them by prompt hash. That's how "
-        "this hosted demo shows real model output with no keys, and how tests and CI run "
+        "In **live** mode every Azure response (Document Intelligence and Azure OpenAI) is saved to "
+        "`data/recorded/`. **Offline** mode replays them, matching LLM calls by prompt hash. That's "
+        "how this hosted demo shows real model output with no keys, and how tests and CI run "
         "without cloud access."
     )
     st.markdown("#### What I'd add for production")
     st.markdown(
         "Human-in-the-loop `interrupt()` with a checkpointer, so escalations pause for a reviewer's "
-        "decision · Azure AI Search for hybrid retrieval over larger policy sets · Snowflake as the "
-        "warehouse with Power BI on the views · FastAPI endpoints for the loan origination system · "
-        "per-field confidence calibration · Presidio for free-text PII · Key Vault + managed "
-        "identity · queue-based workers (Service Bus + Container Apps) for scale."
+        "decision · a RAG policy check with Azure AI Search, citing the lending-policy section "
+        "behind each finding · Azure SQL or Snowflake as the warehouse with Power BI on the views · "
+        "FastAPI endpoints for the loan origination system · per-field confidence calibration · "
+        "Presidio for free-text PII · Key Vault + managed identity · queue-based workers "
+        "(Service Bus + Container Apps) for scale."
     )
-    with st.expander("Lebenflo lending policy (fictional), the RAG corpus"):
-        st.markdown(POLICY_FILE.read_text())
