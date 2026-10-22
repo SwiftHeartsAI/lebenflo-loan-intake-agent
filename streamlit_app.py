@@ -254,7 +254,9 @@ with tab_sql:
         f"[`sql/views.sql`]({REPO_URL}/blob/main/sql/views.sql), written to run on Azure SQL or "
         "Snowflake as well, and ready to feed a Power BI report."
     )
-    con = warehouse()
+    # One cursor per script run: the cached connection is shared by every visitor, and a DuckDB
+    # connection can't run two queries at once, so each session queries through its own cursor.
+    con = warehouse().cursor()
     titles = {
         "v_exception_rate_by_rule": "Exception rate by rule",
         "v_field_quality": "Field quality (accuracy & confidence)",
