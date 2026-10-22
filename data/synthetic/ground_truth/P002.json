@@ -1,0 +1,68 @@
+{
+  "packet_id": "P002",
+  "synthetic": true,
+  "applicant": {
+    "full_name": "Tess Marrowbrook",
+    "date_of_birth": "1979-08-19",
+    "ssn": "935-10-3615",
+    "address": "6934 Quarry Hill Ln, Northmarch City, NM 00000",
+    "employer": "Marrowind Bakery Supply",
+    "annual_salary": 77500.0,
+    "pay_frequency": "semimonthly"
+  },
+  "application": {
+    "loan_amount": 18000.0,
+    "loan_purpose": "Home improvement"
+  },
+  "documents": {
+    "pay_stub": {
+      "file": "pay_stub.pdf",
+      "fields": {
+        "employee_name": "Tess Marrowbrook",
+        "employer_name": "Marrowind Bakery Supply",
+        "employee_ssn": "935-10-3615",
+        "pay_period_start": "2026-09-16",
+        "pay_period_end": "2026-09-30",
+        "pay_date": "2026-10-03",
+        "gross_pay": 3229.17,
+        "ytd_gross_pay": 58125.06,
+        "net_pay": 2454.17
+      }
+    },
+    "w2": {
+      "file": "w2.pdf",
+      "fields": {
+        "employee_name": "Tess Marrowbrook",
+        "employee_ssn": "935-10-3615",
+        "employer_name": "Marrowind Bakery Supply",
+        "wages": 77184.44,
+        "tax_year": "2025"
+      }
+    },
+    "bank_statement": {
+      "file": "bank_statement.pdf",
+      "fields": {
+        "account_holder_name": "Tess Marrowbrook",
+        "account_number": "0071662963",
+        "beginning_balance": 3915.4,
+        "ending_balance": 7794.36,
+        "statement_start": "2026-09-01",
+        "statement_end": "2026-09-30"
+      }
+    },
+    "drivers_license": {
+      "file": "drivers_license.pdf",
+      "fields": {
+        "first_name": "Tess",
+        "last_name": "Marrowbrook",
+        "document_number": "N81971316",
+        "date_of_birth": "1979-08-19",
+        "date_of_expiration": "2030-08-19"
+      }
+    }
+  },
+  "flaw": null,
+  "missing_documents": [],
+  "expected_outcome": "APPROVE_FOR_UNDERWRITING",
+  "expected_reasons": []
+}

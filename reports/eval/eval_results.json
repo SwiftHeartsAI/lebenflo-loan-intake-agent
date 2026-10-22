@@ -1,0 +1,190 @@
+{
+ "run_at": "2026-10-22T14:04:45.661688+00:00",
+ "extraction_sources": {
+  "azure": 39
+ },
+ "field_accuracy": {
+  "overall": 0.9221,
+  "fields_checked": 244,
+  "per_field": {
+   "bank_statement.account_holder_name": 1.0,
+   "bank_statement.account_number": 1.0,
+   "bank_statement.beginning_balance": 1.0,
+   "bank_statement.ending_balance": 1.0,
+   "bank_statement.statement_end": 1.0,
+   "bank_statement.statement_start": 1.0,
+   "drivers_license.date_of_birth": 0.9,
+   "drivers_license.date_of_expiration": 0.9,
+   "drivers_license.document_number": 0.3,
+   "drivers_license.first_name": 1.0,
+   "drivers_license.last_name": 1.0,
+   "pay_stub.employee_name": 1.0,
+   "pay_stub.employee_ssn": 1.0,
+   "pay_stub.employer_name": 1.0,
+   "pay_stub.gross_pay": 1.0,
+   "pay_stub.net_pay": 1.0,
+   "pay_stub.pay_date": 1.0,
+   "pay_stub.pay_period_end": 1.0,
+   "pay_stub.pay_period_start": 1.0,
+   "pay_stub.ytd_gross_pay": 1.0,
+   "w2.employee_name": 1.0,
+   "w2.employee_ssn": 0.0,
+   "w2.employer_name": 1.0,
+   "w2.tax_year": 1.0,
+   "w2.wages": 1.0
+  }
+ },
+ "escalation": {
+  "outcome_accuracy": 0.3,
+  "flawed_escalated": "3/3",
+  "clean_approved": "0/7",
+  "flawed_caught_by_expected_rule": "3/3",
+  "reason_accuracy": 0.1,
+  "escalations_by_rule": {
+   "V-004": 9,
+   "V-001": 1,
+   "V-002": 1,
+   "V-003": 1
+  }
+ },
+ "packets": [
+  {
+   "packet_id": "P001",
+   "flaw": null,
+   "expected_outcome": "APPROVE_FOR_UNDERWRITING",
+   "actual_outcome": "ESCALATE_TO_HUMAN",
+   "outcome_correct": false,
+   "expected_reasons": [],
+   "actual_reasons": [
+    "V-004"
+   ],
+   "reasons_correct": false,
+   "expected_rule_found": true
+  },
+  {
+   "packet_id": "P002",
+   "flaw": null,
+   "expected_outcome": "APPROVE_FOR_UNDERWRITING",
+   "actual_outcome": "ESCALATE_TO_HUMAN",
+   "outcome_correct": false,
+   "expected_reasons": [],
+   "actual_reasons": [
+    "V-004"
+   ],
+   "reasons_correct": false,
+   "expected_rule_found": true
+  },
+  {
+   "packet_id": "P003",
+   "flaw": "name_mismatch",
+   "expected_outcome": "ESCALATE_TO_HUMAN",
+   "actual_outcome": "ESCALATE_TO_HUMAN",
+   "outcome_correct": true,
+   "expected_reasons": [
+    "V-001"
+   ],
+   "actual_reasons": [
+    "V-001",
+    "V-004"
+   ],
+   "reasons_correct": false,
+   "expected_rule_found": true
+  },
+  {
+   "packet_id": "P004",
+   "flaw": null,
+   "expected_outcome": "APPROVE_FOR_UNDERWRITING",
+   "actual_outcome": "ESCALATE_TO_HUMAN",
+   "outcome_correct": false,
+   "expected_reasons": [],
+   "actual_reasons": [
+    "V-004"
+   ],
+   "reasons_correct": false,
+   "expected_rule_found": true
+  },
+  {
+   "packet_id": "P005",
+   "flaw": null,
+   "expected_outcome": "APPROVE_FOR_UNDERWRITING",
+   "actual_outcome": "ESCALATE_TO_HUMAN",
+   "outcome_correct": false,
+   "expected_reasons": [],
+   "actual_reasons": [
+    "V-004"
+   ],
+   "reasons_correct": false,
+   "expected_rule_found": true
+  },
+  {
+   "packet_id": "P006",
+   "flaw": "income_gap",
+   "expected_outcome": "ESCALATE_TO_HUMAN",
+   "actual_outcome": "ESCALATE_TO_HUMAN",
+   "outcome_correct": true,
+   "expected_reasons": [
+    "V-002"
+   ],
+   "actual_reasons": [
+    "V-002",
+    "V-004"
+   ],
+   "reasons_correct": false,
+   "expected_rule_found": true
+  },
+  {
+   "packet_id": "P007",
+   "flaw": null,
+   "expected_outcome": "APPROVE_FOR_UNDERWRITING",
+   "actual_outcome": "ESCALATE_TO_HUMAN",
+   "outcome_correct": false,
+   "expected_reasons": [],
+   "actual_reasons": [
+    "V-004"
+   ],
+   "reasons_correct": false,
+   "expected_rule_found": true
+  },
+  {
+   "packet_id": "P008",
+   "flaw": null,
+   "expected_outcome": "APPROVE_FOR_UNDERWRITING",
+   "actual_outcome": "ESCALATE_TO_HUMAN",
+   "outcome_correct": false,
+   "expected_reasons": [],
+   "actual_reasons": [
+    "V-004"
+   ],
+   "reasons_correct": false,
+   "expected_rule_found": true
+  },
+  {
+   "packet_id": "P009",
+   "flaw": "missing_document",
+   "expected_outcome": "ESCALATE_TO_HUMAN",
+   "actual_outcome": "ESCALATE_TO_HUMAN",
+   "outcome_correct": true,
+   "expected_reasons": [
+    "V-003"
+   ],
+   "actual_reasons": [
+    "V-003"
+   ],
+   "reasons_correct": true,
+   "expected_rule_found": true
+  },
+  {
+   "packet_id": "P010",
+   "flaw": null,
+   "expected_outcome": "APPROVE_FOR_UNDERWRITING",
+   "actual_outcome": "ESCALATE_TO_HUMAN",
+   "outcome_correct": false,
+   "expected_reasons": [],
+   "actual_reasons": [
+    "V-004"
+   ],
+   "reasons_correct": false,
+   "expected_rule_found": true
+  }
+ ]
+}

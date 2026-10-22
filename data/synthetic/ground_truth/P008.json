@@ -1,0 +1,68 @@
+{
+  "packet_id": "P008",
+  "synthetic": true,
+  "applicant": {
+    "full_name": "Ned Fennimore",
+    "date_of_birth": "1997-10-07",
+    "ssn": "919-57-3646",
+    "address": "8847 Tallow St, Northmarch City, NM 00000",
+    "employer": "Kestrelmoor Civil Engineering",
+    "annual_salary": 42000.0,
+    "pay_frequency": "biweekly"
+  },
+  "application": {
+    "loan_amount": 36000.0,
+    "loan_purpose": "Auto loan"
+  },
+  "documents": {
+    "pay_stub": {
+      "file": "pay_stub.pdf",
+      "fields": {
+        "employee_name": "Ned Fennimore",
+        "employer_name": "Kestrelmoor Civil Engineering",
+        "employee_ssn": "919-57-3646",
+        "pay_period_start": "2026-09-20",
+        "pay_period_end": "2026-10-03",
+        "pay_date": "2026-10-09",
+        "gross_pay": 1615.38,
+        "ytd_gross_pay": 32307.6,
+        "net_pay": 1227.69
+      }
+    },
+    "w2": {
+      "file": "w2.pdf",
+      "fields": {
+        "employee_name": "Ned Fennimore",
+        "employee_ssn": "919-57-3646",
+        "employer_name": "Kestrelmoor Civil Engineering",
+        "wages": 41812.9,
+        "tax_year": "2025"
+      }
+    },
+    "bank_statement": {
+      "file": "bank_statement.pdf",
+      "fields": {
+        "account_holder_name": "Ned Fennimore",
+        "account_number": "0086149359",
+        "beginning_balance": 3776.44,
+        "ending_balance": 4117.53,
+        "statement_start": "2026-09-01",
+        "statement_end": "2026-09-30"
+      }
+    },
+    "drivers_license": {
+      "file": "drivers_license.pdf",
+      "fields": {
+        "first_name": "Ned",
+        "last_name": "Fennimore",
+        "document_number": "N20570592",
+        "date_of_birth": "1997-10-07",
+        "date_of_expiration": "2030-10-07"
+      }
+    }
+  },
+  "flaw": null,
+  "missing_documents": [],
+  "expected_outcome": "APPROVE_FOR_UNDERWRITING",
+  "expected_reasons": []
+}

@@ -1,0 +1,24 @@
+# Secrets
+.env
+
+# Python
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.ruff_cache/
+*.egg-info/
+
+# Run outputs (regenerate with the CLI)
+data/audit/
+reports/runs/
+
+# Local Phoenix data
+.phoenix/
+
+.DS_Store
+
+# Private notes (kept locally, not published)
+CLAUDE.md
+kickoff-prompt.md
+docs/INTERVIEW_NOTES.md

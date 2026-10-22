@@ -1,0 +1,68 @@
+{
+  "packet_id": "P010",
+  "synthetic": true,
+  "applicant": {
+    "full_name": "Will Wrenfield",
+    "date_of_birth": "1988-08-17",
+    "ssn": "957-25-5061",
+    "address": "3691 Lantern Way, Northmarch City, NM 00000",
+    "employer": "Copperleaf Dental Group",
+    "annual_salary": 85000.0,
+    "pay_frequency": "semimonthly"
+  },
+  "application": {
+    "loan_amount": 19000.0,
+    "loan_purpose": "Debt consolidation"
+  },
+  "documents": {
+    "pay_stub": {
+      "file": "pay_stub.pdf",
+      "fields": {
+        "employee_name": "Will Wrenfield",
+        "employer_name": "Copperleaf Dental Group",
+        "employee_ssn": "957-25-5061",
+        "pay_period_start": "2026-09-16",
+        "pay_period_end": "2026-09-30",
+        "pay_date": "2026-10-03",
+        "gross_pay": 3541.67,
+        "ytd_gross_pay": 63750.06,
+        "net_pay": 2691.67
+      }
+    },
+    "w2": {
+      "file": "w2.pdf",
+      "fields": {
+        "employee_name": "Will Wrenfield",
+        "employee_ssn": "957-25-5061",
+        "employer_name": "Copperleaf Dental Group",
+        "wages": 84257.8,
+        "tax_year": "2025"
+      }
+    },
+    "bank_statement": {
+      "file": "bank_statement.pdf",
+      "fields": {
+        "account_holder_name": "Will Wrenfield",
+        "account_number": "0019510312",
+        "beginning_balance": 1382.14,
+        "ending_balance": 4347.89,
+        "statement_start": "2026-09-01",
+        "statement_end": "2026-09-30"
+      }
+    },
+    "drivers_license": {
+      "file": "drivers_license.pdf",
+      "fields": {
+        "first_name": "Will",
+        "last_name": "Wrenfield",
+        "document_number": "N79008866",
+        "date_of_birth": "1988-08-17",
+        "date_of_expiration": "2030-08-17"
+      }
+    }
+  },
+  "flaw": null,
+  "missing_documents": [],
+  "expected_outcome": "APPROVE_FOR_UNDERWRITING",
+  "expected_reasons": []
+}

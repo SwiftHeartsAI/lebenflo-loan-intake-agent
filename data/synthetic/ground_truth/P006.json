@@ -1,0 +1,70 @@
+{
+  "packet_id": "P006",
+  "synthetic": true,
+  "applicant": {
+    "full_name": "Rob Larkspur",
+    "date_of_birth": "1990-06-08",
+    "ssn": "917-75-9085",
+    "address": "1499 Lantern Way, Northmarch City, NM 00000",
+    "employer": "Orchard Lantern Software",
+    "annual_salary": 56000.0,
+    "pay_frequency": "semimonthly"
+  },
+  "application": {
+    "loan_amount": 15000.0,
+    "loan_purpose": "Debt consolidation"
+  },
+  "documents": {
+    "pay_stub": {
+      "file": "pay_stub.pdf",
+      "fields": {
+        "employee_name": "Rob Larkspur",
+        "employer_name": "Orchard Lantern Software",
+        "employee_ssn": "917-75-9085",
+        "pay_period_start": "2026-09-16",
+        "pay_period_end": "2026-09-30",
+        "pay_date": "2026-10-03",
+        "gross_pay": 2333.33,
+        "ytd_gross_pay": 41999.94,
+        "net_pay": 1773.33
+      }
+    },
+    "w2": {
+      "file": "w2.pdf",
+      "fields": {
+        "employee_name": "Rob Larkspur",
+        "employee_ssn": "917-75-9085",
+        "employer_name": "Orchard Lantern Software",
+        "wages": 39200.0,
+        "tax_year": "2025"
+      }
+    },
+    "bank_statement": {
+      "file": "bank_statement.pdf",
+      "fields": {
+        "account_holder_name": "Rob Larkspur",
+        "account_number": "0011540956",
+        "beginning_balance": 1320.93,
+        "ending_balance": 2232.57,
+        "statement_start": "2026-09-01",
+        "statement_end": "2026-09-30"
+      }
+    },
+    "drivers_license": {
+      "file": "drivers_license.pdf",
+      "fields": {
+        "first_name": "Rob",
+        "last_name": "Larkspur",
+        "document_number": "N25374874",
+        "date_of_birth": "1990-06-08",
+        "date_of_expiration": "2030-06-08"
+      }
+    }
+  },
+  "flaw": "income_gap",
+  "missing_documents": [],
+  "expected_outcome": "ESCALATE_TO_HUMAN",
+  "expected_reasons": [
+    "V-002"
+  ]
+}

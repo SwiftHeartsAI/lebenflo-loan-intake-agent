@@ -1,0 +1,70 @@
+{
+  "packet_id": "P003",
+  "synthetic": true,
+  "applicant": {
+    "full_name": "Bea Pennywhistle",
+    "date_of_birth": "1972-07-03",
+    "ssn": "970-47-6925",
+    "address": "9469 Fernbank Rd, Northmarch City, NM 00000",
+    "employer": "Tessellate Freight Partners",
+    "annual_salary": 50500.0,
+    "pay_frequency": "semimonthly"
+  },
+  "application": {
+    "loan_amount": 19000.0,
+    "loan_purpose": "Home improvement"
+  },
+  "documents": {
+    "pay_stub": {
+      "file": "pay_stub.pdf",
+      "fields": {
+        "employee_name": "Bea Pennywhistle",
+        "employer_name": "Tessellate Freight Partners",
+        "employee_ssn": "970-47-6925",
+        "pay_period_start": "2026-09-16",
+        "pay_period_end": "2026-09-30",
+        "pay_date": "2026-10-03",
+        "gross_pay": 2104.17,
+        "ytd_gross_pay": 37875.06,
+        "net_pay": 1599.17
+      }
+    },
+    "w2": {
+      "file": "w2.pdf",
+      "fields": {
+        "employee_name": "Beatrice Pennywhistle",
+        "employee_ssn": "970-47-6925",
+        "employer_name": "Tessellate Freight Partners",
+        "wages": 48585.31,
+        "tax_year": "2025"
+      }
+    },
+    "bank_statement": {
+      "file": "bank_statement.pdf",
+      "fields": {
+        "account_holder_name": "Bea Pennywhistle",
+        "account_number": "0031831063",
+        "beginning_balance": 7813.61,
+        "ending_balance": 8672.6,
+        "statement_start": "2026-09-01",
+        "statement_end": "2026-09-30"
+      }
+    },
+    "drivers_license": {
+      "file": "drivers_license.pdf",
+      "fields": {
+        "first_name": "Bea",
+        "last_name": "Pennywhistle",
+        "document_number": "N59684848",
+        "date_of_birth": "1972-07-03",
+        "date_of_expiration": "2030-07-03"
+      }
+    }
+  },
+  "flaw": "name_mismatch",
+  "missing_documents": [],
+  "expected_outcome": "ESCALATE_TO_HUMAN",
+  "expected_reasons": [
+    "V-001"
+  ]
+}

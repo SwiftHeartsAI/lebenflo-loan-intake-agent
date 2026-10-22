@@ -1,0 +1,68 @@
+{
+  "packet_id": "P005",
+  "synthetic": true,
+  "applicant": {
+    "full_name": "Liz Thistlewood",
+    "date_of_birth": "1967-06-13",
+    "ssn": "934-18-4456",
+    "address": "9302 Birchend Ct, Northmarch City, NM 00000",
+    "employer": "Vantrell Hydroponics",
+    "annual_salary": 82000.0,
+    "pay_frequency": "semimonthly"
+  },
+  "application": {
+    "loan_amount": 36000.0,
+    "loan_purpose": "Home improvement"
+  },
+  "documents": {
+    "pay_stub": {
+      "file": "pay_stub.pdf",
+      "fields": {
+        "employee_name": "Liz Thistlewood",
+        "employer_name": "Vantrell Hydroponics",
+        "employee_ssn": "934-18-4456",
+        "pay_period_start": "2026-09-16",
+        "pay_period_end": "2026-09-30",
+        "pay_date": "2026-10-03",
+        "gross_pay": 3416.67,
+        "ytd_gross_pay": 61500.06,
+        "net_pay": 2596.67
+      }
+    },
+    "w2": {
+      "file": "w2.pdf",
+      "fields": {
+        "employee_name": "Liz Thistlewood",
+        "employee_ssn": "934-18-4456",
+        "employer_name": "Vantrell Hydroponics",
+        "wages": 79197.42,
+        "tax_year": "2025"
+      }
+    },
+    "bank_statement": {
+      "file": "bank_statement.pdf",
+      "fields": {
+        "account_holder_name": "Liz Thistlewood",
+        "account_number": "0088461803",
+        "beginning_balance": 6071.39,
+        "ending_balance": 9757.57,
+        "statement_start": "2026-09-01",
+        "statement_end": "2026-09-30"
+      }
+    },
+    "drivers_license": {
+      "file": "drivers_license.pdf",
+      "fields": {
+        "first_name": "Liz",
+        "last_name": "Thistlewood",
+        "document_number": "N67503414",
+        "date_of_birth": "1967-06-13",
+        "date_of_expiration": "2030-06-13"
+      }
+    }
+  },
+  "flaw": null,
+  "missing_documents": [],
+  "expected_outcome": "APPROVE_FOR_UNDERWRITING",
+  "expected_reasons": []
+}

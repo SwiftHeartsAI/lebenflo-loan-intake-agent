@@ -1,0 +1,1456 @@
+{
+ "_source": "azure",
+ "_model_id": "prebuilt-idDocument",
+ "_recorded_at": "2026-10-22T14:01:39.946700+00:00",
+ "result": {
+  "apiVersion": "2024-11-30",
+  "modelId": "prebuilt-idDocument",
+  "stringIndexType": "textElements",
+  "content": "STATE OF NORTHMARCH DRIVER LICENSE\nDL NO:\nN63551839\nLAST NAME:\nOAKHOLLOW\nFIRST NAME:\nKAT\nDOB:\n12/16/1970\nEXP:\n12/16/2030\nISS:\n01/15/2024\nNO PHOTO - SAMPLE\nADDRESS:\n2113 BIRCHEND CT\nSAMPLE - SYNTHETIC TEST DATA\nSAMPLE - SYNTHETIC TEST DATA - fictional document, not valid for any use",
+  "pages": [
+   {
+    "pageNumber": 1,
+    "angle": -0.03400000184774399,
+    "width": 8.5,
+    "height": 11,
+    "unit": "inch",
+    "words": [
+     {
+      "content": "STATE",
+      "polygon": [
+       1.0278,
+       1.1623,
+       1.6266,
+       1.1606,
+       1.6265,
+       1.3446,
+       1.0278,
+       1.3449
+      ],
+      "confidence": 0.998,
+      "span": {
+       "offset": 0,
+       "length": 5
+      }
+     },
+     {
+      "content": "OF",
+      "polygon": [
+       1.6874,
+       1.1602,
+       1.9245,
+       1.159,
+       1.9244,
+       1.3451,
+       1.6873,
+       1.3447
+      ],
+      "confidence": 0.999,
+      "span": {
+       "offset": 6,
+       "length": 2
+      }
+     },
+     {
+      "content": "NORTHMARCH",
+      "polygon": [
+       1.9914,
+       1.1588,
+       3.2863,
+       1.1566,
+       3.2866,
+       1.345,
+       1.9914,
+       1.3452
+      ],
+      "confidence": 0.994,
+      "span": {
+       "offset": 9,
+       "length": 10
+      }
+     },
+     {
+      "content": "DRIVER",
+      "polygon": [
+       3.4049,
+       1.1568,
+       4.0766,
+       1.158,
+       4.0769,
+       1.3444,
+       3.4051,
+       1.3444
+      ],
+      "confidence": 0.996,
+      "span": {
+       "offset": 20,
+       "length": 6
+      }
+     },
+     {
+      "content": "LICENSE",
+      "polygon": [
+       4.1374,
+       1.1581,
+       4.9251,
+       1.1603,
+       4.9251,
+       1.3408,
+       4.1376,
+       1.3442
+      ],
+      "confidence": 0.995,
+      "span": {
+       "offset": 27,
+       "length": 7
+      }
+     },
+     {
+      "content": "DL",
+      "polygon": [
+       2.4246,
+       1.6213,
+       2.6114,
+       1.6206,
+       2.6115,
+       1.7577,
+       2.4247,
+       1.7583
+      ],
+      "confidence": 0.993,
+      "span": {
+       "offset": 35,
+       "length": 2
+      }
+     },
+     {
+      "content": "NO:",
+      "polygon": [
+       2.6587,
+       1.6214,
+       2.9108,
+       1.621,
+       2.9108,
+       1.7583,
+       2.6588,
+       1.758
+      ],
+      "confidence": 0.993,
+      "span": {
+       "offset": 38,
+       "length": 3
+      }
+     },
+     {
+      "content": "N63551839",
+      "polygon": [
+       3.534,
+       1.6224,
+       4.2666,
+       1.6214,
+       4.2666,
+       1.7549,
+       3.5352,
+       1.7549
+      ],
+      "confidence": 0.995,
+      "span": {
+       "offset": 42,
+       "length": 9
+      }
+     },
+     {
+      "content": "LAST",
+      "polygon": [
+       2.424,
+       1.854,
+       2.7898,
+       1.8522,
+       2.79,
+       1.9893,
+       2.4244,
+       1.9902
+      ],
+      "confidence": 0.989,
+      "span": {
+       "offset": 52,
+       "length": 4
+      }
+     },
+     {
+      "content": "NAME:",
+      "polygon": [
+       2.8369,
+       1.853,
+       3.2871,
+       1.8532,
+       3.2871,
+       1.9899,
+       2.8371,
+       1.9895
+      ],
+      "confidence": 0.995,
+      "span": {
+       "offset": 57,
+       "length": 5
+      }
+     },
+     {
+      "content": "OAKHOLLOW",
+      "polygon": [
+       3.5359,
+       1.854,
+       4.4437,
+       1.8499,
+       4.4437,
+       1.9902,
+       3.5361,
+       1.9901
+      ],
+      "confidence": 0.995,
+      "span": {
+       "offset": 63,
+       "length": 9
+      }
+     },
+     {
+      "content": "FIRST",
+      "polygon": [
+       2.4239,
+       2.0918,
+       2.8299,
+       2.0933,
+       2.83,
+       2.2266,
+       2.4242,
+       2.2256
+      ],
+      "confidence": 0.999,
+      "span": {
+       "offset": 73,
+       "length": 5
+      }
+     },
+     {
+      "content": "NAME:",
+      "polygon": [
+       2.876,
+       2.0936,
+       3.3258,
+       2.0927,
+       3.3258,
+       2.2273,
+       2.8761,
+       2.2263
+      ],
+      "confidence": 0.993,
+      "span": {
+       "offset": 79,
+       "length": 5
+      }
+     },
+     {
+      "content": "KAT",
+      "polygon": [
+       3.5373,
+       2.0935,
+       3.8172,
+       2.0921,
+       3.8169,
+       2.2222,
+       3.5373,
+       2.2224
+      ],
+      "confidence": 0.999,
+      "span": {
+       "offset": 85,
+       "length": 3
+      }
+     },
+     {
+      "content": "DOB:",
+      "polygon": [
+       2.4223,
+       2.3302,
+       2.7858,
+       2.3303,
+       2.7855,
+       2.4625,
+       2.4222,
+       2.4628
+      ],
+      "confidence": 0.99,
+      "span": {
+       "offset": 89,
+       "length": 4
+      }
+     },
+     {
+      "content": "12/16/1970",
+      "polygon": [
+       3.5449,
+       2.3328,
+       4.2389,
+       2.33,
+       4.2389,
+       2.4635,
+       3.5459,
+       2.4635
+      ],
+      "confidence": 0.995,
+      "span": {
+       "offset": 94,
+       "length": 10
+      }
+     },
+     {
+      "content": "EXP:",
+      "polygon": [
+       2.4239,
+       2.5653,
+       2.7553,
+       2.5646,
+       2.7548,
+       2.6952,
+       2.4237,
+       2.6946
+      ],
+      "confidence": 0.989,
+      "span": {
+       "offset": 105,
+       "length": 4
+      }
+     },
+     {
+      "content": "12/16/2030",
+      "polygon": [
+       3.5473,
+       2.5659,
+       4.2389,
+       2.5651,
+       4.2389,
+       2.696,
+       3.5478,
+       2.696
+      ],
+      "confidence": 0.996,
+      "span": {
+       "offset": 110,
+       "length": 10
+      }
+     },
+     {
+      "content": "ISS:",
+      "polygon": [
+       2.4226,
+       2.8045,
+       2.7005,
+       2.8032,
+       2.7005,
+       2.9338,
+       2.4226,
+       2.9341
+      ],
+      "confidence": 0.989,
+      "span": {
+       "offset": 121,
+       "length": 4
+      }
+     },
+     {
+      "content": "01/15/2024",
+      "polygon": [
+       3.5364,
+       2.8022,
+       4.2445,
+       2.8015,
+       4.2445,
+       2.9325,
+       3.5366,
+       2.9337
+      ],
+      "confidence": 0.994,
+      "span": {
+       "offset": 126,
+       "length": 10
+      }
+     },
+     {
+      "content": "NO",
+      "polygon": [
+       1.1448,
+       2.9954,
+       1.2976,
+       2.9948,
+       1.2977,
+       3.1002,
+       1.1452,
+       3.1002
+      ],
+      "confidence": 0.998,
+      "span": {
+       "offset": 137,
+       "length": 2
+      }
+     },
+     {
+      "content": "PHOTO",
+      "polygon": [
+       1.3306,
+       2.9946,
+       1.6709,
+       2.9948,
+       1.6708,
+       3.1002,
+       1.3306,
+       3.1002
+      ],
+      "confidence": 0.998,
+      "span": {
+       "offset": 140,
+       "length": 5
+      }
+     },
+     {
+      "content": "-",
+      "polygon": [
+       1.6952,
+       2.9951,
+       1.756,
+       2.9957,
+       1.7557,
+       3.1002,
+       1.695,
+       3.1002
+      ],
+      "confidence": 0.995,
+      "span": {
+       "offset": 146,
+       "length": 1
+      }
+     },
+     {
+      "content": "SAMPLE",
+      "polygon": [
+       1.782,
+       2.9959,
+       2.1859,
+       2.9944,
+       2.1859,
+       3.1002,
+       1.7818,
+       3.1002
+      ],
+      "confidence": 0.998,
+      "span": {
+       "offset": 148,
+       "length": 6
+      }
+     },
+     {
+      "content": "ADDRESS:",
+      "polygon": [
+       2.4189,
+       3.0407,
+       3.1543,
+       3.038,
+       3.1543,
+       3.1721,
+       2.4192,
+       3.1721
+      ],
+      "confidence": 0.995,
+      "span": {
+       "offset": 155,
+       "length": 8
+      }
+     },
+     {
+      "content": "2113",
+      "polygon": [
+       3.5307,
+       3.0381,
+       3.8437,
+       3.0382,
+       3.8433,
+       3.1721,
+       3.5305,
+       3.1721
+      ],
+      "confidence": 0.992,
+      "span": {
+       "offset": 164,
+       "length": 4
+      }
+     },
+     {
+      "content": "BIRCHEND",
+      "polygon": [
+       3.8925,
+       3.0381,
+       4.6095,
+       3.0365,
+       4.6092,
+       3.1721,
+       3.8922,
+       3.1719
+      ],
+      "confidence": 0.995,
+      "span": {
+       "offset": 169,
+       "length": 8
+      }
+     },
+     {
+      "content": "CT",
+      "polygon": [
+       4.6539,
+       3.036,
+       4.8448,
+       3.035,
+       4.845,
+       3.1721,
+       4.6537,
+       3.1721
+      ],
+      "confidence": 0.995,
+      "span": {
+       "offset": 178,
+       "length": 2
+      }
+     },
+     {
+      "content": "SAMPLE",
+      "polygon": [
+       0.1946,
+       7.7833,
+       2.071,
+       6.4793,
+       2.3219,
+       6.9152,
+       0.4116,
+       8.2099
+      ],
+      "confidence": 0.997,
+      "span": {
+       "offset": 181,
+       "length": 6
+      }
+     },
+     {
+      "content": "-",
+      "polygon": [
+       2.2119,
+       6.3866,
+       2.4708,
+       6.2124,
+       2.7221,
+       6.6439,
+       2.4621,
+       6.8201
+      ],
+      "confidence": 0.989,
+      "span": {
+       "offset": 188,
+       "length": 1
+      }
+     },
+     {
+      "content": "SYNTHETIC",
+      "polygon": [
+       2.6089,
+       6.1154,
+       5.1488,
+       4.331,
+       5.414,
+       4.7798,
+       2.863,
+       6.5482
+      ],
+      "confidence": 0.993,
+      "span": {
+       "offset": 190,
+       "length": 9
+      }
+     },
+     {
+      "content": "TEST",
+      "polygon": [
+       5.294,
+       4.2295,
+       6.4371,
+       3.4217,
+       6.6924,
+       3.9058,
+       5.5613,
+       4.6836
+      ],
+      "confidence": 0.791,
+      "span": {
+       "offset": 200,
+       "length": 4
+      }
+     },
+     {
+      "content": "DATA",
+      "polygon": [
+       6.6076,
+       3.3126,
+       7.9262,
+       2.4967,
+       8.1126,
+       2.9268,
+       6.8586,
+       3.7942
+      ],
+      "confidence": 0.985,
+      "span": {
+       "offset": 205,
+       "length": 4
+      }
+     },
+     {
+      "content": "SAMPLE",
+      "polygon": [
+       2.2791,
+       10.485,
+       2.7356,
+       10.4832,
+       2.7345,
+       10.6061,
+       2.2782,
+       10.606
+      ],
+      "confidence": 0.995,
+      "span": {
+       "offset": 210,
+       "length": 6
+      }
+     },
+     {
+      "content": "-",
+      "polygon": [
+       2.7641,
+       10.4832,
+       2.833,
+       10.4831,
+       2.8317,
+       10.6065,
+       2.7628,
+       10.6062
+      ],
+      "confidence": 0.995,
+      "span": {
+       "offset": 217,
+       "length": 1
+      }
+     },
+     {
+      "content": "SYNTHETIC",
+      "polygon": [
+       2.8655,
+       10.4831,
+       3.4904,
+       10.4829,
+       3.4892,
+       10.6084,
+       2.8641,
+       10.6067
+      ],
+      "confidence": 0.996,
+      "span": {
+       "offset": 219,
+       "length": 9
+      }
+     },
+     {
+      "content": "TEST",
+      "polygon": [
+       3.5209,
+       10.4829,
+       3.8069,
+       10.4834,
+       3.8059,
+       10.6087,
+       3.5197,
+       10.6083
+      ],
+      "confidence": 0.989,
+      "span": {
+       "offset": 229,
+       "length": 4
+      }
+     },
+     {
+      "content": "DATA",
+      "polygon": [
+       3.8435,
+       10.4837,
+       4.1356,
+       10.4852,
+       4.1347,
+       10.6093,
+       3.8424,
+       10.6088
+      ],
+      "confidence": 0.992,
+      "span": {
+       "offset": 234,
+       "length": 4
+      }
+     },
+     {
+      "content": "-",
+      "polygon": [
+       4.16,
+       10.4852,
+       4.229,
+       10.4854,
+       4.228,
+       10.6093,
+       4.159,
+       10.6093
+      ],
+      "confidence": 0.995,
+      "span": {
+       "offset": 239,
+       "length": 1
+      }
+     },
+     {
+      "content": "fictional",
+      "polygon": [
+       4.2533,
+       10.4855,
+       4.6287,
+       10.4867,
+       4.6277,
+       10.6108,
+       4.2524,
+       10.6094
+      ],
+      "confidence": 0.992,
+      "span": {
+       "offset": 241,
+       "length": 9
+      }
+     },
+     {
+      "content": "document,",
+      "polygon": [
+       4.6652,
+       10.4868,
+       5.1785,
+       10.4882,
+       5.1777,
+       10.6127,
+       4.6643,
+       10.611
+      ],
+      "confidence": 0.992,
+      "span": {
+       "offset": 251,
+       "length": 9
+      }
+     },
+     {
+      "content": "not",
+      "polygon": [
+       5.2171,
+       10.4881,
+       5.3692,
+       10.4881,
+       5.3686,
+       10.6131,
+       5.2163,
+       10.6128
+      ],
+      "confidence": 0.996,
+      "span": {
+       "offset": 261,
+       "length": 3
+      }
+     },
+     {
+      "content": "valid",
+      "polygon": [
+       5.3997,
+       10.4882,
+       5.6229,
+       10.4895,
+       5.6222,
+       10.6137,
+       5.399,
+       10.6132
+      ],
+      "confidence": 0.995,
+      "span": {
+       "offset": 265,
+       "length": 5
+      }
+     },
+     {
+      "content": "for",
+      "polygon": [
+       5.6574,
+       10.4897,
+       5.7933,
+       10.4906,
+       5.7926,
+       10.6147,
+       5.6566,
+       10.6138
+      ],
+      "confidence": 0.994,
+      "span": {
+       "offset": 271,
+       "length": 3
+      }
+     },
+     {
+      "content": "any",
+      "polygon": [
+       5.8197,
+       10.4907,
+       5.9982,
+       10.4918,
+       5.9975,
+       10.6152,
+       5.819,
+       10.6148
+      ],
+      "confidence": 0.997,
+      "span": {
+       "offset": 275,
+       "length": 3
+      }
+     },
+     {
+      "content": "use",
+      "polygon": [
+       6.0327,
+       10.492,
+       6.2201,
+       10.493,
+       6.2201,
+       10.6142,
+       6.032,
+       10.6151
+      ],
+      "confidence": 0.997,
+      "span": {
+       "offset": 279,
+       "length": 3
+      }
+     }
+    ],
+    "lines": [
+     {
+      "content": "STATE OF NORTHMARCH DRIVER LICENSE",
+      "polygon": [
+       1.0277,
+       1.1582,
+       4.9227,
+       1.1549,
+       4.9229,
+       1.3406,
+       1.0278,
+       1.3439
+      ],
+      "spans": [
+       {
+        "offset": 0,
+        "length": 34
+       }
+      ]
+     },
+     {
+      "content": "DL NO:",
+      "polygon": [
+       2.4246,
+       1.6204,
+       2.9067,
+       1.6205,
+       2.9066,
+       1.7567,
+       2.4245,
+       1.7565
+      ],
+      "spans": [
+       {
+        "offset": 35,
+        "length": 6
+       }
+      ]
+     },
+     {
+      "content": "N63551839",
+      "polygon": [
+       3.534,
+       1.6219,
+       4.265,
+       1.6214,
+       4.265,
+       1.7536,
+       3.5341,
+       1.7541
+      ],
+      "spans": [
+       {
+        "offset": 42,
+        "length": 9
+       }
+      ]
+     },
+     {
+      "content": "LAST NAME:",
+      "polygon": [
+       2.424,
+       1.8519,
+       3.2865,
+       1.8517,
+       3.2866,
+       1.9882,
+       2.4241,
+       1.9885
+      ],
+      "spans": [
+       {
+        "offset": 52,
+        "length": 10
+       }
+      ]
+     },
+     {
+      "content": "OAKHOLLOW",
+      "polygon": [
+       3.5356,
+       1.8531,
+       4.4437,
+       1.8499,
+       4.4437,
+       1.9879,
+       3.5361,
+       1.9911
+      ],
+      "spans": [
+       {
+        "offset": 63,
+        "length": 9
+       }
+      ]
+     },
+     {
+      "content": "FIRST NAME:",
+      "polygon": [
+       2.4239,
+       2.0918,
+       3.3224,
+       2.0916,
+       3.3224,
+       2.2256,
+       2.4239,
+       2.2258
+      ],
+      "spans": [
+       {
+        "offset": 73,
+        "length": 11
+       }
+      ]
+     },
+     {
+      "content": "KAT",
+      "polygon": [
+       3.5366,
+       2.0933,
+       3.8146,
+       2.0918,
+       3.8153,
+       2.2203,
+       3.5373,
+       2.2218
+      ],
+      "spans": [
+       {
+        "offset": 85,
+        "length": 3
+       }
+      ]
+     },
+     {
+      "content": "DOB:",
+      "polygon": [
+       2.4223,
+       2.3298,
+       2.7835,
+       2.3303,
+       2.7834,
+       2.4612,
+       2.4221,
+       2.4607
+      ],
+      "spans": [
+       {
+        "offset": 89,
+        "length": 4
+       }
+      ]
+     },
+     {
+      "content": "12/16/1970",
+      "polygon": [
+       3.5449,
+       2.3324,
+       4.2384,
+       2.33,
+       4.2389,
+       2.4618,
+       3.5454,
+       2.4635
+      ],
+      "spans": [
+       {
+        "offset": 94,
+        "length": 10
+       }
+      ]
+     },
+     {
+      "content": "EXP:",
+      "polygon": [
+       2.4236,
+       2.5648,
+       2.7527,
+       2.5646,
+       2.7527,
+       2.6932,
+       2.4237,
+       2.6933
+      ],
+      "spans": [
+       {
+        "offset": 105,
+        "length": 4
+       }
+      ]
+     },
+     {
+      "content": "12/16/2030",
+      "polygon": [
+       3.5473,
+       2.5655,
+       4.2381,
+       2.5651,
+       4.2382,
+       2.6943,
+       3.5474,
+       2.6947
+      ],
+      "spans": [
+       {
+        "offset": 110,
+        "length": 10
+       }
+      ]
+     },
+     {
+      "content": "ISS:",
+      "polygon": [
+       2.4224,
+       2.8035,
+       2.6981,
+       2.803,
+       2.6984,
+       2.9323,
+       2.4226,
+       2.9328
+      ],
+      "spans": [
+       {
+        "offset": 121,
+        "length": 4
+       }
+      ]
+     },
+     {
+      "content": "01/15/2024",
+      "polygon": [
+       3.5364,
+       2.8022,
+       4.2393,
+       2.8014,
+       4.2394,
+       2.9311,
+       3.5365,
+       2.9319
+      ],
+      "spans": [
+       {
+        "offset": 126,
+        "length": 10
+       }
+      ]
+     },
+     {
+      "content": "NO PHOTO - SAMPLE",
+      "polygon": [
+       1.1448,
+       2.9934,
+       2.185,
+       2.9944,
+       2.1849,
+       3.1002,
+       1.1447,
+       3.0993
+      ],
+      "spans": [
+       {
+        "offset": 137,
+        "length": 17
+       }
+      ]
+     },
+     {
+      "content": "ADDRESS:",
+      "polygon": [
+       2.4189,
+       3.0384,
+       3.1541,
+       3.038,
+       3.1541,
+       3.1714,
+       2.419,
+       3.1718
+      ],
+      "spans": [
+       {
+        "offset": 155,
+        "length": 8
+       }
+      ]
+     },
+     {
+      "content": "2113 BIRCHEND CT",
+      "polygon": [
+       3.5304,
+       3.0364,
+       4.8423,
+       3.035,
+       4.8424,
+       3.1711,
+       3.5306,
+       3.1721
+      ],
+      "spans": [
+       {
+        "offset": 164,
+        "length": 16
+       }
+      ]
+     },
+     {
+      "content": "SAMPLE - SYNTHETIC TEST DATA",
+      "polygon": [
+       0.1937,
+       7.7719,
+       7.8476,
+       2.4967,
+       8.1126,
+       2.9021,
+       0.4278,
+       8.2099
+      ],
+      "spans": [
+       {
+        "offset": 181,
+        "length": 28
+       }
+      ]
+     },
+     {
+      "content": "SAMPLE - SYNTHETIC TEST DATA - fictional document, not valid for any use",
+      "polygon": [
+       2.2785,
+       10.4796,
+       6.2177,
+       10.489,
+       6.2174,
+       10.6142,
+       2.2782,
+       10.604
+      ],
+      "spans": [
+       {
+        "offset": 210,
+        "length": 72
+       }
+      ]
+     }
+    ],
+    "spans": [
+     {
+      "offset": 0,
+      "length": 282
+     }
+    ]
+   }
+  ],
+  "styles": [],
+  "documents": [
+   {
+    "docType": "idDocument.driverLicense",
+    "boundingRegions": [
+     {
+      "pageNumber": 1,
+      "polygon": [
+       0,
+       0,
+       8.5,
+       0,
+       8.5,
+       11,
+       0,
+       11
+      ]
+     }
+    ],
+    "fields": {
+     "Address": {
+      "type": "address",
+      "content": "2113 BIRCHEND CT",
+      "boundingRegions": [
+       {
+        "pageNumber": 1,
+        "polygon": [
+         3.5304,
+         3.0363,
+         4.8449,
+         3.035,
+         4.845,
+         3.1721,
+         3.5305,
+         3.1734
+        ]
+       }
+      ],
+      "confidence": 0.649,
+      "spans": [
+       {
+        "offset": 164,
+        "length": 16
+       }
+      ],
+      "valueAddress": {
+       "houseNumber": "2113",
+       "road": "BIRCHEND CT",
+       "streetAddress": "2113 BIRCHEND CT"
+      }
+     },
+     "CountryRegion": {
+      "type": "countryRegion",
+      "valueCountryRegion": "USA",
+      "confidence": 0.995
+     },
+     "DateOfBirth": {
+      "type": "date",
+      "valueDate": "1970-12-16",
+      "content": "12/16/1970",
+      "boundingRegions": [
+       {
+        "pageNumber": 1,
+        "polygon": [
+         3.5449,
+         2.3328,
+         4.2389,
+         2.33,
+         4.2389,
+         2.4635,
+         3.5459,
+         2.4635
+        ]
+       }
+      ],
+      "confidence": 0.9,
+      "spans": [
+       {
+        "offset": 94,
+        "length": 10
+       }
+      ]
+     },
+     "DateOfExpiration": {
+      "type": "date",
+      "valueDate": "2030-12-16",
+      "content": "12/16/2030",
+      "boundingRegions": [
+       {
+        "pageNumber": 1,
+        "polygon": [
+         3.5473,
+         2.5659,
+         4.2389,
+         2.5651,
+         4.2389,
+         2.696,
+         3.5478,
+         2.696
+        ]
+       }
+      ],
+      "confidence": 0.867,
+      "spans": [
+       {
+        "offset": 110,
+        "length": 10
+       }
+      ]
+     },
+     "DateOfIssue": {
+      "type": "date",
+      "valueDate": "2024-01-15",
+      "content": "01/15/2024",
+      "boundingRegions": [
+       {
+        "pageNumber": 1,
+        "polygon": [
+         3.5364,
+         2.8022,
+         4.2445,
+         2.8015,
+         4.2445,
+         2.9325,
+         3.5366,
+         2.9337
+        ]
+       }
+      ],
+      "confidence": 0.799,
+      "spans": [
+       {
+        "offset": 126,
+        "length": 10
+       }
+      ]
+     },
+     "DocumentNumber": {
+      "type": "string",
+      "valueString": "63551839",
+      "content": "N63551839",
+      "boundingRegions": [
+       {
+        "pageNumber": 1,
+        "polygon": [
+         3.534,
+         1.6224,
+         4.2666,
+         1.6214,
+         4.2666,
+         1.7549,
+         3.5352,
+         1.7549
+        ]
+       }
+      ],
+      "confidence": 0.777,
+      "spans": [
+       {
+        "offset": 42,
+        "length": 9
+       }
+      ]
+     },
+     "FirstName": {
+      "type": "string",
+      "valueString": "KAT",
+      "content": "KAT",
+      "boundingRegions": [
+       {
+        "pageNumber": 1,
+        "polygon": [
+         3.5373,
+         2.0935,
+         3.8172,
+         2.0921,
+         3.8169,
+         2.2222,
+         3.5373,
+         2.2224
+        ]
+       }
+      ],
+      "confidence": 0.859,
+      "spans": [
+       {
+        "offset": 85,
+        "length": 3
+       }
+      ]
+     },
+     "LastName": {
+      "type": "string",
+      "valueString": "OAKHOLLOW",
+      "content": "OAKHOLLOW",
+      "boundingRegions": [
+       {
+        "pageNumber": 1,
+        "polygon": [
+         3.5359,
+         1.854,
+         4.4437,
+         1.8499,
+         4.4437,
+         1.9902,
+         3.5361,
+         1.9901
+        ]
+       }
+      ],
+      "confidence": 0.816,
+      "spans": [
+       {
+        "offset": 63,
+        "length": 9
+       }
+      ]
+     },
+     "Region": {
+      "type": "string",
+      "valueString": "Utah",
+      "content": "STATE OF NORTHMARCH",
+      "boundingRegions": [
+       {
+        "pageNumber": 1,
+        "polygon": [
+         1.0275,
+         1.1604,
+         3.2863,
+         1.1566,
+         3.2866,
+         1.345,
+         1.0278,
+         1.3488
+        ]
+       }
+      ],
+      "confidence": 0.145,
+      "spans": [
+       {
+        "offset": 0,
+        "length": 19
+       }
+      ]
+     }
+    },
+    "confidence": 1,
+    "spans": [
+     {
+      "offset": 0,
+      "length": 282
+     }
+    ]
+   }
+  ],
+  "contentFormat": "text"
+ }
+}

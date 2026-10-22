@@ -1,0 +1,61 @@
+{
+  "packet_id": "P009",
+  "synthetic": true,
+  "applicant": {
+    "full_name": "Kat Oakhollow",
+    "date_of_birth": "1970-12-16",
+    "ssn": "908-78-3060",
+    "address": "2113 Birchend Ct, Northmarch City, NM 00000",
+    "employer": "Saltmeadow Print Works",
+    "annual_salary": 102500.0,
+    "pay_frequency": "semimonthly"
+  },
+  "application": {
+    "loan_amount": 21000.0,
+    "loan_purpose": "Debt consolidation"
+  },
+  "documents": {
+    "pay_stub": {
+      "file": "pay_stub.pdf",
+      "fields": {
+        "employee_name": "Kat Oakhollow",
+        "employer_name": "Saltmeadow Print Works",
+        "employee_ssn": "908-78-3060",
+        "pay_period_start": "2026-09-16",
+        "pay_period_end": "2026-09-30",
+        "pay_date": "2026-10-03",
+        "gross_pay": 4270.83,
+        "ytd_gross_pay": 76874.94,
+        "net_pay": 3245.83
+      }
+    },
+    "w2": {
+      "file": "w2.pdf",
+      "fields": {
+        "employee_name": "Kat Oakhollow",
+        "employee_ssn": "908-78-3060",
+        "employer_name": "Saltmeadow Print Works",
+        "wages": 99043.64,
+        "tax_year": "2025"
+      }
+    },
+    "drivers_license": {
+      "file": "drivers_license.pdf",
+      "fields": {
+        "first_name": "Kat",
+        "last_name": "Oakhollow",
+        "document_number": "N63551839",
+        "date_of_birth": "1970-12-16",
+        "date_of_expiration": "2030-12-16"
+      }
+    }
+  },
+  "flaw": "missing_document",
+  "missing_documents": [
+    "bank_statement"
+  ],
+  "expected_outcome": "ESCALATE_TO_HUMAN",
+  "expected_reasons": [
+    "V-003"
+  ]
+}

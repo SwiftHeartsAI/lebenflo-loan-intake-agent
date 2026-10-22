@@ -1,0 +1,11 @@
+{
+ "_model": "azure-openai/gpt-5.4-mini",
+ "_recorded_at": "2026-10-22T14:03:23.250245+00:00",
+ "prompt_sha256": "1a88c59dfa0d50dc78fed5f919022096aa6506637c59571c65b4eee2f1df4824",
+ "response": {
+  "employee_name": "Will Wrenfield",
+  "employer_name": "Copperleaf Dental Group",
+  "wages": 84257.8,
+  "tax_year": "2025"
+ }
+}

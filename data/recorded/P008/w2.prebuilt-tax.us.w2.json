@@ -1,0 +1,2089 @@
+{
+ "_source": "azure",
+ "_model_id": "prebuilt-tax.us.w2",
+ "_recorded_at": "2026-10-22T14:01:03.675035+00:00",
+ "result": {
+  "apiVersion": "2024-11-30",
+  "modelId": "prebuilt-tax.us.w2",
+  "stringIndexType": "textElements",
+  "content": "Form W-2 Wage and Tax Statement 2025 Copy B - To Be Filed With Employee's FEDERAL Tax Return\na Employee's social security number:\n919-57-3646\nb Employer identification number:\n00-0000000\nc Employer's name:\nKestrelmoor Civil Engineering\ne Employee's name:\nNed Fennimore\nf Employee's address:\n8847 Tallow St, Northmarch City, NM 00000\n1 Wages, tips, other compensation:\n$41,812.90\n2 Federal income tax withheld:\n$5,017.55\n3 Social security wages:\n$41,812.90\n5 Medicare wages and tips:\n$41,812.90\nSAMPLE - SYNTHETIC TEST DATA\nSAMPLE - SYNTHETIC TEST DATA - fictional document, not valid for any use",
+  "pages": [
+   {
+    "pageNumber": 1,
+    "angle": -0.0738999992609024,
+    "width": 8.5,
+    "height": 11,
+    "unit": "inch",
+    "words": [
+     {
+      "content": "Form",
+      "polygon": [
+       0.6917,
+       0.6554,
+       1.2367,
+       0.6551,
+       1.2358,
+       0.8847,
+       0.6915,
+       0.8823
+      ],
+      "confidence": 0.992,
+      "span": {
+       "offset": 0,
+       "length": 4
+      }
+     },
+     {
+      "content": "W-2",
+      "polygon": [
+       1.3081,
+       0.655,
+       1.7102,
+       0.6527,
+       1.7087,
+       0.8868,
+       1.3072,
+       0.8852
+      ],
+      "confidence": 0.997,
+      "span": {
+       "offset": 5,
+       "length": 3
+      }
+     },
+     {
+      "content": "Wage",
+      "polygon": [
+       1.7779,
+       0.6527,
+       2.3642,
+       0.6508,
+       2.3629,
+       0.8884,
+       1.7763,
+       0.8869
+      ],
+      "confidence": 0.992,
+      "span": {
+       "offset": 9,
+       "length": 4
+      }
+     },
+     {
+      "content": "and",
+      "polygon": [
+       2.4393,
+       0.6501,
+       2.8189,
+       0.6499,
+       2.8178,
+       0.885,
+       2.4381,
+       0.8891
+      ],
+      "confidence": 0.998,
+      "span": {
+       "offset": 14,
+       "length": 3
+      }
+     },
+     {
+      "content": "Tax",
+      "polygon": [
+       2.8903,
+       0.6504,
+       3.2737,
+       0.6532,
+       3.2729,
+       0.8831,
+       2.8892,
+       0.8847
+      ],
+      "confidence": 0.998,
+      "span": {
+       "offset": 18,
+       "length": 3
+      }
+     },
+     {
+      "content": "Statement",
+      "polygon": [
+       3.3413,
+       0.6534,
+       4.4086,
+       0.6518,
+       4.4082,
+       0.8747,
+       3.3405,
+       0.8824
+      ],
+      "confidence": 0.995,
+      "span": {
+       "offset": 22,
+       "length": 9
+      }
+     },
+     {
+      "content": "2025",
+      "polygon": [
+       4.4763,
+       0.6513,
+       4.9749,
+       0.6499,
+       4.9749,
+       0.8696,
+       4.4758,
+       0.8745
+      ],
+      "confidence": 0.992,
+      "span": {
+       "offset": 32,
+       "length": 4
+      }
+     },
+     {
+      "content": "Copy",
+      "polygon": [
+       0.6903,
+       0.9642,
+       1.0167,
+       0.9632,
+       1.0172,
+       1.1238,
+       0.6907,
+       1.1238
+      ],
+      "confidence": 0.992,
+      "span": {
+       "offset": 37,
+       "length": 4
+      }
+     },
+     {
+      "content": "B",
+      "polygon": [
+       1.0622,
+       0.963,
+       1.1452,
+       0.9626,
+       1.1456,
+       1.1238,
+       1.0627,
+       1.1238
+      ],
+      "confidence": 0.994,
+      "span": {
+       "offset": 42,
+       "length": 1
+      }
+     },
+     {
+      "content": "-",
+      "polygon": [
+       1.1826,
+       0.9624,
+       1.2683,
+       0.962,
+       1.2687,
+       1.1238,
+       1.1831,
+       1.1238
+      ],
+      "confidence": 0.992,
+      "span": {
+       "offset": 44,
+       "length": 1
+      }
+     },
+     {
+      "content": "To",
+      "polygon": [
+       1.303,
+       0.962,
+       1.4609,
+       0.9617,
+       1.4615,
+       1.1238,
+       1.3035,
+       1.1238
+      ],
+      "confidence": 0.996,
+      "span": {
+       "offset": 46,
+       "length": 2
+      }
+     },
+     {
+      "content": "Be",
+      "polygon": [
+       1.5091,
+       0.9616,
+       1.6696,
+       0.9606,
+       1.6701,
+       1.1238,
+       1.5097,
+       1.1238
+      ],
+      "confidence": 0.995,
+      "span": {
+       "offset": 49,
+       "length": 2
+      }
+     },
+     {
+      "content": "Filed",
+      "polygon": [
+       1.7178,
+       0.9603,
+       2.0068,
+       0.9578,
+       2.0071,
+       1.1238,
+       1.7183,
+       1.1238
+      ],
+      "confidence": 0.996,
+      "span": {
+       "offset": 52,
+       "length": 5
+      }
+     },
+     {
+      "content": "With",
+      "polygon": [
+       2.0496,
+       0.9574,
+       2.3225,
+       0.9578,
+       2.3227,
+       1.1238,
+       2.0499,
+       1.1238
+      ],
+      "confidence": 0.989,
+      "span": {
+       "offset": 58,
+       "length": 4
+      }
+     },
+     {
+      "content": "Employee's",
+      "polygon": [
+       2.376,
+       0.9578,
+       3.0771,
+       0.9573,
+       3.0773,
+       1.1233,
+       2.3762,
+       1.1238
+      ],
+      "confidence": 0.992,
+      "span": {
+       "offset": 63,
+       "length": 10
+      }
+     },
+     {
+      "content": "FEDERAL",
+      "polygon": [
+       3.1279,
+       0.9574,
+       3.7567,
+       0.9579,
+       3.757,
+       1.1202,
+       3.1281,
+       1.1231
+      ],
+      "confidence": 0.994,
+      "span": {
+       "offset": 74,
+       "length": 7
+      }
+     },
+     {
+      "content": "Tax",
+      "polygon": [
+       3.7969,
+       0.9579,
+       4.0297,
+       0.958,
+       4.03,
+       1.119,
+       3.7972,
+       1.1201
+      ],
+      "confidence": 0.998,
+      "span": {
+       "offset": 82,
+       "length": 3
+      }
+     },
+     {
+      "content": "Return",
+      "polygon": [
+       4.0752,
+       0.9582,
+       4.4935,
+       0.9606,
+       4.4935,
+       1.1154,
+       4.0755,
+       1.1187
+      ],
+      "confidence": 0.993,
+      "span": {
+       "offset": 86,
+       "length": 6
+      }
+     },
+     {
+      "content": "a",
+      "polygon": [
+       0.6819,
+       1.5496,
+       0.7642,
+       1.5498,
+       0.7648,
+       1.7051,
+       0.6825,
+       1.7051
+      ],
+      "confidence": 0.995,
+      "span": {
+       "offset": 93,
+       "length": 1
+      }
+     },
+     {
+      "content": "Employee's",
+      "polygon": [
+       0.8157,
+       1.5499,
+       1.5695,
+       1.5488,
+       1.5698,
+       1.7051,
+       0.8162,
+       1.7051
+      ],
+      "confidence": 0.992,
+      "span": {
+       "offset": 95,
+       "length": 10
+      }
+     },
+     {
+      "content": "social",
+      "polygon": [
+       1.6133,
+       1.5487,
+       2.0018,
+       1.5487,
+       2.0018,
+       1.7051,
+       1.6135,
+       1.7051
+      ],
+      "confidence": 0.996,
+      "span": {
+       "offset": 106,
+       "length": 6
+      }
+     },
+     {
+      "content": "security",
+      "polygon": [
+       2.0481,
+       1.5486,
+       2.5653,
+       1.5487,
+       2.5653,
+       1.7051,
+       2.048,
+       1.7051
+      ],
+      "confidence": 0.997,
+      "span": {
+       "offset": 113,
+       "length": 8
+      }
+     },
+     {
+      "content": "number:",
+      "polygon": [
+       2.5961,
+       1.5489,
+       3.1764,
+       1.549,
+       3.1764,
+       1.7025,
+       2.5962,
+       1.7051
+      ],
+      "confidence": 0.993,
+      "span": {
+       "offset": 122,
+       "length": 7
+      }
+     },
+     {
+      "content": "919-57-3646",
+      "polygon": [
+       3.881,
+       1.5486,
+       4.6872,
+       1.5475,
+       4.6872,
+       1.6867,
+       3.8815,
+       1.6873
+      ],
+      "confidence": 0.993,
+      "span": {
+       "offset": 130,
+       "length": 11
+      }
+     },
+     {
+      "content": "b",
+      "polygon": [
+       0.6834,
+       1.8527,
+       0.7738,
+       1.8522,
+       0.774,
+       2.0096,
+       0.6836,
+       2.009
+      ],
+      "confidence": 0.993,
+      "span": {
+       "offset": 142,
+       "length": 1
+      }
+     },
+     {
+      "content": "Employer",
+      "polygon": [
+       0.8229,
+       1.852,
+       1.4377,
+       1.849,
+       1.438,
+       2.0096,
+       0.8231,
+       2.0096
+      ],
+      "confidence": 0.995,
+      "span": {
+       "offset": 144,
+       "length": 8
+      }
+     },
+     {
+      "content": "identification",
+      "polygon": [
+       1.4687,
+       1.8489,
+       2.3471,
+       1.8494,
+       2.3469,
+       2.0068,
+       1.469,
+       2.0096
+      ],
+      "confidence": 0.992,
+      "span": {
+       "offset": 153,
+       "length": 14
+      }
+     },
+     {
+      "content": "number:",
+      "polygon": [
+       2.3962,
+       1.8497,
+       2.9495,
+       1.8508,
+       2.9495,
+       2.003,
+       2.3959,
+       2.0066
+      ],
+      "confidence": 0.993,
+      "span": {
+       "offset": 168,
+       "length": 7
+      }
+     },
+     {
+      "content": "00-0000000",
+      "polygon": [
+       3.8826,
+       1.8533,
+       4.6373,
+       1.8515,
+       4.6374,
+       1.9924,
+       3.8837,
+       1.993
+      ],
+      "confidence": 0.994,
+      "span": {
+       "offset": 176,
+       "length": 10
+      }
+     },
+     {
+      "content": "c",
+      "polygon": [
+       0.6873,
+       2.161,
+       0.7667,
+       2.1607,
+       0.767,
+       2.3128,
+       0.6877,
+       2.3124
+      ],
+      "confidence": 0.992,
+      "span": {
+       "offset": 187,
+       "length": 1
+      }
+     },
+     {
+      "content": "Employer's",
+      "polygon": [
+       0.8163,
+       2.1606,
+       1.5405,
+       2.1599,
+       1.5405,
+       2.311,
+       0.8166,
+       2.3131
+      ],
+      "confidence": 0.993,
+      "span": {
+       "offset": 189,
+       "length": 10
+      }
+     },
+     {
+      "content": "name:",
+      "polygon": [
+       1.5702,
+       2.1596,
+       2.0033,
+       2.1591,
+       2.0033,
+       2.3083,
+       1.5703,
+       2.3111
+      ],
+      "confidence": 0.993,
+      "span": {
+       "offset": 200,
+       "length": 5
+      }
+     },
+     {
+      "content": "Kestrelmoor",
+      "polygon": [
+       3.8817,
+       2.1554,
+       4.6365,
+       2.1552,
+       4.6364,
+       2.3114,
+       3.8817,
+       2.3065
+      ],
+      "confidence": 0.994,
+      "span": {
+       "offset": 206,
+       "length": 11
+      }
+     },
+     {
+      "content": "Civil",
+      "polygon": [
+       4.6797,
+       2.1554,
+       4.9313,
+       2.1576,
+       4.931,
+       2.3134,
+       4.6796,
+       2.3117
+      ],
+      "confidence": 0.998,
+      "span": {
+       "offset": 218,
+       "length": 5
+      }
+     },
+     {
+      "content": "Engineering",
+      "polygon": [
+       4.9821,
+       2.1575,
+       5.722,
+       2.1604,
+       5.722,
+       2.3185,
+       4.9818,
+       2.3137
+      ],
+      "confidence": 0.996,
+      "span": {
+       "offset": 224,
+       "length": 11
+      }
+     },
+     {
+      "content": "e",
+      "polygon": [
+       0.6856,
+       2.4722,
+       0.7657,
+       2.4722,
+       0.7661,
+       2.6241,
+       0.6859,
+       2.6241
+      ],
+      "confidence": 0.994,
+      "span": {
+       "offset": 236,
+       "length": 1
+      }
+     },
+     {
+      "content": "Employee's",
+      "polygon": [
+       0.8157,
+       2.4721,
+       1.569,
+       2.4702,
+       1.5692,
+       2.6236,
+       0.8161,
+       2.6241
+      ],
+      "confidence": 0.994,
+      "span": {
+       "offset": 238,
+       "length": 10
+      }
+     },
+     {
+      "content": "name:",
+      "polygon": [
+       1.6191,
+       2.4697,
+       2.0309,
+       2.4699,
+       2.0309,
+       2.619,
+       1.6192,
+       2.6237
+      ],
+      "confidence": 0.995,
+      "span": {
+       "offset": 249,
+       "length": 5
+      }
+     },
+     {
+      "content": "Ned",
+      "polygon": [
+       3.8814,
+       2.4692,
+       4.1332,
+       2.469,
+       4.1335,
+       2.6085,
+       3.8823,
+       2.6092
+      ],
+      "confidence": 0.998,
+      "span": {
+       "offset": 255,
+       "length": 3
+      }
+     },
+     {
+      "content": "Fennimore",
+      "polygon": [
+       4.1882,
+       2.4691,
+       4.8532,
+       2.4706,
+       4.8532,
+       2.6111,
+       4.1883,
+       2.6087
+      ],
+      "confidence": 0.993,
+      "span": {
+       "offset": 259,
+       "length": 9
+      }
+     },
+     {
+      "content": "f",
+      "polygon": [
+       0.683,
+       2.7707,
+       0.7442,
+       2.7708,
+       0.7442,
+       2.9272,
+       0.683,
+       2.9272
+      ],
+      "confidence": 0.994,
+      "span": {
+       "offset": 269,
+       "length": 1
+      }
+     },
+     {
+      "content": "Employee's",
+      "polygon": [
+       0.785,
+       2.7709,
+       1.54,
+       2.77,
+       1.5399,
+       2.927,
+       0.785,
+       2.9272
+      ],
+      "confidence": 0.911,
+      "span": {
+       "offset": 271,
+       "length": 10
+      }
+     },
+     {
+      "content": "address:",
+      "polygon": [
+       1.5833,
+       2.7701,
+       2.1637,
+       2.7721,
+       2.1637,
+       2.9232,
+       1.5833,
+       2.9266
+      ],
+      "confidence": 0.992,
+      "span": {
+       "offset": 282,
+       "length": 8
+      }
+     },
+     {
+      "content": "8847",
+      "polygon": [
+       3.8811,
+       2.7677,
+       4.1922,
+       2.7676,
+       4.1923,
+       2.9221,
+       3.8816,
+       2.9208
+      ],
+      "confidence": 0.989,
+      "span": {
+       "offset": 291,
+       "length": 4
+      }
+     },
+     {
+      "content": "Tallow",
+      "polygon": [
+       4.2333,
+       2.7677,
+       4.6344,
+       2.7677,
+       4.6345,
+       2.923,
+       4.2335,
+       2.9221
+      ],
+      "confidence": 0.997,
+      "span": {
+       "offset": 296,
+       "length": 6
+      }
+     },
+     {
+      "content": "St,",
+      "polygon": [
+       4.6781,
+       2.7678,
+       4.8349,
+       2.7685,
+       4.8352,
+       2.923,
+       4.6782,
+       2.923
+      ],
+      "confidence": 0.995,
+      "span": {
+       "offset": 303,
+       "length": 3
+      }
+     },
+     {
+      "content": "Northmarch",
+      "polygon": [
+       4.8889,
+       2.7683,
+       5.6011,
+       2.7659,
+       5.6017,
+       2.923,
+       4.8892,
+       2.923
+      ],
+      "confidence": 0.994,
+      "span": {
+       "offset": 307,
+       "length": 10
+      }
+     },
+     {
+      "content": "City,",
+      "polygon": [
+       5.6499,
+       2.7659,
+       5.9147,
+       2.7662,
+       5.9158,
+       2.923,
+       5.6506,
+       2.923
+      ],
+      "confidence": 0.993,
+      "span": {
+       "offset": 318,
+       "length": 5
+      }
+     },
+     {
+      "content": "NM",
+      "polygon": [
+       5.9687,
+       2.7663,
+       6.1718,
+       2.7659,
+       6.1736,
+       2.923,
+       5.9699,
+       2.923
+      ],
+      "confidence": 0.994,
+      "span": {
+       "offset": 324,
+       "length": 2
+      }
+     },
+     {
+      "content": "00000",
+      "polygon": [
+       6.2181,
+       2.7658,
+       6.613,
+       2.7618,
+       6.613,
+       2.9186,
+       6.22,
+       2.923
+      ],
+      "confidence": 0.995,
+      "span": {
+       "offset": 327,
+       "length": 5
+      }
+     },
+     {
+      "content": "1",
+      "polygon": [
+       0.6926,
+       3.0778,
+       0.7517,
+       3.0775,
+       0.7519,
+       3.2344,
+       0.6927,
+       3.234
+      ],
+      "confidence": 0.995,
+      "span": {
+       "offset": 333,
+       "length": 1
+      }
+     },
+     {
+      "content": "Wages,",
+      "polygon": [
+       0.8058,
+       3.0772,
+       1.2868,
+       3.0773,
+       1.2869,
+       3.2361,
+       0.8059,
+       3.2348
+      ],
+      "confidence": 0.995,
+      "span": {
+       "offset": 335,
+       "length": 6
+      }
+     },
+     {
+      "content": "tips,",
+      "polygon": [
+       1.3305,
+       3.0778,
+       1.611,
+       3.0772,
+       1.6112,
+       3.2362,
+       1.3307,
+       3.2361
+      ],
+      "confidence": 0.997,
+      "span": {
+       "offset": 342,
+       "length": 5
+      }
+     },
+     {
+      "content": "other",
+      "polygon": [
+       1.6598,
+       3.077,
+       2.0071,
+       3.0775,
+       2.0072,
+       3.235,
+       1.6601,
+       3.236
+      ],
+      "confidence": 0.997,
+      "span": {
+       "offset": 348,
+       "length": 5
+      }
+     },
+     {
+      "content": "compensation:",
+      "polygon": [
+       2.0457,
+       3.0776,
+       3.0381,
+       3.0777,
+       3.0381,
+       3.2288,
+       2.0458,
+       3.2349
+      ],
+      "confidence": 0.992,
+      "span": {
+       "offset": 354,
+       "length": 13
+      }
+     },
+     {
+      "content": "$41,812.90",
+      "polygon": [
+       3.8792,
+       3.0774,
+       4.5931,
+       3.0756,
+       4.5931,
+       3.2186,
+       3.8804,
+       3.2219
+      ],
+      "confidence": 0.992,
+      "span": {
+       "offset": 368,
+       "length": 10
+      }
+     },
+     {
+      "content": "2",
+      "polygon": [
+       0.6818,
+       3.3779,
+       0.7641,
+       3.3779,
+       0.7643,
+       3.5249,
+       0.6822,
+       3.5245
+      ],
+      "confidence": 0.995,
+      "span": {
+       "offset": 379,
+       "length": 1
+      }
+     },
+     {
+      "content": "Federal",
+      "polygon": [
+       0.8149,
+       3.3779,
+       1.2937,
+       3.378,
+       1.2937,
+       3.5264,
+       0.8151,
+       3.5251
+      ],
+      "confidence": 0.996,
+      "span": {
+       "offset": 381,
+       "length": 7
+      }
+     },
+     {
+      "content": "income",
+      "polygon": [
+       1.3469,
+       3.3779,
+       1.8233,
+       3.3796,
+       1.8233,
+       3.5264,
+       1.3469,
+       3.5264
+      ],
+      "confidence": 0.998,
+      "span": {
+       "offset": 389,
+       "length": 6
+      }
+     },
+     {
+      "content": "tax",
+      "polygon": [
+       1.8644,
+       3.3797,
+       2.0652,
+       3.3798,
+       2.0652,
+       3.5264,
+       1.8644,
+       3.5264
+      ],
+      "confidence": 0.998,
+      "span": {
+       "offset": 396,
+       "length": 3
+      }
+     },
+     {
+      "content": "withheld:",
+      "polygon": [
+       2.1039,
+       3.3799,
+       2.7171,
+       3.3786,
+       2.7171,
+       3.5246,
+       2.1039,
+       3.5264
+      ],
+      "confidence": 0.992,
+      "span": {
+       "offset": 400,
+       "length": 9
+      }
+     },
+     {
+      "content": "$5,017.55",
+      "polygon": [
+       3.8799,
+       3.3808,
+       4.5156,
+       3.3788,
+       4.5156,
+       3.5213,
+       3.8814,
+       3.5264
+      ],
+      "confidence": 0.993,
+      "span": {
+       "offset": 410,
+       "length": 9
+      }
+     },
+     {
+      "content": "3",
+      "polygon": [
+       0.6836,
+       3.6844,
+       0.7654,
+       3.6843,
+       0.7655,
+       3.8346,
+       0.6836,
+       3.8338
+      ],
+      "confidence": 0.995,
+      "span": {
+       "offset": 420,
+       "length": 1
+      }
+     },
+     {
+      "content": "Social",
+      "polygon": [
+       0.8125,
+       3.6843,
+       1.2117,
+       3.6857,
+       1.2117,
+       3.8386,
+       0.8127,
+       3.835
+      ],
+      "confidence": 0.993,
+      "span": {
+       "offset": 422,
+       "length": 6
+      }
+     },
+     {
+      "content": "security",
+      "polygon": [
+       1.2589,
+       3.6858,
+       1.787,
+       3.6907,
+       1.7868,
+       3.8414,
+       1.2588,
+       3.839
+      ],
+      "confidence": 0.993,
+      "span": {
+       "offset": 429,
+       "length": 8
+      }
+     },
+     {
+      "content": "wages:",
+      "polygon": [
+       1.8267,
+       3.691,
+       2.3021,
+       3.6925,
+       2.3021,
+       3.842,
+       1.8265,
+       3.8416
+      ],
+      "confidence": 0.992,
+      "span": {
+       "offset": 438,
+       "length": 6
+      }
+     },
+     {
+      "content": "$41,812.90",
+      "polygon": [
+       3.8805,
+       3.6901,
+       4.5931,
+       3.6863,
+       4.5931,
+       3.8258,
+       3.8824,
+       3.8309
+      ],
+      "confidence": 0.993,
+      "span": {
+       "offset": 445,
+       "length": 10
+      }
+     },
+     {
+      "content": "5",
+      "polygon": [
+       0.6863,
+       3.9942,
+       0.7567,
+       3.994,
+       0.7568,
+       4.1462,
+       0.6864,
+       4.1455
+      ],
+      "confidence": 0.994,
+      "span": {
+       "offset": 456,
+       "length": 1
+      }
+     },
+     {
+      "content": "Medicare",
+      "polygon": [
+       0.7869,
+       3.9939,
+       1.4055,
+       3.9959,
+       1.4054,
+       4.1503,
+       0.787,
+       4.1465
+      ],
+      "confidence": 0.993,
+      "span": {
+       "offset": 458,
+       "length": 8
+      }
+     },
+     {
+      "content": "wages",
+      "polygon": [
+       1.4482,
+       3.996,
+       1.8682,
+       3.9967,
+       1.8677,
+       4.1515,
+       1.4481,
+       4.1506
+      ],
+      "confidence": 0.998,
+      "span": {
+       "offset": 467,
+       "length": 5
+      }
+     },
+     {
+      "content": "and",
+      "polygon": [
+       1.9135,
+       3.9969,
+       2.1524,
+       3.9981,
+       2.1516,
+       4.152,
+       1.913,
+       4.1519
+      ],
+      "confidence": 0.999,
+      "span": {
+       "offset": 473,
+       "length": 3
+      }
+     },
+     {
+      "content": "tips:",
+      "polygon": [
+       2.1976,
+       3.9981,
+       2.4958,
+       3.9981,
+       2.4958,
+       4.1512,
+       2.197,
+       4.1518
+      ],
+      "confidence": 0.993,
+      "span": {
+       "offset": 477,
+       "length": 5
+      }
+     },
+     {
+      "content": "$41,812.90",
+      "polygon": [
+       3.8791,
+       3.9967,
+       4.592,
+       3.9934,
+       4.5931,
+       4.136,
+       3.8811,
+       4.1409
+      ],
+      "confidence": 0.993,
+      "span": {
+       "offset": 483,
+       "length": 10
+      }
+     },
+     {
+      "content": "SAMPLE",
+      "polygon": [
+       0.19,
+       7.788,
+       2.064,
+       6.4748,
+       2.3259,
+       6.9145,
+       0.4277,
+       8.2154
+      ],
+      "confidence": 0.996,
+      "span": {
+       "offset": 494,
+       "length": 6
+      }
+     },
+     {
+      "content": "-",
+      "polygon": [
+       2.2056,
+       6.3814,
+       2.4594,
+       6.2118,
+       2.7202,
+       6.6476,
+       2.4662,
+       6.8192
+      ],
+      "confidence": 0.977,
+      "span": {
+       "offset": 501,
+       "length": 1
+      }
+     },
+     {
+      "content": "SYNTHETIC",
+      "polygon": [
+       2.6061,
+       6.1109,
+       5.1399,
+       4.3341,
+       5.4155,
+       4.785,
+       2.8696,
+       6.5472
+      ],
+      "confidence": 0.995,
+      "span": {
+       "offset": 503,
+       "length": 9
+      }
+     },
+     {
+      "content": "TEST",
+      "polygon": [
+       5.2843,
+       4.2299,
+       6.4339,
+       3.4184,
+       6.6958,
+       3.88,
+       5.5608,
+       4.6843
+      ],
+      "confidence": 0.992,
+      "span": {
+       "offset": 513,
+       "length": 4
+      }
+     },
+     {
+      "content": "DATA",
+      "polygon": [
+       6.5978,
+       3.3127,
+       7.9076,
+       2.5023,
+       8.1237,
+       2.9391,
+       6.856,
+       3.773
+      ],
+      "confidence": 0.99,
+      "span": {
+       "offset": 518,
+       "length": 4
+      }
+     },
+     {
+      "content": "SAMPLE",
+      "polygon": [
+       2.2797,
+       10.4848,
+       2.7352,
+       10.4831,
+       2.7343,
+       10.6059,
+       2.2789,
+       10.6064
+      ],
+      "confidence": 0.995,
+      "span": {
+       "offset": 523,
+       "length": 6
+      }
+     },
+     {
+      "content": "-",
+      "polygon": [
+       2.7637,
+       10.483,
+       2.8328,
+       10.4829,
+       2.8318,
+       10.6061,
+       2.7628,
+       10.606
+      ],
+      "confidence": 0.994,
+      "span": {
+       "offset": 530,
+       "length": 1
+      }
+     },
+     {
+      "content": "SYNTHETIC",
+      "polygon": [
+       2.8633,
+       10.4829,
+       3.4896,
+       10.4826,
+       3.4888,
+       10.6081,
+       2.8623,
+       10.6063
+      ],
+      "confidence": 0.993,
+      "span": {
+       "offset": 532,
+       "length": 9
+      }
+     },
+     {
+      "content": "TEST",
+      "polygon": [
+       3.5221,
+       10.4825,
+       3.8068,
+       10.4833,
+       3.806,
+       10.6085,
+       3.5213,
+       10.608
+      ],
+      "confidence": 0.992,
+      "span": {
+       "offset": 542,
+       "length": 4
+      }
+     },
+     {
+      "content": "DATA",
+      "polygon": [
+       3.8434,
+       10.4836,
+       4.1342,
+       10.4851,
+       4.1335,
+       10.6092,
+       3.8426,
+       10.6086
+      ],
+      "confidence": 0.992,
+      "span": {
+       "offset": 547,
+       "length": 4
+      }
+     },
+     {
+      "content": "-",
+      "polygon": [
+       4.1586,
+       10.4851,
+       4.2277,
+       10.4852,
+       4.2271,
+       10.6091,
+       4.1579,
+       10.6091
+      ],
+      "confidence": 0.993,
+      "span": {
+       "offset": 552,
+       "length": 1
+      }
+     },
+     {
+      "content": "fictional",
+      "polygon": [
+       4.2542,
+       10.4853,
+       4.6283,
+       10.4864,
+       4.6277,
+       10.6109,
+       4.2535,
+       10.6091
+      ],
+      "confidence": 0.992,
+      "span": {
+       "offset": 554,
+       "length": 9
+      }
+     },
+     {
+      "content": "document,",
+      "polygon": [
+       4.6649,
+       10.4865,
+       5.1774,
+       10.4879,
+       5.1769,
+       10.6127,
+       4.6643,
+       10.6112
+      ],
+      "confidence": 0.992,
+      "span": {
+       "offset": 564,
+       "length": 9
+      }
+     },
+     {
+      "content": "not",
+      "polygon": [
+       5.216,
+       10.4879,
+       5.3685,
+       10.4878,
+       5.3682,
+       10.6131,
+       5.2155,
+       10.6128
+      ],
+      "confidence": 0.996,
+      "span": {
+       "offset": 574,
+       "length": 3
+      }
+     },
+     {
+      "content": "valid",
+      "polygon": [
+       5.399,
+       10.488,
+       5.6227,
+       10.4895,
+       5.6223,
+       10.6139,
+       5.3987,
+       10.6132
+      ],
+      "confidence": 0.993,
+      "span": {
+       "offset": 578,
+       "length": 5
+      }
+     },
+     {
+      "content": "for",
+      "polygon": [
+       5.6573,
+       10.4898,
+       5.7915,
+       10.4907,
+       5.7911,
+       10.6151,
+       5.6568,
+       10.6141
+      ],
+      "confidence": 0.997,
+      "span": {
+       "offset": 584,
+       "length": 3
+      }
+     },
+     {
+      "content": "any",
+      "polygon": [
+       5.8199,
+       10.4909,
+       5.9989,
+       10.4919,
+       5.9985,
+       10.6162,
+       5.8196,
+       10.6154
+      ],
+      "confidence": 0.992,
+      "span": {
+       "offset": 588,
+       "length": 3
+      }
+     },
+     {
+      "content": "use",
+      "polygon": [
+       6.0334,
+       10.492,
+       6.2201,
+       10.4927,
+       6.2201,
+       10.6158,
+       6.033,
+       10.6161
+      ],
+      "confidence": 0.997,
+      "span": {
+       "offset": 592,
+       "length": 3
+      }
+     }
+    ],
+    "lines": [
+     {
+      "content": "Form W-2 Wage and Tax Statement 2025",
+      "polygon": [
+       0.6916,
+       0.6487,
+       4.9749,
+       0.6501,
+       4.9748,
+       0.8867,
+       0.6915,
+       0.8853
+      ],
+      "spans": [
+       {
+        "offset": 0,
+        "length": 36
+       }
+      ]
+     },
+     {
+      "content": "Copy B - To Be Filed With Employee's FEDERAL Tax Return",
+      "polygon": [
+       0.6903,
+       0.9597,
+       4.4927,
+       0.9533,
+       4.493,
+       1.1188,
+       0.6906,
+       1.1238
+      ],
+      "spans": [
+       {
+        "offset": 37,
+        "length": 55
+       }
+      ]
+     },
+     {
+      "content": "a Employee's social security number:",
+      "polygon": [
+       0.6819,
+       1.5487,
+       3.1758,
+       1.5475,
+       3.1759,
+       1.7039,
+       0.6819,
+       1.705
+      ],
+      "spans": [
+       {
+        "offset": 93,
+        "length": 36
+       }
+      ]
+     },
+     {
+      "content": "919-57-3646",
+      "polygon": [
+       3.881,
+       1.5486,
+       4.6823,
+       1.5475,
+       4.6825,
+       1.6847,
+       3.8812,
+       1.6858
+      ],
+      "spans": [
+       {
+        "offset": 130,
+        "length": 11
+       }
+      ]
+     },
+     {
+      "content": "b Employer identification number:",
+      "polygon": [
+       0.6834,
+       1.8501,
+       2.9491,
+       1.8465,
+       2.9494,
+       2.0051,
+       0.6836,
+       2.0087
+      ],
+      "spans": [
+       {
+        "offset": 142,
+        "length": 33
+       }
+      ]
+     },
+     {
+      "content": "00-0000000",
+      "polygon": [
+       3.8826,
+       1.8524,
+       4.6348,
+       1.8515,
+       4.635,
+       1.9906,
+       3.8828,
+       1.9916
+      ],
+      "spans": [
+       {
+        "offset": 176,
+        "length": 10
+       }
+      ]
+     },
+     {
+      "content": "c Employer's name:",
+      "polygon": [
+       0.6873,
+       2.1606,
+       2.0016,
+       2.159,
+       2.0019,
+       2.3084,
+       0.6876,
+       2.3115
+      ],
+      "spans": [
+       {
+        "offset": 187,
+        "length": 18
+       }
+      ]
+     },
+     {
+      "content": "Kestrelmoor Civil Engineering",
+      "polygon": [
+       3.8817,
+       2.1535,
+       5.722,
+       2.1595,
+       5.7213,
+       2.3159,
+       3.8809,
+       2.3062
+      ],
+      "spans": [
+       {
+        "offset": 206,
+        "length": 29
+       }
+      ]
+     },
+     {
+      "content": "e Employee's name:",
+      "polygon": [
+       0.6856,
+       2.4704,
+       2.0254,
+       2.469,
+       2.0256,
+       2.6216,
+       0.6857,
+       2.623
+      ],
+      "spans": [
+       {
+        "offset": 236,
+        "length": 18
+       }
+      ]
+     },
+     {
+      "content": "Ned Fennimore",
+      "polygon": [
+       3.8814,
+       2.4678,
+       4.8524,
+       2.4704,
+       4.8521,
+       2.6095,
+       3.8811,
+       2.6069
+      ],
+      "spans": [
+       {
+        "offset": 255,
+        "length": 13
+       }
+      ]
+     },
+     {
+      "content": "f Employee's address:",
+      "polygon": [
+       0.6828,
+       2.7706,
+       2.1631,
+       2.7687,
+       2.1633,
+       2.9245,
+       0.683,
+       2.9264
+      ],
+      "spans": [
+       {
+        "offset": 269,
+        "length": 21
+       }
+      ]
+     },
+     {
+      "content": "8847 Tallow St, Northmarch City, NM 00000",
+      "polygon": [
+       3.8811,
+       2.7677,
+       6.6115,
+       2.7619,
+       6.6118,
+       2.9214,
+       3.8814,
+       2.923
+      ],
+      "spans": [
+       {
+        "offset": 291,
+        "length": 41
+       }
+      ]
+     },
+     {
+      "content": "1 Wages, tips, other compensation:",
+      "polygon": [
+       0.6926,
+       3.076,
+       3.0348,
+       3.0766,
+       3.0348,
+       3.2342,
+       0.6925,
+       3.2336
+      ],
+      "spans": [
+       {
+        "offset": 333,
+        "length": 34
+       }
+      ]
+     },
+     {
+      "content": "$41,812.90",
+      "polygon": [
+       3.8792,
+       3.0769,
+       4.5902,
+       3.0737,
+       4.5908,
+       3.2165,
+       3.8799,
+       3.2197
+      ],
+      "spans": [
+       {
+        "offset": 368,
+        "length": 10
+       }
+      ]
+     },
+     {
+      "content": "2 Federal income tax withheld:",
+      "polygon": [
+       0.6818,
+       3.377,
+       2.7169,
+       3.3786,
+       2.7168,
+       3.526,
+       0.6817,
+       3.5244
+      ],
+      "spans": [
+       {
+        "offset": 379,
+        "length": 30
+       }
+      ]
+     },
+     {
+      "content": "$5,017.55",
+      "polygon": [
+       3.8799,
+       3.3808,
+       4.5117,
+       3.3771,
+       4.5125,
+       3.5205,
+       3.8807,
+       3.5242
+      ],
+      "spans": [
+       {
+        "offset": 410,
+        "length": 9
+       }
+      ]
+     },
+     {
+      "content": "3 Social security wages:",
+      "polygon": [
+       0.6836,
+       3.6824,
+       2.3,
+       3.6919,
+       2.2991,
+       3.842,
+       0.6827,
+       3.8332
+      ],
+      "spans": [
+       {
+        "offset": 420,
+        "length": 24
+       }
+      ]
+     },
+     {
+      "content": "$41,812.90",
+      "polygon": [
+       3.8805,
+       3.6895,
+       4.5882,
+       3.6835,
+       4.5894,
+       3.8236,
+       3.8817,
+       3.8296
+      ],
+      "spans": [
+       {
+        "offset": 445,
+        "length": 10
+       }
+      ]
+     },
+     {
+      "content": "5 Medicare wages and tips:",
+      "polygon": [
+       0.6863,
+       3.9935,
+       2.4937,
+       3.9981,
+       2.4933,
+       4.1512,
+       0.6862,
+       4.1466
+      ],
+      "spans": [
+       {
+        "offset": 456,
+        "length": 26
+       }
+      ]
+     },
+     {
+      "content": "$41,812.90",
+      "polygon": [
+       3.8791,
+       3.9967,
+       4.5887,
+       3.9914,
+       4.59,
+       4.1339,
+       3.8803,
+       4.1401
+      ],
+      "spans": [
+       {
+        "offset": 483,
+        "length": 10
+       }
+      ]
+     },
+     {
+      "content": "SAMPLE - SYNTHETIC TEST DATA",
+      "polygon": [
+       0.1882,
+       7.7642,
+       7.8425,
+       2.5023,
+       8.1237,
+       2.9097,
+       0.4403,
+       8.2154
+      ],
+      "spans": [
+       {
+        "offset": 494,
+        "length": 28
+       }
+      ]
+     },
+     {
+      "content": "SAMPLE - SYNTHETIC TEST DATA - fictional document, not valid for any use",
+      "polygon": [
+       2.2793,
+       10.4796,
+       6.2181,
+       10.4891,
+       6.2178,
+       10.615,
+       2.2789,
+       10.6044
+      ],
+      "spans": [
+       {
+        "offset": 523,
+        "length": 72
+       }
+      ]
+     }
+    ],
+    "spans": [
+     {
+      "offset": 0,
+      "length": 595
+     }
+    ]
+   }
+  ],
+  "styles": [],
+  "documents": [],
+  "contentFormat": "text"
+ }
+}

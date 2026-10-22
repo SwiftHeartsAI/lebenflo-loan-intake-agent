@@ -1,0 +1,68 @@
+{
+  "packet_id": "P007",
+  "synthetic": true,
+  "applicant": {
+    "full_name": "Mia Bramblecott",
+    "date_of_birth": "1999-05-25",
+    "ssn": "982-53-2827",
+    "address": "4818 Mossgate Ave, Northmarch City, NM 00000",
+    "employer": "Brindlewood Hospitality",
+    "annual_salary": 62000.0,
+    "pay_frequency": "biweekly"
+  },
+  "application": {
+    "loan_amount": 5000.0,
+    "loan_purpose": "Debt consolidation"
+  },
+  "documents": {
+    "pay_stub": {
+      "file": "pay_stub.pdf",
+      "fields": {
+        "employee_name": "Mia Bramblecott",
+        "employer_name": "Brindlewood Hospitality",
+        "employee_ssn": "982-53-2827",
+        "pay_period_start": "2026-09-20",
+        "pay_period_end": "2026-10-03",
+        "pay_date": "2026-10-09",
+        "gross_pay": 2384.62,
+        "ytd_gross_pay": 47692.4,
+        "net_pay": 1812.31
+      }
+    },
+    "w2": {
+      "file": "w2.pdf",
+      "fields": {
+        "employee_name": "Mia Bramblecott",
+        "employee_ssn": "982-53-2827",
+        "employer_name": "Brindlewood Hospitality",
+        "wages": 59901.41,
+        "tax_year": "2025"
+      }
+    },
+    "bank_statement": {
+      "file": "bank_statement.pdf",
+      "fields": {
+        "account_holder_name": "Mia Bramblecott",
+        "account_number": "0050056581",
+        "beginning_balance": 2959.79,
+        "ending_balance": 4306.76,
+        "statement_start": "2026-09-01",
+        "statement_end": "2026-09-30"
+      }
+    },
+    "drivers_license": {
+      "file": "drivers_license.pdf",
+      "fields": {
+        "first_name": "Mia",
+        "last_name": "Bramblecott",
+        "document_number": "N95758349",
+        "date_of_birth": "1999-05-25",
+        "date_of_expiration": "2030-05-25"
+      }
+    }
+  },
+  "flaw": null,
+  "missing_documents": [],
+  "expected_outcome": "APPROVE_FOR_UNDERWRITING",
+  "expected_reasons": []
+}

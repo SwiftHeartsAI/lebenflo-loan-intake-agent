@@ -1,0 +1,11 @@
+{
+ "_model": "azure-openai/gpt-5.4-mini",
+ "_recorded_at": "2026-10-22T14:00:24.475324+00:00",
+ "prompt_sha256": "341dc41deabce4a92c95c43ac9aff36d087bc813e3b6d570c1574346155610c7",
+ "response": {
+  "employee_name": "Mia Bramblecott",
+  "employer_name": "Brindlewood Hospitality",
+  "wages": 59901.41,
+  "tax_year": "2025"
+ }
+}

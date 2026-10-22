@@ -1,0 +1,11 @@
+{
+ "_model": "azure-openai/gpt-5.4-mini",
+ "_recorded_at": "2026-10-22T14:01:37.785055+00:00",
+ "prompt_sha256": "69225f908fbd84455e3b0ccb2f5dff2ea7e3c6e3e3db99a5b9a9822b292ce8e7",
+ "response": {
+  "employee_name": "Ned Fennimore",
+  "employer_name": "Kestrelmoor Civil Engineering",
+  "wages": 41812.9,
+  "tax_year": "2025"
+ }
+}

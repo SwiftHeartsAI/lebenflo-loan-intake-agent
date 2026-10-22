@@ -1,0 +1,68 @@
+{
+  "packet_id": "P001",
+  "synthetic": true,
+  "applicant": {
+    "full_name": "Jon Quillfeather",
+    "date_of_birth": "1972-01-24",
+    "ssn": "935-41-4657",
+    "address": "2296 Birchend Ct, Northmarch City, NM 00000",
+    "employer": "Quillback Robotics Co",
+    "annual_salary": 55000.0,
+    "pay_frequency": "semimonthly"
+  },
+  "application": {
+    "loan_amount": 32000.0,
+    "loan_purpose": "Auto loan"
+  },
+  "documents": {
+    "pay_stub": {
+      "file": "pay_stub.pdf",
+      "fields": {
+        "employee_name": "Jon Quillfeather",
+        "employer_name": "Quillback Robotics Co",
+        "employee_ssn": "935-41-4657",
+        "pay_period_start": "2026-09-16",
+        "pay_period_end": "2026-09-30",
+        "pay_date": "2026-10-03",
+        "gross_pay": 2291.67,
+        "ytd_gross_pay": 41250.06,
+        "net_pay": 1741.67
+      }
+    },
+    "w2": {
+      "file": "w2.pdf",
+      "fields": {
+        "employee_name": "Jon Quillfeather",
+        "employee_ssn": "935-41-4657",
+        "employer_name": "Quillback Robotics Co",
+        "wages": 54934.52,
+        "tax_year": "2025"
+      }
+    },
+    "bank_statement": {
+      "file": "bank_statement.pdf",
+      "fields": {
+        "account_holder_name": "Jon Quillfeather",
+        "account_number": "0083140807",
+        "beginning_balance": 2592.83,
+        "ending_balance": 4728.84,
+        "statement_start": "2026-09-01",
+        "statement_end": "2026-09-30"
+      }
+    },
+    "drivers_license": {
+      "file": "drivers_license.pdf",
+      "fields": {
+        "first_name": "Jon",
+        "last_name": "Quillfeather",
+        "document_number": "N66306997",
+        "date_of_birth": "1972-01-24",
+        "date_of_expiration": "2030-01-24"
+      }
+    }
+  },
+  "flaw": null,
+  "missing_documents": [],
+  "expected_outcome": "APPROVE_FOR_UNDERWRITING",
+  "expected_reasons": []
+}

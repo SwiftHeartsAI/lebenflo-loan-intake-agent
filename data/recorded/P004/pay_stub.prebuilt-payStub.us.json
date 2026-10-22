@@ -1,0 +1,2403 @@
+{
+ "_source": "azure",
+ "_model_id": "prebuilt-payStub.us",
+ "_recorded_at": "2026-10-22T13:57:04.471633+00:00",
+ "result": {
+  "apiVersion": "2024-11-30",
+  "modelId": "prebuilt-payStub.us",
+  "stringIndexType": "textElements",
+  "content": "EARNINGS STATEMENT Glimmerstone Health Clinic - Payroll Department\nEmployer:\nGlimmerstone Health Clinic\nEmployee Name:\nSam Ashcombe\nEmployee Address:\n9990 Birchend Ct, Northmarch City, NM 00000\nSocial Security Number:\n934-99-2169\nPay Period Start:\n09/16/2026\nPay Period End:\n09/30/2026\nPay Date:\n10/03/2026\nEarnings\nCurrent\nYear to Date\nGross Pay\n$2,645.83\n$47,624.94\nTaxes and Deductions\n$635.00\n$11,429.99\nNet Pay\n$2,010.83\n$36,194.95\nSAMPLE - SYNTHETIC T\nSAMPLE - SYNTHETIC TEST DATA - fictional document, not valid for any use\nDATA",
+  "pages": [
+   {
+    "pageNumber": 1,
+    "angle": -0.01549999974668026,
+    "width": 8.5,
+    "height": 11,
+    "unit": "inch",
+    "words": [
+     {
+      "content": "EARNINGS",
+      "polygon": [
+       0.6938,
+       0.6574,
+       1.8571,
+       0.6539,
+       1.856,
+       0.8581,
+       0.6928,
+       0.8567
+      ],
+      "confidence": 0.995,
+      "span": {
+       "offset": 0,
+       "length": 8
+      }
+     },
+     {
+      "content": "STATEMENT",
+      "polygon": [
+       1.9343,
+       0.6536,
+       3.2926,
+       0.6537,
+       3.2926,
+       0.8581,
+       1.933,
+       0.8581
+      ],
+      "confidence": 0.995,
+      "span": {
+       "offset": 9,
+       "length": 9
+      }
+     },
+     {
+      "content": "Glimmerstone",
+      "polygon": [
+       0.6942,
+       0.9708,
+       1.545,
+       0.9679,
+       1.5451,
+       1.1129,
+       0.6944,
+       1.1094
+      ],
+      "confidence": 0.995,
+      "span": {
+       "offset": 19,
+       "length": 12
+      }
+     },
+     {
+      "content": "Health",
+      "polygon": [
+       1.5762,
+       0.9679,
+       1.9908,
+       0.9677,
+       1.9908,
+       1.1147,
+       1.5762,
+       1.113
+      ],
+      "confidence": 0.997,
+      "span": {
+       "offset": 32,
+       "length": 6
+      }
+     },
+     {
+      "content": "Clinic",
+      "polygon": [
+       2.0387,
+       0.9676,
+       2.3742,
+       0.9679,
+       2.3743,
+       1.1167,
+       2.0388,
+       1.1149
+      ],
+      "confidence": 0.995,
+      "span": {
+       "offset": 39,
+       "length": 6
+      }
+     },
+     {
+      "content": "-",
+      "polygon": [
+       2.4102,
+       0.968,
+       2.4941,
+       0.9678,
+       2.4941,
+       1.1173,
+       2.4103,
+       1.117
+      ],
+      "confidence": 0.996,
+      "span": {
+       "offset": 46,
+       "length": 1
+      }
+     },
+     {
+      "content": "Payroll",
+      "polygon": [
+       2.5372,
+       0.9677,
+       2.947,
+       0.9687,
+       2.947,
+       1.1181,
+       2.5372,
+       1.1174
+      ],
+      "confidence": 0.994,
+      "span": {
+       "offset": 48,
+       "length": 7
+      }
+     },
+     {
+      "content": "Department",
+      "polygon": [
+       2.9997,
+       0.9686,
+       3.7331,
+       0.9709,
+       3.7332,
+       1.1172,
+       2.9997,
+       1.1181
+      ],
+      "confidence": 0.995,
+      "span": {
+       "offset": 56,
+       "length": 10
+      }
+     },
+     {
+      "content": "Employer:",
+      "polygon": [
+       0.6909,
+       1.5555,
+       1.3779,
+       1.5554,
+       1.3779,
+       1.7045,
+       0.6909,
+       1.7045
+      ],
+      "confidence": 0.995,
+      "span": {
+       "offset": 67,
+       "length": 9
+      }
+     },
+     {
+      "content": "Glimmerstone",
+      "polygon": [
+       3.0541,
+       1.5516,
+       3.9148,
+       1.5505,
+       3.9148,
+       1.6896,
+       3.054,
+       1.6899
+      ],
+      "confidence": 0.995,
+      "span": {
+       "offset": 77,
+       "length": 12
+      }
+     },
+     {
+      "content": "Health",
+      "polygon": [
+       3.9629,
+       1.5504,
+       4.3497,
+       1.5498,
+       4.3493,
+       1.69,
+       3.9628,
+       1.6898
+      ],
+      "confidence": 0.995,
+      "span": {
+       "offset": 90,
+       "length": 6
+      }
+     },
+     {
+      "content": "Clinic",
+      "polygon": [
+       4.4001,
+       1.5497,
+       4.748,
+       1.5497,
+       4.7479,
+       1.6901,
+       4.3996,
+       1.6902
+      ],
+      "confidence": 0.995,
+      "span": {
+       "offset": 97,
+       "length": 6
+      }
+     },
+     {
+      "content": "Employee",
+      "polygon": [
+       0.6899,
+       1.8031,
+       1.3458,
+       1.8007,
+       1.3457,
+       1.9519,
+       0.6898,
+       1.9521
+      ],
+      "confidence": 0.995,
+      "span": {
+       "offset": 104,
+       "length": 8
+      }
+     },
+     {
+      "content": "Name:",
+      "polygon": [
+       1.3949,
+       1.8012,
+       1.8151,
+       1.8015,
+       1.8151,
+       1.9479,
+       1.3947,
+       1.9516
+      ],
+      "confidence": 0.996,
+      "span": {
+       "offset": 113,
+       "length": 5
+      }
+     },
+     {
+      "content": "Sam",
+      "polygon": [
+       3.0505,
+       1.8014,
+       3.3314,
+       1.801,
+       3.3311,
+       1.9368,
+       3.0505,
+       1.9373
+      ],
+      "confidence": 0.999,
+      "span": {
+       "offset": 119,
+       "length": 3
+      }
+     },
+     {
+      "content": "Ashcombe",
+      "polygon": [
+       3.376,
+       1.801,
+       4.0397,
+       1.8005,
+       4.0397,
+       1.9368,
+       3.3757,
+       1.9369
+      ],
+      "confidence": 0.996,
+      "span": {
+       "offset": 123,
+       "length": 8
+      }
+     },
+     {
+      "content": "Employee",
+      "polygon": [
+       0.6903,
+       2.0522,
+       1.3445,
+       2.0496,
+       1.3444,
+       2.202,
+       0.6901,
+       2.2012
+      ],
+      "confidence": 0.994,
+      "span": {
+       "offset": 132,
+       "length": 8
+      }
+     },
+     {
+      "content": "Address:",
+      "polygon": [
+       1.3867,
+       2.0495,
+       1.9922,
+       2.0488,
+       1.9922,
+       2.1986,
+       1.3864,
+       2.2017
+      ],
+      "confidence": 0.995,
+      "span": {
+       "offset": 141,
+       "length": 8
+      }
+     },
+     {
+      "content": "9990",
+      "polygon": [
+       3.0497,
+       2.0476,
+       3.3589,
+       2.0477,
+       3.3586,
+       2.1935,
+       3.0496,
+       2.1919
+      ],
+      "confidence": 0.984,
+      "span": {
+       "offset": 150,
+       "length": 4
+      }
+     },
+     {
+      "content": "Birchend",
+      "polygon": [
+       3.4076,
+       2.0479,
+       3.9431,
+       2.0482,
+       3.9427,
+       2.1958,
+       3.4073,
+       2.1936
+      ],
+      "confidence": 0.995,
+      "span": {
+       "offset": 155,
+       "length": 8
+      }
+     },
+     {
+      "content": "Ct,",
+      "polygon": [
+       3.9918,
+       2.0483,
+       4.1573,
+       2.048,
+       4.1569,
+       2.1966,
+       3.9914,
+       2.1961
+      ],
+      "confidence": 0.993,
+      "span": {
+       "offset": 164,
+       "length": 3
+      }
+     },
+     {
+      "content": "Northmarch",
+      "polygon": [
+       4.2108,
+       2.0478,
+       4.9241,
+       2.0462,
+       4.9238,
+       2.1969,
+       4.2104,
+       2.1966
+      ],
+      "confidence": 0.995,
+      "span": {
+       "offset": 168,
+       "length": 10
+      }
+     },
+     {
+      "content": "City,",
+      "polygon": [
+       4.9727,
+       2.0464,
+       5.2356,
+       2.0469,
+       5.2355,
+       2.1971,
+       4.9725,
+       2.1972
+      ],
+      "confidence": 0.995,
+      "span": {
+       "offset": 179,
+       "length": 5
+      }
+     },
+     {
+      "content": "NM",
+      "polygon": [
+       5.2892,
+       2.0469,
+       5.4937,
+       2.0459,
+       5.4929,
+       2.1977,
+       5.289,
+       2.1968
+      ],
+      "confidence": 0.994,
+      "span": {
+       "offset": 185,
+       "length": 2
+      }
+     },
+     {
+      "content": "00000",
+      "polygon": [
+       5.5423,
+       2.0457,
+       5.9318,
+       2.0437,
+       5.9314,
+       2.1921,
+       5.5415,
+       2.1974
+      ],
+      "confidence": 0.996,
+      "span": {
+       "offset": 188,
+       "length": 5
+      }
+     },
+     {
+      "content": "Social",
+      "polygon": [
+       0.6909,
+       2.3038,
+       1.094,
+       2.3027,
+       1.0935,
+       2.451,
+       0.6909,
+       2.4481
+      ],
+      "confidence": 0.996,
+      "span": {
+       "offset": 194,
+       "length": 6
+      }
+     },
+     {
+      "content": "Security",
+      "polygon": [
+       1.1447,
+       2.3032,
+       1.6877,
+       2.3039,
+       1.6873,
+       2.4508,
+       1.1443,
+       2.4516
+      ],
+      "confidence": 0.994,
+      "span": {
+       "offset": 201,
+       "length": 8
+      }
+     },
+     {
+      "content": "Number:",
+      "polygon": [
+       1.7336,
+       2.3041,
+       2.3021,
+       2.3035,
+       2.3021,
+       2.4482,
+       1.7332,
+       2.4508
+      ],
+      "confidence": 0.994,
+      "span": {
+       "offset": 210,
+       "length": 7
+      }
+     },
+     {
+      "content": "934-99-2169",
+      "polygon": [
+       3.0509,
+       2.304,
+       3.846,
+       2.3021,
+       3.846,
+       2.4358,
+       3.0514,
+       2.4358
+      ],
+      "confidence": 0.993,
+      "span": {
+       "offset": 218,
+       "length": 11
+      }
+     },
+     {
+      "content": "Pay",
+      "polygon": [
+       0.6903,
+       2.5523,
+       0.9366,
+       2.5521,
+       0.9369,
+       2.7016,
+       0.6909,
+       2.7016
+      ],
+      "confidence": 0.998,
+      "span": {
+       "offset": 230,
+       "length": 3
+      }
+     },
+     {
+      "content": "Period",
+      "polygon": [
+       0.9839,
+       2.5518,
+       1.4044,
+       2.5493,
+       1.4043,
+       2.7016,
+       0.984,
+       2.7016
+      ],
+      "confidence": 0.992,
+      "span": {
+       "offset": 234,
+       "length": 6
+      }
+     },
+     {
+      "content": "Start:",
+      "polygon": [
+       1.4517,
+       2.549,
+       1.815,
+       2.5494,
+       1.8149,
+       2.7,
+       1.4515,
+       2.7016
+      ],
+      "confidence": 0.995,
+      "span": {
+       "offset": 241,
+       "length": 6
+      }
+     },
+     {
+      "content": "09/16/2026",
+      "polygon": [
+       3.0524,
+       2.5548,
+       3.7552,
+       2.555,
+       3.7549,
+       2.685,
+       3.0527,
+       2.685
+      ],
+      "confidence": 0.995,
+      "span": {
+       "offset": 248,
+       "length": 10
+      }
+     },
+     {
+      "content": "Pay",
+      "polygon": [
+       0.6889,
+       2.8001,
+       0.9376,
+       2.8007,
+       0.9378,
+       2.9507,
+       0.6894,
+       2.9507
+      ],
+      "confidence": 0.998,
+      "span": {
+       "offset": 259,
+       "length": 3
+      }
+     },
+     {
+      "content": "Period",
+      "polygon": [
+       0.9849,
+       2.8001,
+       1.4028,
+       2.7983,
+       1.4027,
+       2.9502,
+       0.9849,
+       2.9507
+      ],
+      "confidence": 0.995,
+      "span": {
+       "offset": 263,
+       "length": 6
+      }
+     },
+     {
+      "content": "End:",
+      "polygon": [
+       1.4551,
+       2.7977,
+       1.7598,
+       2.7968,
+       1.7598,
+       2.9481,
+       1.4549,
+       2.9505
+      ],
+      "confidence": 0.989,
+      "span": {
+       "offset": 270,
+       "length": 4
+      }
+     },
+     {
+      "content": "09/30/2026",
+      "polygon": [
+       3.0526,
+       2.8035,
+       3.752,
+       2.8025,
+       3.752,
+       2.9341,
+       3.0528,
+       2.9341
+      ],
+      "confidence": 0.995,
+      "span": {
+       "offset": 275,
+       "length": 10
+      }
+     },
+     {
+      "content": "Pay",
+      "polygon": [
+       0.6884,
+       3.0536,
+       0.9378,
+       3.0545,
+       0.9372,
+       3.2009,
+       0.688,
+       3.2005
+      ],
+      "confidence": 0.993,
+      "span": {
+       "offset": 286,
+       "length": 3
+      }
+     },
+     {
+      "content": "Date:",
+      "polygon": [
+       0.9839,
+       3.0544,
+       1.3277,
+       3.0516,
+       1.3272,
+       3.1999,
+       0.983,
+       3.201
+      ],
+      "confidence": 0.996,
+      "span": {
+       "offset": 290,
+       "length": 5
+      }
+     },
+     {
+      "content": "10/03/2026",
+      "polygon": [
+       3.063,
+       3.0508,
+       3.752,
+       3.0522,
+       3.752,
+       3.1832,
+       3.0631,
+       3.1832
+      ],
+      "confidence": 0.995,
+      "span": {
+       "offset": 296,
+       "length": 10
+      }
+     },
+     {
+      "content": "Earnings",
+      "polygon": [
+       0.6908,
+       3.4417,
+       1.2894,
+       3.4422,
+       1.2894,
+       3.5868,
+       0.6905,
+       3.5832
+      ],
+      "confidence": 0.993,
+      "span": {
+       "offset": 307,
+       "length": 8
+      }
+     },
+     {
+      "content": "Current",
+      "polygon": [
+       4.1633,
+       3.4408,
+       4.6816,
+       3.4423,
+       4.6816,
+       3.572,
+       4.1634,
+       3.5716
+      ],
+      "confidence": 0.995,
+      "span": {
+       "offset": 316,
+       "length": 7
+      }
+     },
+     {
+      "content": "Year",
+      "polygon": [
+       5.8268,
+       3.4401,
+       6.1348,
+       3.4392,
+       6.1374,
+       3.5753,
+       5.8295,
+       3.576
+      ],
+      "confidence": 0.989,
+      "span": {
+       "offset": 324,
+       "length": 4
+      }
+     },
+     {
+      "content": "to",
+      "polygon": [
+       6.168,
+       3.4396,
+       6.2965,
+       3.4411,
+       6.2987,
+       3.5749,
+       6.1708,
+       3.5752
+      ],
+      "confidence": 0.999,
+      "span": {
+       "offset": 329,
+       "length": 2
+      }
+     },
+     {
+      "content": "Date",
+      "polygon": [
+       6.3453,
+       3.4411,
+       6.6512,
+       3.4402,
+       6.6517,
+       3.575,
+       6.3476,
+       3.5744
+      ],
+      "confidence": 0.988,
+      "span": {
+       "offset": 332,
+       "length": 4
+      }
+     },
+     {
+      "content": "Gross",
+      "polygon": [
+       0.695,
+       3.6907,
+       1.0613,
+       3.6933,
+       1.0597,
+       3.8362,
+       0.6946,
+       3.8331
+      ],
+      "confidence": 0.997,
+      "span": {
+       "offset": 337,
+       "length": 5
+      }
+     },
+     {
+      "content": "Pay",
+      "polygon": [
+       1.1103,
+       3.6937,
+       1.3503,
+       3.6951,
+       1.3503,
+       3.8364,
+       1.1086,
+       3.8364
+      ],
+      "confidence": 0.998,
+      "span": {
+       "offset": 343,
+       "length": 3
+      }
+     },
+     {
+      "content": "$2,645.83",
+      "polygon": [
+       4.1603,
+       3.6911,
+       4.7868,
+       3.6866,
+       4.7868,
+       3.8254,
+       4.1616,
+       3.8302
+      ],
+      "confidence": 0.993,
+      "span": {
+       "offset": 347,
+       "length": 9
+      }
+     },
+     {
+      "content": "$47,624.94",
+      "polygon": [
+       5.8258,
+       3.6897,
+       6.5355,
+       3.6883,
+       6.5355,
+       3.825,
+       5.8278,
+       3.8309
+      ],
+      "confidence": 0.994,
+      "span": {
+       "offset": 357,
+       "length": 10
+      }
+     },
+     {
+      "content": "Taxes",
+      "polygon": [
+       0.6913,
+       3.9417,
+       1.0684,
+       3.9406,
+       1.0685,
+       4.0829,
+       0.6913,
+       4.0825
+      ],
+      "confidence": 0.995,
+      "span": {
+       "offset": 368,
+       "length": 5
+      }
+     },
+     {
+      "content": "and",
+      "polygon": [
+       1.1101,
+       3.9406,
+       1.3345,
+       3.9412,
+       1.3346,
+       4.0826,
+       1.1101,
+       4.083
+      ],
+      "confidence": 0.998,
+      "span": {
+       "offset": 374,
+       "length": 3
+      }
+     },
+     {
+      "content": "Deductions",
+      "polygon": [
+       1.3855,
+       3.9414,
+       2.0807,
+       3.9428,
+       2.0807,
+       4.0818,
+       1.3855,
+       4.0827
+      ],
+      "confidence": 0.992,
+      "span": {
+       "offset": 378,
+       "length": 10
+      }
+     },
+     {
+      "content": "$635.00",
+      "polygon": [
+       4.1589,
+       3.9415,
+       4.6761,
+       3.9396,
+       4.6761,
+       4.0757,
+       4.1606,
+       4.0799
+      ],
+      "confidence": 0.997,
+      "span": {
+       "offset": 389,
+       "length": 7
+      }
+     },
+     {
+      "content": "$11,429.99",
+      "polygon": [
+       5.826,
+       3.9484,
+       6.5299,
+       3.9417,
+       6.5299,
+       4.0777,
+       5.8307,
+       4.0837
+      ],
+      "confidence": 0.993,
+      "span": {
+       "offset": 397,
+       "length": 10
+      }
+     },
+     {
+      "content": "Net",
+      "polygon": [
+       0.6901,
+       4.1915,
+       0.9094,
+       4.1947,
+       0.9068,
+       4.3383,
+       0.6888,
+       4.3333
+      ],
+      "confidence": 0.996,
+      "span": {
+       "offset": 408,
+       "length": 3
+      }
+     },
+     {
+      "content": "Pay",
+      "polygon": [
+       0.9538,
+       4.1957,
+       1.1953,
+       4.1984,
+       1.1953,
+       4.3402,
+       0.9506,
+       4.3398
+      ],
+      "confidence": 0.998,
+      "span": {
+       "offset": 412,
+       "length": 3
+      }
+     },
+     {
+      "content": "$2,010.83",
+      "polygon": [
+       4.158,
+       4.1961,
+       4.792,
+       4.1907,
+       4.7923,
+       4.3284,
+       4.1616,
+       4.3347
+      ],
+      "confidence": 0.994,
+      "span": {
+       "offset": 416,
+       "length": 9
+      }
+     },
+     {
+      "content": "$36,194.95",
+      "polygon": [
+       5.8241,
+       4.1968,
+       6.5355,
+       4.1895,
+       6.5355,
+       4.3292,
+       5.8308,
+       4.3386
+      ],
+      "confidence": 0.993,
+      "span": {
+       "offset": 426,
+       "length": 10
+      }
+     },
+     {
+      "content": "SAMPLE",
+      "polygon": [
+       0.1948,
+       7.792,
+       2.081,
+       6.4843,
+       2.3232,
+       6.9251,
+       0.43,
+       8.2043
+      ],
+      "confidence": 0.998,
+      "span": {
+       "offset": 437,
+       "length": 6
+      }
+     },
+     {
+      "content": "-",
+      "polygon": [
+       2.2146,
+       6.3893,
+       2.466,
+       6.2052,
+       2.7121,
+       6.6476,
+       2.4572,
+       6.831
+      ],
+      "confidence": 0.987,
+      "span": {
+       "offset": 444,
+       "length": 1
+      }
+     },
+     {
+      "content": "SYNTHETIC",
+      "polygon": [
+       2.606,
+       6.105,
+       5.1497,
+       4.3224,
+       5.3963,
+       4.7598,
+       2.8516,
+       6.547
+      ],
+      "confidence": 0.994,
+      "span": {
+       "offset": 446,
+       "length": 9
+      }
+     },
+     {
+      "content": "T",
+      "polygon": [
+       5.2854,
+       4.2303,
+       5.6255,
+       4.0081,
+       5.8604,
+       4.4224,
+       5.5302,
+       4.6639
+      ],
+      "confidence": 0.989,
+      "span": {
+       "offset": 456,
+       "length": 1
+      }
+     },
+     {
+      "content": "SAMPLE",
+      "polygon": [
+       2.2825,
+       10.4885,
+       2.7339,
+       10.4868,
+       2.7329,
+       10.6039,
+       2.2818,
+       10.604
+      ],
+      "confidence": 0.994,
+      "span": {
+       "offset": 458,
+       "length": 6
+      }
+     },
+     {
+      "content": "-",
+      "polygon": [
+       2.765,
+       10.4867,
+       2.8331,
+       10.4866,
+       2.832,
+       10.6042,
+       2.764,
+       10.604
+      ],
+      "confidence": 0.983,
+      "span": {
+       "offset": 465,
+       "length": 1
+      }
+     },
+     {
+      "content": "SYNTHETIC",
+      "polygon": [
+       2.8642,
+       10.4866,
+       3.4888,
+       10.486,
+       3.4878,
+       10.6062,
+       2.8631,
+       10.6044
+      ],
+      "confidence": 0.993,
+      "span": {
+       "offset": 467,
+       "length": 9
+      }
+     },
+     {
+      "content": "TEST",
+      "polygon": [
+       3.5219,
+       10.4859,
+       3.8059,
+       10.4864,
+       3.805,
+       10.6066,
+       3.5209,
+       10.6061
+      ],
+      "confidence": 0.988,
+      "span": {
+       "offset": 477,
+       "length": 4
+      }
+     },
+     {
+      "content": "DATA",
+      "polygon": [
+       3.8429,
+       10.4868,
+       4.1347,
+       10.4883,
+       4.1339,
+       10.6072,
+       3.842,
+       10.6068
+      ],
+      "confidence": 0.992,
+      "span": {
+       "offset": 482,
+       "length": 4
+      }
+     },
+     {
+      "content": "-",
+      "polygon": [
+       4.16,
+       10.4883,
+       4.2281,
+       10.4884,
+       4.2274,
+       10.6071,
+       4.1592,
+       10.6072
+      ],
+      "confidence": 0.994,
+      "span": {
+       "offset": 487,
+       "length": 1
+      }
+     },
+     {
+      "content": "fictional",
+      "polygon": [
+       4.2534,
+       10.4884,
+       4.6269,
+       10.4896,
+       4.6262,
+       10.6089,
+       4.2527,
+       10.607
+      ],
+      "confidence": 0.993,
+      "span": {
+       "offset": 489,
+       "length": 9
+      }
+     },
+     {
+      "content": "document,",
+      "polygon": [
+       4.6639,
+       10.4898,
+       5.1775,
+       10.4917,
+       5.177,
+       10.611,
+       4.6631,
+       10.6092
+      ],
+      "confidence": 0.992,
+      "span": {
+       "offset": 499,
+       "length": 9
+      }
+     },
+     {
+      "content": "not",
+      "polygon": [
+       5.2165,
+       10.4918,
+       5.3682,
+       10.492,
+       5.3678,
+       10.6118,
+       5.2159,
+       10.6111
+      ],
+      "confidence": 0.997,
+      "span": {
+       "offset": 509,
+       "length": 3
+      }
+     },
+     {
+      "content": "valid",
+      "polygon": [
+       5.3993,
+       10.4922,
+       5.6231,
+       10.4935,
+       5.6225,
+       10.6126,
+       5.3989,
+       10.6119
+      ],
+      "confidence": 0.994,
+      "span": {
+       "offset": 513,
+       "length": 5
+      }
+     },
+     {
+      "content": "for",
+      "polygon": [
+       5.6562,
+       10.4937,
+       5.7923,
+       10.4946,
+       5.7918,
+       10.6138,
+       5.6556,
+       10.6127
+      ],
+      "confidence": 0.996,
+      "span": {
+       "offset": 519,
+       "length": 3
+      }
+     },
+     {
+      "content": "any",
+      "polygon": [
+       5.8196,
+       10.4947,
+       5.9986,
+       10.4958,
+       5.9981,
+       10.6149,
+       5.8191,
+       10.614
+      ],
+      "confidence": 0.997,
+      "span": {
+       "offset": 523,
+       "length": 3
+      }
+     },
+     {
+      "content": "use",
+      "polygon": [
+       6.0336,
+       10.496,
+       6.2201,
+       10.4969,
+       6.2197,
+       10.6149,
+       6.033,
+       10.6149
+      ],
+      "confidence": 0.994,
+      "span": {
+       "offset": 527,
+       "length": 3
+      }
+     },
+     {
+      "content": "DATA",
+      "polygon": [
+       6.6458,
+       3.335,
+       7.8428,
+       2.4967,
+       8.096,
+       2.861,
+       6.8658,
+       3.7091
+      ],
+      "confidence": 0.99,
+      "span": {
+       "offset": 531,
+       "length": 4
+      }
+     }
+    ],
+    "lines": [
+     {
+      "content": "EARNINGS STATEMENT",
+      "polygon": [
+       0.6926,
+       0.6545,
+       3.2923,
+       0.6516,
+       3.2925,
+       0.8553,
+       0.6928,
+       0.8581
+      ],
+      "spans": [
+       {
+        "offset": 0,
+        "length": 18
+       }
+      ]
+     },
+     {
+      "content": "Glimmerstone Health Clinic - Payroll Department",
+      "polygon": [
+       0.6942,
+       0.9633,
+       3.7303,
+       0.97,
+       3.73,
+       1.1179,
+       0.6939,
+       1.1103
+      ],
+      "spans": [
+       {
+        "offset": 19,
+        "length": 47
+       }
+      ]
+     },
+     {
+      "content": "Employer:",
+      "polygon": [
+       0.6909,
+       1.5542,
+       1.3729,
+       1.554,
+       1.373,
+       1.7034,
+       0.6909,
+       1.7036
+      ],
+      "spans": [
+       {
+        "offset": 67,
+        "length": 9
+       }
+      ]
+     },
+     {
+      "content": "Glimmerstone Health Clinic",
+      "polygon": [
+       3.0541,
+       1.5484,
+       4.7435,
+       1.5495,
+       4.7434,
+       1.6891,
+       3.054,
+       1.688
+      ],
+      "spans": [
+       {
+        "offset": 77,
+        "length": 26
+       }
+      ]
+     },
+     {
+      "content": "Employee Name:",
+      "polygon": [
+       0.6898,
+       1.8005,
+       1.8122,
+       1.8005,
+       1.8122,
+       1.9506,
+       0.6898,
+       1.9506
+      ],
+      "spans": [
+       {
+        "offset": 104,
+        "length": 14
+       }
+      ]
+     },
+     {
+      "content": "Sam Ashcombe",
+      "polygon": [
+       3.0505,
+       1.8006,
+       4.0387,
+       1.8001,
+       4.0388,
+       1.9356,
+       3.0505,
+       1.936
+      ],
+      "spans": [
+       {
+        "offset": 119,
+        "length": 12
+       }
+      ]
+     },
+     {
+      "content": "Employee Address:",
+      "polygon": [
+       0.6901,
+       2.0483,
+       1.99,
+       2.0488,
+       1.9899,
+       2.201,
+       0.6901,
+       2.2005
+      ],
+      "spans": [
+       {
+        "offset": 132,
+        "length": 17
+       }
+      ]
+     },
+     {
+      "content": "9990 Birchend Ct, Northmarch City, NM 00000",
+      "polygon": [
+       3.0495,
+       2.0476,
+       5.9278,
+       2.0437,
+       5.928,
+       2.1947,
+       3.0497,
+       2.1978
+      ],
+      "spans": [
+       {
+        "offset": 150,
+        "length": 43
+       }
+      ]
+     },
+     {
+      "content": "Social Security Number:",
+      "polygon": [
+       0.6909,
+       2.3023,
+       2.2997,
+       2.3018,
+       2.2997,
+       2.4489,
+       0.6909,
+       2.4494
+      ],
+      "spans": [
+       {
+        "offset": 194,
+        "length": 23
+       }
+      ]
+     },
+     {
+      "content": "934-99-2169",
+      "polygon": [
+       3.0509,
+       2.3031,
+       3.8438,
+       2.3022,
+       3.844,
+       2.4355,
+       3.0511,
+       2.4358
+      ],
+      "spans": [
+       {
+        "offset": 218,
+        "length": 11
+       }
+      ]
+     },
+     {
+      "content": "Pay Period Start:",
+      "polygon": [
+       0.6903,
+       2.5507,
+       1.8119,
+       2.5477,
+       1.8123,
+       2.6987,
+       0.6907,
+       2.7016
+      ],
+      "spans": [
+       {
+        "offset": 230,
+        "length": 17
+       }
+      ]
+     },
+     {
+      "content": "09/16/2026",
+      "polygon": [
+       3.0524,
+       2.5541,
+       3.7523,
+       2.5545,
+       3.7522,
+       2.6839,
+       3.0524,
+       2.6835
+      ],
+      "spans": [
+       {
+        "offset": 248,
+        "length": 10
+       }
+      ]
+     },
+     {
+      "content": "Pay Period End:",
+      "polygon": [
+       0.6889,
+       2.7994,
+       1.7587,
+       2.7962,
+       1.7592,
+       2.9476,
+       0.6893,
+       2.9507
+      ],
+      "spans": [
+       {
+        "offset": 259,
+        "length": 15
+       }
+      ]
+     },
+     {
+      "content": "09/30/2026",
+      "polygon": [
+       3.0526,
+       2.8023,
+       3.7515,
+       2.8024,
+       3.7515,
+       2.9331,
+       3.0526,
+       2.933
+      ],
+      "spans": [
+       {
+        "offset": 275,
+        "length": 10
+       }
+      ]
+     },
+     {
+      "content": "Pay Date:",
+      "polygon": [
+       0.688,
+       3.0513,
+       1.3248,
+       3.0513,
+       1.3248,
+       3.2002,
+       0.688,
+       3.2003
+      ],
+      "spans": [
+       {
+        "offset": 286,
+        "length": 9
+       }
+      ]
+     },
+     {
+      "content": "10/03/2026",
+      "polygon": [
+       3.063,
+       3.0504,
+       3.752,
+       3.0522,
+       3.7517,
+       3.1832,
+       3.0627,
+       3.1816
+      ],
+      "spans": [
+       {
+        "offset": 296,
+        "length": 10
+       }
+      ]
+     },
+     {
+      "content": "Earnings",
+      "polygon": [
+       0.6906,
+       3.4417,
+       1.2887,
+       3.4423,
+       1.2885,
+       3.5857,
+       0.6905,
+       3.5851
+      ],
+      "spans": [
+       {
+        "offset": 307,
+        "length": 8
+       }
+      ]
+     },
+     {
+      "content": "Current",
+      "polygon": [
+       4.1633,
+       3.4408,
+       4.6774,
+       3.441,
+       4.6774,
+       3.5708,
+       4.1633,
+       3.5707
+      ],
+      "spans": [
+       {
+        "offset": 316,
+        "length": 7
+       }
+      ]
+     },
+     {
+      "content": "Year to Date",
+      "polygon": [
+       5.8268,
+       3.4385,
+       6.6465,
+       3.4384,
+       6.6465,
+       3.5736,
+       5.8268,
+       3.5737
+      ],
+      "spans": [
+       {
+        "offset": 324,
+        "length": 12
+       }
+      ]
+     },
+     {
+      "content": "Gross Pay",
+      "polygon": [
+       0.695,
+       3.6898,
+       1.3465,
+       3.6942,
+       1.3456,
+       3.8362,
+       0.6941,
+       3.8318
+      ],
+      "spans": [
+       {
+        "offset": 337,
+        "length": 9
+       }
+      ]
+     },
+     {
+      "content": "$2,645.83",
+      "polygon": [
+       4.1603,
+       3.6902,
+       4.7849,
+       3.6854,
+       4.786,
+       3.8231,
+       4.1614,
+       3.8279
+      ],
+      "spans": [
+       {
+        "offset": 347,
+        "length": 9
+       }
+      ]
+     },
+     {
+      "content": "$47,624.94",
+      "polygon": [
+       5.8258,
+       3.6896,
+       6.5299,
+       3.687,
+       6.5311,
+       3.8226,
+       5.827,
+       3.8288
+      ],
+      "spans": [
+       {
+        "offset": 357,
+        "length": 10
+       }
+      ]
+     },
+     {
+      "content": "Taxes and Deductions",
+      "polygon": [
+       0.6913,
+       3.9397,
+       2.0783,
+       3.9417,
+       2.0781,
+       4.0821,
+       0.6911,
+       4.0801
+      ],
+      "spans": [
+       {
+        "offset": 368,
+        "length": 20
+       }
+      ]
+     },
+     {
+      "content": "$635.00",
+      "polygon": [
+       4.1589,
+       3.9415,
+       4.671,
+       3.9376,
+       4.6721,
+       4.0738,
+       4.16,
+       4.0776
+      ],
+      "spans": [
+       {
+        "offset": 389,
+        "length": 7
+       }
+      ]
+     },
+     {
+      "content": "$11,429.99",
+      "polygon": [
+       5.826,
+       3.9456,
+       6.5279,
+       3.9393,
+       6.5291,
+       4.0752,
+       5.8272,
+       4.0815
+      ],
+      "spans": [
+       {
+        "offset": 397,
+        "length": 10
+       }
+      ]
+     },
+     {
+      "content": "Net Pay",
+      "polygon": [
+       0.6901,
+       4.1915,
+       1.1933,
+       4.1984,
+       1.1914,
+       4.3402,
+       0.6882,
+       4.334
+      ],
+      "spans": [
+       {
+        "offset": 408,
+        "length": 7
+       }
+      ]
+     },
+     {
+      "content": "$2,010.83",
+      "polygon": [
+       4.158,
+       4.1956,
+       4.786,
+       4.1879,
+       4.7877,
+       4.3261,
+       4.1597,
+       4.3339
+      ],
+      "spans": [
+       {
+        "offset": 416,
+        "length": 9
+       }
+      ]
+     },
+     {
+      "content": "$36,194.95",
+      "polygon": [
+       5.824,
+       4.1959,
+       6.5295,
+       4.1861,
+       6.5315,
+       4.3266,
+       5.826,
+       4.3364
+      ],
+      "spans": [
+       {
+        "offset": 426,
+        "length": 10
+       }
+      ]
+     },
+     {
+      "content": "SAMPLE - SYNTHETIC T",
+      "polygon": [
+       0.1937,
+       7.8176,
+       5.5987,
+       4.0081,
+       5.8604,
+       4.4034,
+       0.4499,
+       8.2043
+      ],
+      "spans": [
+       {
+        "offset": 437,
+        "length": 20
+       }
+      ]
+     },
+     {
+      "content": "SAMPLE - SYNTHETIC TEST DATA - fictional document, not valid for any use",
+      "polygon": [
+       2.2821,
+       10.4852,
+       6.2151,
+       10.4928,
+       6.2147,
+       10.6137,
+       2.2818,
+       10.6021
+      ],
+      "spans": [
+       {
+        "offset": 458,
+        "length": 72
+       }
+      ]
+     },
+     {
+      "content": "DATA",
+      "polygon": [
+       6.6406,
+       3.3555,
+       7.8271,
+       2.4967,
+       8.0956,
+       2.869,
+       6.8807,
+       3.7091
+      ],
+      "spans": [
+       {
+        "offset": 531,
+        "length": 4
+       }
+      ]
+     }
+    ],
+    "spans": [
+     {
+      "offset": 0,
+      "length": 535
+     }
+    ]
+   }
+  ],
+  "styles": [],
+  "documents": [
+   {
+    "docType": "payStub.us",
+    "boundingRegions": [
+     {
+      "pageNumber": 1,
+      "polygon": [
+       0,
+       0,
+       8.5,
+       0,
+       8.5,
+       11,
+       0,
+       11
+      ]
+     }
+    ],
+    "fields": {
+     "CurrentPeriodDeductions": {
+      "type": "number",
+      "valueNumber": 635,
+      "content": "$635.00",
+      "boundingRegions": [
+       {
+        "pageNumber": 1,
+        "polygon": [
+         4.1589,
+         3.9415,
+         4.6761,
+         3.9396,
+         4.6761,
+         4.0757,
+         4.1606,
+         4.0799
+        ]
+       }
+      ],
+      "confidence": 0.958,
+      "spans": [
+       {
+        "offset": 389,
+        "length": 7
+       }
+      ]
+     },
+     "CurrentPeriodGrossPay": {
+      "type": "number",
+      "valueNumber": 2645.83,
+      "content": "$2,645.83",
+      "boundingRegions": [
+       {
+        "pageNumber": 1,
+        "polygon": [
+         4.1603,
+         3.6911,
+         4.7868,
+         3.6866,
+         4.7868,
+         3.8254,
+         4.1616,
+         3.8302
+        ]
+       }
+      ],
+      "confidence": 0.97,
+      "spans": [
+       {
+        "offset": 347,
+        "length": 9
+       }
+      ]
+     },
+     "CurrentPeriodNetPay": {
+      "type": "number",
+      "valueNumber": 2010.83,
+      "content": "$2,010.83",
+      "boundingRegions": [
+       {
+        "pageNumber": 1,
+        "polygon": [
+         4.158,
+         4.1961,
+         4.792,
+         4.1907,
+         4.7923,
+         4.3284,
+         4.1616,
+         4.3347
+        ]
+       }
+      ],
+      "confidence": 0.973,
+      "spans": [
+       {
+        "offset": 416,
+        "length": 9
+       }
+      ]
+     },
+     "CurrentPeriodTaxes": {
+      "type": "number",
+      "valueNumber": 635,
+      "content": "$635.00",
+      "boundingRegions": [
+       {
+        "pageNumber": 1,
+        "polygon": [
+         4.1589,
+         3.9415,
+         4.6761,
+         3.9396,
+         4.6761,
+         4.0757,
+         4.1606,
+         4.0799
+        ]
+       }
+      ],
+      "confidence": 0.55,
+      "spans": [
+       {
+        "offset": 389,
+        "length": 7
+       }
+      ]
+     },
+     "EmployeeAddress": {
+      "type": "address",
+      "content": "9990 Birchend Ct, Northmarch City, NM 00000",
+      "boundingRegions": [
+       {
+        "pageNumber": 1,
+        "polygon": [
+         3.0497,
+         2.042,
+         5.9318,
+         2.0437,
+         5.9317,
+         2.198,
+         3.0496,
+         2.1962
+        ]
+       }
+      ],
+      "confidence": 0.773,
+      "spans": [
+       {
+        "offset": 150,
+        "length": 43
+       }
+      ],
+      "valueAddress": {
+       "houseNumber": "9990",
+       "road": "Birchend Ct, Northmarch",
+       "postalCode": "00000",
+       "city": "City",
+       "state": "NM",
+       "streetAddress": "9990 Birchend Ct, Northmarch"
+      }
+     },
+     "EmployeeName": {
+      "type": "string",
+      "valueString": "Sam Ashcombe",
+      "content": "Sam Ashcombe",
+      "boundingRegions": [
+       {
+        "pageNumber": 1,
+        "polygon": [
+         3.0504,
+         1.8009,
+         4.0397,
+         1.8005,
+         4.0398,
+         1.9369,
+         3.0505,
+         1.9373
+        ]
+       }
+      ],
+      "confidence": 0.971,
+      "spans": [
+       {
+        "offset": 119,
+        "length": 12
+       }
+      ]
+     },
+     "EmployeeSSN": {
+      "type": "string",
+      "valueString": "934-99-2169",
+      "content": "934-99-2169",
+      "boundingRegions": [
+       {
+        "pageNumber": 1,
+        "polygon": [
+         3.0509,
+         2.304,
+         3.846,
+         2.3021,
+         3.846,
+         2.4358,
+         3.0514,
+         2.4358
+        ]
+       }
+      ],
+      "confidence": 0.952,
+      "spans": [
+       {
+        "offset": 218,
+        "length": 11
+       }
+      ]
+     },
+     "EmployerName": {
+      "type": "string",
+      "valueString": "Glimmerstone Health Clinic",
+      "content": "Glimmerstone Health Clinic",
+      "boundingRegions": [
+       {
+        "pageNumber": 1,
+        "polygon": [
+         3.0539,
+         1.5504,
+         4.748,
+         1.5495,
+         4.7481,
+         1.6901,
+         3.054,
+         1.691
+        ]
+       }
+      ],
+      "confidence": 0.488,
+      "spans": [
+       {
+        "offset": 77,
+        "length": 26
+       }
+      ]
+     },
+     "PayDate": {
+      "type": "date",
+      "valueDate": "2026-10-03",
+      "content": "10/03/2026",
+      "boundingRegions": [
+       {
+        "pageNumber": 1,
+        "polygon": [
+         3.063,
+         3.0508,
+         3.752,
+         3.0522,
+         3.752,
+         3.1832,
+         3.0631,
+         3.1832
+        ]
+       }
+      ],
+      "confidence": 0.966,
+      "spans": [
+       {
+        "offset": 296,
+        "length": 10
+       }
+      ]
+     },
+     "PayPeriodEndDate": {
+      "type": "date",
+      "valueDate": "2026-09-30",
+      "content": "09/30/2026",
+      "boundingRegions": [
+       {
+        "pageNumber": 1,
+        "polygon": [
+         3.0526,
+         2.8035,
+         3.752,
+         2.8025,
+         3.752,
+         2.9341,
+         3.0528,
+         2.9341
+        ]
+       }
+      ],
+      "confidence": 0.955,
+      "spans": [
+       {
+        "offset": 275,
+        "length": 10
+       }
+      ]
+     },
+     "PayPeriodStartDate": {
+      "type": "date",
+      "valueDate": "2026-09-16",
+      "content": "09/16/2026",
+      "boundingRegions": [
+       {
+        "pageNumber": 1,
+        "polygon": [
+         3.0524,
+         2.5548,
+         3.7552,
+         2.555,
+         3.7549,
+         2.685,
+         3.0527,
+         2.685
+        ]
+       }
+      ],
+      "confidence": 0.949,
+      "spans": [
+       {
+        "offset": 248,
+        "length": 10
+       }
+      ]
+     },
+     "YearToDateDeductions": {
+      "type": "number",
+      "valueNumber": 11429.99,
+      "content": "$11,429.99",
+      "boundingRegions": [
+       {
+        "pageNumber": 1,
+        "polygon": [
+         5.826,
+         3.9484,
+         6.5299,
+         3.9417,
+         6.5299,
+         4.0777,
+         5.8307,
+         4.0837
+        ]
+       }
+      ],
+      "confidence": 0.9,
+      "spans": [
+       {
+        "offset": 397,
+        "length": 10
+       }
+      ]
+     },
+     "YearToDateGrossPay": {
+      "type": "number",
+      "valueNumber": 47624.94,
+      "content": "$47,624.94",
+      "boundingRegions": [
+       {
+        "pageNumber": 1,
+        "polygon": [
+         5.8258,
+         3.6897,
+         6.5355,
+         3.6883,
+         6.5355,
+         3.825,
+         5.8278,
+         3.8309
+        ]
+       }
+      ],
+      "confidence": 0.934,
+      "spans": [
+       {
+        "offset": 357,
+        "length": 10
+       }
+      ]
+     },
+     "YearToDateNetPay": {
+      "type": "number",
+      "valueNumber": 36194.95,
+      "content": "$36,194.95",
+      "boundingRegions": [
+       {
+        "pageNumber": 1,
+        "polygon": [
+         5.8241,
+         4.1968,
+         6.5355,
+         4.1895,
+         6.5355,
+         4.3292,
+         5.8308,
+         4.3386
+        ]
+       }
+      ],
+      "confidence": 0.899,
+      "spans": [
+       {
+        "offset": 426,
+        "length": 10
+       }
+      ]
+     }
+    },
+    "confidence": 1,
+    "spans": [
+     {
+      "offset": 0,
+      "length": 535
+     }
+    ]
+   }
+  ],
+  "contentFormat": "text"
+ }
+}

@@ -1,0 +1,68 @@
+{
+  "packet_id": "P004",
+  "synthetic": true,
+  "applicant": {
+    "full_name": "Sam Ashcombe",
+    "date_of_birth": "1987-04-22",
+    "ssn": "934-99-2169",
+    "address": "9990 Birchend Ct, Northmarch City, NM 00000",
+    "employer": "Glimmerstone Health Clinic",
+    "annual_salary": 63500.0,
+    "pay_frequency": "semimonthly"
+  },
+  "application": {
+    "loan_amount": 15000.0,
+    "loan_purpose": "Home improvement"
+  },
+  "documents": {
+    "pay_stub": {
+      "file": "pay_stub.pdf",
+      "fields": {
+        "employee_name": "Sam Ashcombe",
+        "employer_name": "Glimmerstone Health Clinic",
+        "employee_ssn": "934-99-2169",
+        "pay_period_start": "2026-09-16",
+        "pay_period_end": "2026-09-30",
+        "pay_date": "2026-10-03",
+        "gross_pay": 2645.83,
+        "ytd_gross_pay": 47624.94,
+        "net_pay": 2010.83
+      }
+    },
+    "w2": {
+      "file": "w2.pdf",
+      "fields": {
+        "employee_name": "Sam Ashcombe",
+        "employee_ssn": "934-99-2169",
+        "employer_name": "Glimmerstone Health Clinic",
+        "wages": 62550.59,
+        "tax_year": "2025"
+      }
+    },
+    "bank_statement": {
+      "file": "bank_statement.pdf",
+      "fields": {
+        "account_holder_name": "Sam Ashcombe",
+        "account_number": "0017507864",
+        "beginning_balance": 8914.09,
+        "ending_balance": 10432.75,
+        "statement_start": "2026-09-01",
+        "statement_end": "2026-09-30"
+      }
+    },
+    "drivers_license": {
+      "file": "drivers_license.pdf",
+      "fields": {
+        "first_name": "Sam",
+        "last_name": "Ashcombe",
+        "document_number": "N40742311",
+        "date_of_birth": "1987-04-22",
+        "date_of_expiration": "2030-04-22"
+      }
+    }
+  },
+  "flaw": null,
+  "missing_documents": [],
+  "expected_outcome": "APPROVE_FOR_UNDERWRITING",
+  "expected_reasons": []
+}
