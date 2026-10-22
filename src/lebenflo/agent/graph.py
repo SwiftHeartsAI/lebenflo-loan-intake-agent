@@ -1,7 +1,8 @@
-"""The intake agent: a LangGraph workflow  extract -> validate -> decide -> memo.
+"""The intake agent: a LangGraph workflow  extract -> validate -> policy_check -> decide -> memo.
 
 Design choice: the *decision* is deterministic (rules), and the LLM only writes a plain-English
-summary for the reviewer. The agent can never decline a loan; it either passes the packet on to
+summary for the reviewer, grounded in the policy sections that RAG retrieved for each finding.
+The agent can never decline a loan; it either passes the packet on to
 underwriting or escalates it to a human, with rule IDs as reasons.
 """
 
@@ -17,7 +18,8 @@ from lebenflo.extract.pipeline import extract_packet
 from lebenflo.governance.audit import log_event, sha256
 from lebenflo.governance.pii import mask_account
 from lebenflo.llm import LLM
-from lebenflo.validate.rules import Finding, periods_per_year, run_rules
+from lebenflo.rag.policy import load_index, retrieve
+from lebenflo.validate.rules import DECISION_FIELDS, Finding, periods_per_year, run_rules
 
 APPROVE = "APPROVE_FOR_UNDERWRITING"
 ESCALATE = "ESCALATE_TO_HUMAN"
@@ -27,6 +29,7 @@ class IntakeState(TypedDict, total=False):
     packet_id: str
     documents: dict[str, dict]  # doc_type -> ExtractedDocument (as dict, so state is JSON)
     findings: list[dict]
+    policy_refs: list[dict]  # per finding: the query and the top policy sections retrieved
     outcome: str
     reasons: list[str]
     memo: str
@@ -37,6 +40,8 @@ def load_docs(state: IntakeState) -> dict[str, ExtractedDocument]:
 
 
 def build_graph(settings: Settings, llm: LLM, packets_dir: Path = PACKETS_DIR):
+    policy_index = load_index()  # None until the policy has been embedded (live mode, once)
+
     def extract(state: IntakeState) -> IntakeState:
         docs = extract_packet(packets_dir / state["packet_id"], settings, llm)
         return {"documents": {k: d.model_dump() for k, d in docs.items()}}
@@ -52,6 +57,23 @@ def build_graph(settings: Settings, llm: LLM, packets_dir: Path = PACKETS_DIR):
         )
         return {"findings": [f.model_dump() for f in findings]}
 
+    def policy_check(state: IntakeState) -> IntakeState:
+        """RAG: find the lending-policy section behind each finding (or the routing rule)."""
+        if policy_index is None:
+            return {"policy_refs": []}
+        keys = sorted({f["rule_id"] for f in state["findings"]}) or ["APPROVE"]
+        refs = [{"query": key, "matches": retrieve(policy_index, key, k=2)} for key in keys]
+        log_event(
+            state["packet_id"],
+            "policy_check",
+            "rag",
+            model=policy_index["embedding_model"],
+            detail={
+                r["query"]: [(m["section_id"], m["score"]) for m in r["matches"]] for r in refs
+            },
+        )
+        return {"policy_refs": refs}
+
     def decide(state: IntakeState) -> IntakeState:
         # Any finding -> a human looks at it. There is deliberately no "decline" branch.
         reasons = [f"{f['rule_id']}: {f['message']}" for f in state["findings"]]
@@ -66,7 +88,8 @@ def build_graph(settings: Settings, llm: LLM, packets_dir: Path = PACKETS_DIR):
         system = (
             "You write a short intake summary for a credit union loan reviewer. Use only the "
             "facts given. Do not recommend approval or decline; explain what was checked and "
-            "what the reviewer should look at. 3-5 sentences."
+            "what the reviewer should look at, and cite the policy sections provided by their "
+            "IDs (for example LP-3). 3-5 sentences."
         )
         user = json.dumps(facts, indent=1)
         summary = llm.complete(system, user)
@@ -83,11 +106,13 @@ def build_graph(settings: Settings, llm: LLM, packets_dir: Path = PACKETS_DIR):
     graph = StateGraph(IntakeState)
     graph.add_node("extract", extract)
     graph.add_node("validate", validate)
+    graph.add_node("policy_check", policy_check)
     graph.add_node("decide", decide)
     graph.add_node("memo", memo)
     graph.add_edge(START, "extract")
     graph.add_edge("extract", "validate")
-    graph.add_edge("validate", "decide")
+    graph.add_edge("validate", "policy_check")
+    graph.add_edge("policy_check", "decide")
     graph.add_edge("decide", "memo")
     graph.add_edge("memo", END)
     return graph.compile()
@@ -122,6 +147,11 @@ def memo_facts(state: IntakeState, packets_dir: Path) -> dict:
         "documents_received": sorted(docs),
         "outcome": state["outcome"],
         "findings": [Finding(**f).model_dump() for f in state["findings"]],
+        # Only the best match per finding goes to the LLM, to keep the grounding focused.
+        "policy": [
+            {k: r["matches"][0][k] for k in ("section_id", "title", "text")}
+            for r in state.get("policy_refs", [])
+        ],
     }
 
 
@@ -138,11 +168,11 @@ def render_memo(state: IntakeState, facts: dict, summary: str) -> str:
         *[f"- {r}" for r in state["reasons"]],
         "",
         "## Documents",
-        "| Document | Method | Source | Lowest field confidence |",
+        "| Document | Method | Source | Lowest confidence (fields the rules use) |",
         "|---|---|---|---|",
         *[
             f"| {d.doc_type} | {d.model_id} | {d.source} | "
-            f"{min(f.confidence for f in d.fields.values()):.2f} |"
+            f"{min(d.fields[n].confidence for n in DECISION_FIELDS[d.doc_type]):.2f} |"
             for d in docs.values()
         ],
         "",
@@ -152,6 +182,12 @@ def render_memo(state: IntakeState, facts: dict, summary: str) -> str:
         f"- Annualized pay stub income: {money(facts['annualized_pay_stub_income'])} · "
         f"W-2 wages: {money(facts['w2_wages'])}",
         f"- Bank account: {facts['bank_account']} · ending balance {money(facts['bank_ending_balance'])}",
+        "",
+        "## Policy references (retrieved by RAG)",
+        *(
+            [f"- **{p['section_id']} {p['title']}**: {p['text'][:220]}…" for p in facts["policy"]]
+            or ["- Policy index not built yet (run `python -m lebenflo.rag` in live mode)."]
+        ),
         "",
         "## Summary for the reviewer",
         summary,

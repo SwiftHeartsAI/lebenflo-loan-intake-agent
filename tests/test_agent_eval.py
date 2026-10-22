@@ -5,11 +5,11 @@ import json
 from lebenflo.agent.__main__ import all_packet_ids, run_packets
 from lebenflo.config import GROUND_TRUTH_DIR, get_settings
 from lebenflo.eval.__main__ import evaluate
-from lebenflo.llm import FakeLLM
+from lebenflo.llm import OfflineLLM
 
 
 def test_agent_catches_every_flaw_and_never_leaks_pii():
-    llm = FakeLLM()
+    llm = OfflineLLM()
     states = run_packets(all_packet_ids(), get_settings(), llm)
     results = evaluate(states)
 

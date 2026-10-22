@@ -1,0 +1,3 @@
+# Dependencies for Streamlit Community Cloud: installs this project (see pyproject.toml).
+# Editable (-e) so data/ and policy/ paths resolve to the repo checkout.
+-e .

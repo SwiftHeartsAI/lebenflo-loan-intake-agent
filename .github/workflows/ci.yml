@@ -1,0 +1,24 @@
+name: CI
+
+# Lint and test on every push and pull request. Runs fully offline: Document Intelligence,
+# Azure OpenAI and embedding responses are replayed from data/recorded/, so no secrets are needed.
+on:
+  push:
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    env:
+      LEBENFLO_MODE: offline
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v6
+        with:
+          python-version: "3.13"
+      - name: Install dependencies
+        run: uv sync --locked --no-dev && uv pip install pytest ruff
+      - name: Lint
+        run: uv run --no-sync ruff check . && uv run --no-sync ruff format --check .
+      - name: Test
+        run: uv run --no-sync pytest

@@ -18,7 +18,8 @@ reports/runs/
 
 .DS_Store
 
-# Private notes (kept locally, not published)
+# Private notes (kept locally, never published)
+Laura's Notes/
 CLAUDE.md
-kickoff-prompt.md
-docs/INTERVIEW_NOTES.md
+data/warehouse.duckdb*
+.claude/
