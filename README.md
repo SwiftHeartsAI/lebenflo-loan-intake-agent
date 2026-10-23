@@ -40,7 +40,7 @@ Intelligence per document; Azure OpenAI calls by prompt hash), so everything abo
 no keys. CI runs lint and tests the same way on every push.
 
 Tracing: run `uv run phoenix serve` in another terminal, then open http://localhost:6006.
-Traces go to the `lebenflo-loan-intake` project.
+Traces go to the `lebenflo-loan-intake` project (see [Observability](#observability)).
 
 ## Live mode (real Azure)
 
@@ -89,6 +89,27 @@ The agent never missed a flaw, but it is over-cautious:
   masked before the LLM, so it isn't extracted, by design.
 - **Driver's license:** one day/month swap on the date of birth and expiry, at low confidence,
   correctly escalated by V-004. The license number lost its "N" prefix on 7 of 10.
+
+## Observability
+
+Every run is traced with [Arize Phoenix](https://github.com/Arize-ai/phoenix), running locally
+at no cost. OpenInference instruments LangGraph and the OpenAI client automatically, and each
+Document Intelligence call adds its own span.
+
+**One packet, end to end.** P003 (name mismatch) goes through extract → validate → decide → memo.
+The five Document Intelligence calls are nested under `extract`, including the `prebuilt-layout`
+fallback for the W-2. This run is an offline replay, so the Azure calls take 0 ms.
+
+![Phoenix trace of packet P003](docs/images/phoenix-trace.png)
+
+**PII masking, as the LLM saw it.** The W-2 text sent to Azure OpenAI in a live run: the SSN
+has been replaced with `[SSN]` before the prompt left the app. Account numbers and dates of
+birth are masked the same way.
+
+![Phoenix LLM span showing the masked SSN](docs/images/phoenix-pii-masking.png)
+
+To reproduce: `uv run phoenix serve`, then `uv run python -m lebenflo.agent P003`, and open
+http://localhost:6006.
 
 ## Layout
 

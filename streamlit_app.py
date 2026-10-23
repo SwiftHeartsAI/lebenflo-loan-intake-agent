@@ -18,6 +18,7 @@ from lebenflo.config import (
     AUDIT_LOG,
     GROUND_TRUTH_DIR,
     PACKETS_DIR,
+    ROOT,
     SQL_DIR,
     Settings,
     get_settings,
@@ -301,6 +302,12 @@ with tab_gov:
         "DOB: 07/03/1972, pay date 10/03/2026.",
     )
     st.code(mask_pii(sample), language=None)
+    # A screenshot, because the hosted demo has no Phoenix server to link to.
+    st.image(
+        str(ROOT / "docs" / "images" / "phoenix-pii-masking.png"),
+        caption="A live W-2 prompt as Azure OpenAI received it, traced in Arize Phoenix: "
+        "the SSN is already [SSN].",
+    )
 
     st.markdown("#### Audit trail")
     st.markdown(
@@ -359,6 +366,12 @@ digraph {
   memo -> phoenix [style=dotted, color=gray];
 }
 """)
+    st.markdown("#### Tracing with Arize Phoenix")
+    st.image(
+        str(ROOT / "docs" / "images" / "phoenix-trace.png"),
+        caption="Packet P003 in Phoenix: each graph step is a span, with the Document "
+        "Intelligence calls nested under extract (offline replay, so they take 0 ms).",
+    )
     st.markdown("#### Components")
     st.dataframe(
         pd.DataFrame(

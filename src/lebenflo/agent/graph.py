@@ -17,6 +17,7 @@ from lebenflo.extract.pipeline import extract_packet
 from lebenflo.governance.audit import log_event, sha256
 from lebenflo.governance.pii import mask_account
 from lebenflo.llm import LLM
+from lebenflo.tracing import inside_graph_node
 from lebenflo.validate.rules import DECISION_FIELDS, Finding, periods_per_year, run_rules
 
 APPROVE = "APPROVE_FOR_UNDERWRITING"
@@ -38,7 +39,8 @@ def load_docs(state: IntakeState) -> dict[str, ExtractedDocument]:
 
 def build_graph(settings: Settings, llm: LLM, packets_dir: Path = PACKETS_DIR):
     def extract(state: IntakeState) -> IntakeState:
-        docs = extract_packet(packets_dir / state["packet_id"], settings, llm)
+        with inside_graph_node():
+            docs = extract_packet(packets_dir / state["packet_id"], settings, llm)
         return {"documents": {k: d.model_dump() for k, d in docs.items()}}
 
     def validate(state: IntakeState) -> IntakeState:
@@ -69,7 +71,8 @@ def build_graph(settings: Settings, llm: LLM, packets_dir: Path = PACKETS_DIR):
             "what the reviewer should look at. 3-5 sentences."
         )
         user = json.dumps(facts, indent=1)
-        summary = llm.complete(system, user)
+        with inside_graph_node():
+            summary = llm.complete(system, user)
         log_event(
             state["packet_id"],
             "memo",
